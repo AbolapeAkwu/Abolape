@@ -1,0 +1,2998 @@
+\documentclass[12pt]{report}
+%documentstyle[12pt]{report}
+%\documentclass{amsart}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath,makeidx,verbatim}
+\usepackage{amssymb,amsfonts,amstext,amsmath,amsthm}
+%\pagenumbering{roman}
+%\textwidth 6.0in
+%\textheight 8.0in
+\hoffset = -0.50 truecm
+\newcommand{\calb}{{\cal B}}
+\newcommand{\ch}{{\cal H}}
+\newcommand{\clc}{{\cal C}}
+\newcommand{\n}{-\!\!\!\!\!\!N}
+\newcommand{\cd}{{\cal D}}
+\newcommand{\cm}{{\cal M}}
+\newcommand{\R}{I\!\!R}
+\newcommand{\T}{I\!\!T}
+%\newcommand{\R}{R}}
+\newcommand{\D}{I\!\!D}
+\newcommand{\p}{I\!\!P}
+\newcommand{\F}{I\!\!F}
+%\newcommand{\f}{I\!\!F}
+\newcommand{\h}{I\!\!H}
+%\newcommand{\h}{\mathbb{H}}
+%\newcommand{\N}{I\!\!N}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+%\newcommand{\C}{|\!\!\!C}
+%\newcommand{\Z}{Z\!\!\!\!Z}
+\newcommand{\E}{I\!\!\!\!E}
+\newcommand{\K}{I\!\!\!\!K}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bq}{\begin{eqnarray*}}
+\newcommand{\eq}{\end{eqnarray*}}
+\newcommand{\st}{\stackrel}
+\newcommand{\ud}{\underline}
+\newcommand{\ben}{\begin{enumerate}}
+\newcommand{\een}{\end{enumerate}}
+\newcommand{\bt}{\begin{tabular}}
+\newcommand{\et}{\end{tabular}}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{exm}[thm]{Example}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{sln}{solution}
+
+\begin{document}
+\pagenumbering{roman} \baselineskip 24pt
+\newcommand{\disp}{\displaystyle}
+\thispagestyle{empty}
+\begin{center}
+{\bf \ DECOMPOSITION OF CERTAIN EQUIPARTITE GRAPHS INTO SUNLET
+GRAPHS } \vskip 1.0cm
+BY \\
+\ \\
+\ \\
+\ ABOLAPE DEBORAH AKINOLA\\
+B.Sc Mathematics (Ilorin), M.Sc. Mathematics (Ibadan)\\
+\ \\
+A Thesis in the Department of Mathematics,\\
+Submitted to the Faculty of Science\\
+in partial fulfillment of the requirement for the degree of \\
+\ \\
+DOCTOR OF PHILOSOPHY\\
+\ \\
+of the \\
+\ \\
+UNIVERSITY OF IBADAN\\
+\begin{flushright}
+\vskip 1.8cm MAY, 2014
+\end{flushright}
+\end{center}
+\begin{center}
+\chapter*{DEDICATION}
+\end{center}
+\addcontentsline{toc}{chapter}{DEDICATION}
+%\vspace{1.5in}
+This work is dedicated to the King of kings and Lord of lords.
+ %\end{center}
+%\newpage
+\baselineskip 24pt
+%\begin{center}
+%\newpage
+\begin{center}
+\chapter*{ABSTRACT}
+\end{center}
+\addcontentsline{toc}{chapter}{ABSTRACT} Graph decomposition is
+widely used in the field of combinatorial design theory with the
+intention of determining necessary and sufficient conditions for the
+existence of the designs. Researchers in recent years have
+concentrated on establishing the necessary and sufficient conditions
+for the decomposition of complete graph into sunlet graphs. However,
+little is known about the necessary and sufficient
+conditions for the decomposition of equipartite graphs into sunlet
+graph. Therefore, this work was aimed at establishing necessary and
+sufficient conditions for the decomposition of equipartite
+graphs into edge-disjoint sunlet graph.\\
+The structure and the definition of four equipartite graphs:
+lexicographic product of cycle and the complement of a complete
+graph ($C_r*\bar{K}_m$), lexicographic product of complete graph
+minus a $1$-factor and  complement of a complete graph
+($K_n-I*\bar{K}_m$), lexicographic product of complete graph plus a
+$1$-factor and complement of a complete graph
+($K_n+I*\bar{K}_m$), lexicographic product of complete graph and
+complement of a complete graph ($K_n*\bar{K}_m$) were used for the
+decomposition into edge-disjoint sunlet graphs. A unified method was
+used to decompose $C_r*\bar{K}_m$ into edge-disjoint sunlet graphs
+via the action of permutation and the concept of Latin square.
+Labeling scheme was used in the decomposition of the four
+equipartite graphs into sunlet graphs. The graph $K_n-I*\bar{K}_m$
+was decomposed into edge-disjoint sunlet graph using Walecki's
+construction. Blowing up point and lifting back method were used to
+decompose $K_n+I*\bar{K}_m$ and $K_n*\bar{K}_m$ into edge-disjoint
+sunlet graphs. The congruent class of each  graph were used to
+categorise them into different categories. Blowing up point and
+lifting back method were used to establish the necessary and
+sufficient conditions for the decomposition of the equipartite
+graphs into edge-disjoint sunlet graphs.\\
+The graph $C_r*\bar{K}_m$ was decomposed into edge-disjoint sunlet
+graphs $L_{rm}$, $L_r$ and $L_m$, where $L_{rm},L_r$ and $L_m$
+denote sunlet graphs with $rm,r$ and $m$ vertices respectively. The
+graph $K_n-I*\bar{K}_m$ was decomposed into edge-disjoint sunlet
+graphs $L_q$, where $L_q$ is a sunlet graph with $q$ vertices. The
+graph $K_n+I*\bar{K}_m$ and $K_n*\bar{K}_m$ were both decomposed
+into edge-disjoint sunlet graphs $L_q$. The necessary and sufficient
+conditions developed for the decomposition of the four graphs
+$C_r*\bar{K}_m, K_n-I*\bar{K}_m,K_n+I*\bar{K}_m$ and $K_n*\bar{K}_m$
+into edge-disjoint sunlet graphs are: $rm^2\equiv 0(\mod\ q)$;
+$\displaystyle{\frac{n(n-2)m^2}{2}}\equiv 0(\mod\ q)$;
+$\displaystyle{\frac{n^2m^2}{2}}\equiv 0(\mod\ q)$;
+$\displaystyle{\frac{n(n-1)m^2}{2}}\equiv 0(\mod\ q)$ respectively.
+It was found that for any graph $G$ with cycle decomposition,
+lexicographic product of $G$ and complement of a complete graph
+on two vertices had sunlet graph decomposition. For any given graph
+$G$ with sunlet graph decomposition, lexicographic product of $G$
+and the complement of a complete graph on $l$ vertices had sunlet
+graph decomposition, for a positive integer $l$.\\
+The necessary and sufficient conditions for the decomposition of equipartite graphs into edge disjoint graphs were obtained. These could be used in the experimental designs to determine the existence of sunlet graph designs of equipartite graphs.
+\\
+{\bf Keywords:} Graph decomposition, Lexicographic product of graphs, Complete graphs, Equipartite graph.\\
+{\bf Word count:} 457
+%developed could be used in
+%the experimental designs to determine the existence of sunlet graph
+%designs of equipartite graphs. %considered in this work.
+%The study of graph decomposition has been one of the most important topics in graph theory and also play an important role in the study of combinatorics experimental designs. One of the main goals of combinatorial design theory is to determine the necessary and sufficient conditions for the existence of a particular design. There are many new designs whose their necessary and sufficient conditions are not fully known. \\
+%This work is aimed at decomposing  complete multipartite graph $K_n*\bar{K}_m$,  lexicographic product of cycle and the complement of a complete graph $C_r*\bar{K}_m$, lexicographic product of complete graph minus a $1$-factor and the complement of a complete graph $K_n-I*\bar{K}_m$ and lexicographic product of complete graph plus a $1$-factor and the complement of a complete graph $K_n+I*\bar{K}_m$ into certain corona graph called \emph{sunlet graph}.\\
+%We present the complete proofs for necessary and sufficient conditions in each case as follows:\\
+%The necessary and sufficient condition for the graph  $K_n*\bar{K}_m$ to admit decomposition into sunlet graph $L_q$ given by $$m(n-1)\equiv 0(mod\ 2) \ \ \ and \ \  \ \frac{n(m-1)m^2}{2}\equiv 0(mod\ \ q)$$ was obtained.\\
+%The necessary and sufficient condition for the decomposition of the graph $C_r*\bar{K}_m$ into sunlet graph $L_q$ given by $rm^2\equiv 0(mod\ q)$ was obtained. The necessary  and sufficient condition for sunlet graph $L_q$ to decompose the graph $K_n-I*\bar{K}_m$ was obtained to be $$m(n-1)\equiv 0(mod\ 2) \ \ \ and \ \ \ \ \frac{n(n-2)m^2}{2}\equiv 0 (mod \ q).$$ The necessary and sufficient condition obtained for the decomposition of the graph $K_n-I*\bar{K}_m$ into sunlet graph $L_q$ is $\frac{n^2m^2}{2}\equiv 0(mod\ q)$. In addition, we investigate the decomposition of the graph $K_n*\bar{K}_m$ into sunlet graph of length $2p$, where $p$ is prime.\\
+%The necessary and sufficient conditions given above can be used to
+%determine whether the sunlet graph $L_q$-designs of the graphs
+%$K_n*\bar{K}_m,C_r*\bar{K}_m,K_n-I*\bar{K}_m,K_n+I*\bar{K}_m$ exist.
+\chapter*{ACKNOWLEDGEMENTS}
+\addcontentsline{toc}{chapter}{ACKNOWLEDGEMENTS} The Lord is the
+source of my life, joy and living. I really acknowledge Him for
+sustaining me till the end of this program.
+
+I am grateful for the unquantifiable support of my supervisor, Dr.
+Deborah O. A. Ajayi whom God used tremendously for me in the course
+of this work. Thanks a lot and may God bless you and your family
+abundantly.
+
+I am grateful to my loving husband for his moral and financial
+support in the course of this program. My gratitude goes to every
+member of my family, - my parents - Mr and Mrs Akinola, my son -
+Promise, my sisters - Akinola Adebola, Grace Olojede, Abolanle,
+Abolatito and Abiola for their love, care and prayers; my aunties -
+Olojede Abigael and Aina Olayinka in their own ways.
+
+My gratitude goes to my Lecturer-Dr Arawomo and my colleagues - Mr Adefokun, Mr Ogundipe and
+Mrs Sangodapo. I extend my appreciation to many people who in the
+course of this work have given me encouragement and prayer support.
+I am also grateful to every member of staff of the department of
+Mathematics, University of Ibadan for their various help and
+providing me a conducive atmosphere to carry out this research.
+
+All glory and honor belongs to God who sustained me till now.
+
+\chapter*{CERTIFICATION}
+%\end{center}
+\addcontentsline{toc}{chapter}{CERTIFICATION} I certify that this
+ work was carried out by  Abolape D. Akinola
+ in the Department of
+Mathematics, University of Ibadan. \vspace{1.5in}
+
+\baselineskip 12pt
+\begin{center}
+-----------------------------------------------\\
+Supervisor\\
+  Deborah O. A. Ajayi\ \\
+B.Ed, M.Sc, Ph.D (Ibadan)\\
+ Department of Mathematics,\\
+University of Ibadan, Nigeria. \\
+\end{center}
+\baselineskip 24pt
+ \tableofcontents
+%\begin{center}
+\newpage
+
+\begin{center}
+\chapter{INTRODUCTION}
+\end{center}
+\pagenumbering{arabic}
+%\addcontentsline{toc}{chapter}{Introduction}
+%\end{center}
+%\baselineskip 24pt
+%\section{Introduction}
+The subject of graph decomposition is a vast and sprawling topic.
+Indeed, recently a number of survey articles and several books have
+appeared, each devoted to a particular subtopic within this domain.
+A great deal of research has been done on the study of isomorphic
+decomposition of complete graphs. This appears to have been
+motivated by its close relationship to the theory of block designs.
+For this reason, an $H$-decomposition of complete graph $K_n$ is
+sometimes called an $H$-design on $K_n$. Nevertheless, the
+fundamental question of determining whether complete graph $K_n$,
+complete bipartite graphs, complete multipartite graphs has an
+$H$-decomposition for a given graph $H$ has not been solved in
+general.
+
+ Let $C_k$ denote a cycle on $k$ vertices. The problem of finding $C_k$-decomposition of $K_{2n+1}$ and $K_{2n}-I$, where $I$ is a $1$-factor of $K_{2n}$ is completely settled in two different papers by Alspach and Gavlas (2001) and Sajna (2002). The well-known Oberwolfach  problem formulated as ``Is it possible to seat an odd number $n$ of people at $s$ round
+tables $T_1,T_2,...,T_s$ (where each $T_i$ can accommodate $t_i\geq
+3$ people and $\sum t_i=n$) for $k$ different meals so that each
+person has every other person for a neighbor exactly once?'' is
+equivalent to
+ %In terms of graph theory, this problem is equivalent to
+ asking for an odd integer $n$, such that $K_n$ is decomposable into cycles, in terms of graph theory.  That is, is it possible for $K_n$ to have a $2$-factorization in which each $2$-factor consists of cycles of lengths $t_1,t_2,...,t_s$?
+
+ Liu (2000) settled completely %In \cite{JLE9},
+ the generalised Oberwolfach problem  if $t$ is even or $n$ is odd integer and  generalized Oberwolfach problem to the decomposition of complete equipartite graphs into uniform cycles.
+
+%consists in finding a $2$-factors are isomorphic to a given $2$-factor of $K_{2n+1}$. \\
+A generalisation to complete graph decomposition problem is to
+find $C_k$-decomposition of $K_n*\bar{K}_m$, which is the complete
+$n$-partite graph in which each partite set has $m$ vertices. The
+study of cycle decomposition of $K_n*\bar{K}_m$ was initiated by
+Hoffman et al in 1989. %\cite{DHOR}.
+The problem of sunlet graph decomposition of complete graphs on even
+vertices was solved by Anitha and Lekshmi (2008)% \cite{RA}.
+
+In this work, necessary and sufficient conditions for the
+decomposition of some equipartite graphs into edge-disjoint sunlet
+graphs were established which generalizes the cycle decomposition of
+equipartite graphs.
+
+Chapter one is an introduction to the work which
+gives definitions, preliminaries of graph theory and graph
+decomposition. Chapter two is a review of the literature on cycle,
+complete and sunlet graph decompositions. Chapter three gives the
+main results on sunlet graph decomposition of $C_r*\bar{K}_m$,
+$K_n-I*\bar{K}_m$, $(K_n+I)*\bar{K}_m$ and $K_n*\bar{K}_m$. We
+conclude with a summary of our results and recommendations for
+further research in chapter four.
+\section{Definitions and Preliminaries of graph theory}
+  {\bf Graph}\\
+%A graph is a pair $G(V,E)$ of sets such that $E$ $\subseteq [V]^2$; thus the elements of E are $2$-element subsets of $V$. The elements of $V$ are the vertices (or nodes, or points) of the graph $G$, the elements of $E$ are its edges or lines. A graph with vertex set $V$ is said to be a graph on $V$. The vertex set of a graph $G$ is referred to as $V(G)$, its edge set as $E(G)$.
+A {\em graph} is a mathematical entity that consists of a non-empty
+set of objects called {\em vertices} (or {\em points}) (or {\em
+nodes})  and a set of unordered pairs of vertices called {\em edges}
+(or {\em lines}). Let V denotes the set of vertices, and E denotes
+the set of edges of a graph, then the graph is denoted by $G(V, E)$
+or simply $G$ The number of vertices of $G$ is its {\em order}
+written as $|G|$. An $n$ vertex graph is a graph of order $n$. The
+number of edges of a graph $G$ is denoted by $||G||$ and is known as
+its {\em size}. A graph is {\em finite} if its vertex set and edge
+set are finite.  A vertex $v$ is {\em incident} with an edge $e$ if
+$v \in E$; then $e$ is an edge at $v$. The two vertices incident
+with an edge are its {\em ends}, and an edge joins its ends. An edge
+$\{ x,y\}$ is usually written as $xy$. If $x \in X$ and $y \in Y$,
+then $xy$ is an $X-Y$ edge. The set of all $X-Y$ edges in a set $E$
+is denoted by $E(X,Y)$. The set of all the edges in $E$ at a vertex
+$v$ is denoted by $E(v)$.
+Two vertices $x,y$ of $G$  are {\em adjacent} or {\em neighbors} if $xy$ is an edge of $G$. Two edges $e\neq f$ are adjacent if they have an end in common. The set of neighbors of a vertex $v$ in $G$ is denoted by $N(v)$. More generally for $U\subseteq V$, the neighbors in $V\setminus U$ of vertices in $U$ are called neighbors of $U$; their set is denoted by $N(U)$.\\
+\\
+{\bf Complete graph}\\ If all the vertices of $G$ are pairwise
+adjacent, then $G$ is {\em complete}. A complete graph on $n$
+vertices is denoted by $K_n$. Pairwise non-adjacent vertices or
+edges are called {\em independent}.\\
+\\
+{\bf Subgraph}\\
+If $G\cap G'=\emptyset$, then $G$ and $G'$ are {\em disjoint}. If
+$V'\subseteq V$ and $E'\subseteq E$ then $G'$ is a {\em subgraph} of
+$G$ (and $G$ a {\em supergraph} of $G'$) written as $G'\subseteq G$.
+If $G'\subseteq G$ and $G'\neq G$ then $G'$ is a {\em proper
+subgraph} of $G$. If $G'\subseteq G$ and $G'$ contains all the edges
+$xy\in E$ with $x,y\in V'$, then $G'$ is an induced subgraph of $G$;
+we say that $V'$ {\em induces} or {\em spans} $G'$ in $G$. $G$ is
+{\em edge-maximal} with a given graph property if $G$ itself has the
+property but no graph $G+xy$ does, for non-adjacent vertices $x,y\in
+G$.
+The graph $G'\subseteq G$  is a {\em spanning subgraph} of $G$ if $V'$ spans all of $G$, i.e. if $V'=V$.\\
+\\
+{\bf Isomorphic graph}\\
+Let $G=(V,E)$ and $G'=(V',E')$ be two graphs. The graphs $G$ and
+$G'$ are {\em isomorphic} and write $G\simeq G'$, if there exist a
+bijection $f:V\longrightarrow V'$ with $xy \in E \leftrightarrow
+f(x)f(y) \in E'$ for all $x,y\in V$. Such a map $f$ is called an
+{\em isomorphism}; if $G=G'$, it is called an {\em automorphism}. We
+do not normally distinguish between isomorphic graphs. Thus we
+usually write $G=G'$ rather than $G\simeq G'$. A class of graph that
+is closed under isomorphism is called a {\em graph property}.
+
+Let $\rho$ be a permutation of the vertex set $V$ of a graph $G$. For any subset $U$ of $V$, $\rho$ acts as a function from $U$ to $V$ by considering the restriction of $\rho$ to $U$. If $H$ is a subgraph of $G$ with vertex set $U$, then $\rho (H)$ is a subgraph of $G$ provided that for each edge $xy\in E(H)$, $\rho (x) \rho (y)\in E(G)$. In this case, $\rho (H)$ has vertex set $\rho (U)$ and edge set $\{\rho (x) \rho (y) :xy\in E(H)\}$.\\
+\\
+{\bf   Complement of a graph}\\  The {\em complement} $\overline{G}$ of a simple graph $G$ with the same vertex set $V(G)$ is defined by $(u,v)\in E(\bar{G})$ if and only if $(u,v)\notin E(G)$.\\
+\\
+{\bf  Degree of a graph}\\
+  The {\em degree} or {\em valency} $d(v)$ of a vertex $v$ is the number $|E(v)|$ of edges at $v$; which is equal to the number of neighbors of $v$. A vertex of degree zero is isolated.
+The vertex with degree one is known as {\em pendant vertex}.
+
+The number $$\delta(G):=min\{d(v) |v\in V\}$$ is the {\em minimum
+degree} of $G$, while $$\Delta(G):=max\{d(v)|v\in V\}$$ is its {\em
+maximum degree}. If all the vertices of $G$ have the same degree
+$k$, then $G$ is {\em $k$-regular} or simply {\em regular}. A
+$3$-regular graph is called {\em cubic}.
+\begin{cor}(Diestel, 2005)
+In any graph, the number of vertices of odd degree is even.
+\end{cor}
+The number $$d(G):=\frac{1}{V}\sum_{v\in V} d(v)$$ is the average degree of $G$. Clearly $\delta (G)\leq d(G) \leq \Delta (G)$.\\
+%{\bf     proposition 0.4.3}\\
+%The number of vertices of odd degree in a graph is always even.\\
+\\
+{\bf    Paths}\\
+A {\em path} is a non-empty graph $P=(V,E)$ of the form
+$V=\{x_0,x_1,...,x_k\}$, $E=\{x_0x_1,x_1x_2,...,x_{k-1}x_k\}$ where
+$x_i$ are all distinct. The vertices $x_0$ and $x_k$ are linked by
+$P$ and called its {\em ends}; the vertices $x_1,x_2,...,x_{k-1}$
+are the {\em inner vertices} of $P$. The number of edges of a path
+is its {\em length} and the path of length $k$ with $k+1$ vertices
+is denoted by $P_k$. Note that $k$ is allowed to be zero.
+$P=x_0x_1...x_k $ is a path $P$ from $x_0$ to $x_k$. The vertices
+encountered first, third,... are called the {\em odd vertices}, and
+the vertices encountered second, fourth,... are called the {\em even
+vertices}.
+
+ Given sets $A, B$ of vertices, we call $P=x_0...x_k$ and $A-B$ path if $V(P)\cap A=\{x_0\}$ and $V(P)\cap B=\{x_k\}$.\\
+Two or more paths are {\em independent} if none of them contain an
+inner vertex of another. Two $a-b$ paths for instance, are
+independent if and only if $a$ and $b$ are their only common
+vertices.
+
+Given a graph $H$, we call $P$ an {\em $H$-path} if $P$ is non-trivial and meets $H$ exactly in it's ends. In particular, the edge of any $H$-path of length one is never an edge of $H$.\\
+\\
+{\bf Cycle}\\  If $P=x_0...x_{k-1}$ is a path and $k\geq 3$, then
+the graph $C:=P+x_{k-1}x_0$ is called a {\em cycle}. Cycle can be
+denoted by a (cyclic) sequence of vertices; the above cycle $C$
+might be written as $x_0...x_{k-1}x_0$.
+
+  The {\em length} of a cycle is its number of edges (or vertices); the cycle of length $k$ is called a $k$-cycle and denoted by $C_k$.
+The minimum length of a cycle (contained) in a graph $G$ is the {\em
+girth} $g(G)$ of $G$; the maximum length of a cycle in $G$ is its
+{\em circumference}.
+
+An edge which joins two vertices of a cycle but is not itself an
+edge of the cycle is a {\em chord} of that cycle.
+Thus an induced cycle in $G$, a cycle in $G$ forming an induced subgraph is one that has no chords. If a graph has large minimum degree, it contains long paths and cycles.\\
+\\
+%{\bf  proposition 0.5.4}\\
+%Every graph $G$ contains a path of length $\delta (G)$ and a cycle of length at least $\delta (G)+1$ (provided that $\delta (G)\geq 2$).\\
+{\bf   Walk}\\
+A {\em walk} (of length $k$) in a graph $G$ is non-empty alternating
+sequence $v_0e_0v_1e_1...e_{k-1}v_k$ of vertices and edges in $G$
+such that $e_i={v_iv_{i+1}}$ for all $i< k$. If $v_0=v_k$, the walk
+is closed. If the vertices in a walk are all distinct, it defines an
+obvious path in $G$. In general, every walk between two vertices
+contains a path between these vertices. The {\em distance}
+$d_G(x,y)$ in $G$ of two vertices $x,y$ is the length of a shortest
+$x-y$ path in $G$; if no such path exists, we set $d(x,y):=\infty$.
+The greatest distance between any two vertices in $G$ is the {\em
+diameter} of $G$, denoted by diam $G$. A vertex is central in $G$ if
+its greatest distance from any other
+vertex is as small as possible.\\
+\\
+ %The distance is the radius of $G$, denoted by $radG$. Thus $$radG=\min_{x\in V(G)} \max_{y\in V(G)}d_G(x,y)$$
+%Then $radG\leq diam G\leq 2radG$. Diameter and radius are not related to minimum, average or maximum degree if we say nothing about the order of the graph.\\
+%{\bf  proposition 0.5.6}\\
+%Every graph G containing a cycle satisfies $g(G)\leq 2 $diam$G+1$.\\
+%{\bf  proposition 0.5.7}\\
+%A graph $G$ of radius at most $k$ and maximum degree at most $d\geq 3$ has fewer than $\frac{d}{d-2}(d-1)^k$ vertices.\\
+{\bf Connected graph}\\
+ A non-empty graph $G$ is called {\em connected} if any two of its vertices are linked by a path in $G$.
+A graph is $k$-connected if any two of its vertices can be joined by
+$k$ independent paths. The greatest integer $k$ such that $G$ is
+$k$-connected is the {\em connectivity} of $G$. The vertex
+connectivity of a connected graph $G$, denoted $K_v(G)$, is the
+minimum number of vertices whose removal can either disconnect $G$
+or reduce it to a $1$-vertex graph.
+Thus, if $G$ is not a complete graph (it has at least one pair of non-adjacent vertices), then $K_v(G)$ is the size of a smallest vertex-cut.\\
+A graph $G$ is {\em $k$-connected} if $G$ is connected and
+$K_v(G)\geq k$. If $G$ has non-adjacent vertices, then $G$ is
+$k$-connected if every vertex-cut has at least $k$ vertices.
+
+The {\em edge-connectivity} of a connected graph $G$, denoted
+$K_e(G)$, is the minimum number of edges whose removal can
+disconnect $G$. Thus, for connected graphs, the edge-connectivity is
+the size of the smallest edge-cut. A graph is {\em
+$k$-edge-connected} if $G$ is connected and every edge-cut has at
+least $k$ edges.
+
+ A maximal connected subgraph of $G$ is called a {\em component} of $G$.\\
+If $A, B\subseteq V$ and $X\subseteq V\cup E$ are such that every
+$A-B$ path in $G$ contains a vertex or an edge from $X$, then $X$
+{\em separates} the sets $A$ and $B$ in $G$ which implies $A\cap
+B\subseteq X$.
+ $X$ separates $G$ if $G-X$ is disconnected, that is if $X$ separates in $G$ some two vertices that are not in $X$.
+A separating set of vertices is a {\em separator}. A vertex which
+separates two other vertices of the same component is a {\em cut
+vertex }and an edge separating its ends is a {\em bridge}. Thus
+bridge in a graph are precisely those edges that do not lie on any
+cycle.
+The unordered pair $\{A,B\}$  is a separation of $G$ if $A\cup B=V$ and $G$ has no edge between $A\setminus B$ and $B\setminus A$. If both $A\setminus B$ and $B\setminus A$ are non-empty, the separation is proper.\\
+%{\bf  Corollary 0.6.2}\\
+%If $G$ is a connected graph,then $K_v(G)\leq K_e(G)$.Thus we always have $K_v(G)\leq K_e(G)\leq \delta(G)$.\\
+%\textbf{ 0.7   Trees and Forests}\\
+%An a cyclic graph,one not containing any cycle is called a forest.\\
+%A connected forest is called is called a tree.Thus a forest is a graph whose components are trees.The vertices of degree one in a tree are its leaves except that the root of a tree is never called a leaf,even if it has degree one.Every non-trivial tree has a leaf.$xTy$ is the unique path in a tree $T$ between two vertices $x,y$.Every connected graph contains a spanning tree.\\
+%{\bf    Theorem 0.7.1}\\
+%The following assertion are equivalent for a graph $T$:\\
+%{\bf(i)}\ $T$ is a tree\\
+%{\bf(ii)}\ Any two vertices of $T$ are linked by a unique path in $T$;\\
+%{\bf(iii)}\ $T$ is minimally connected,that is $T$ is connected but $T-e$ is disconnected for every edge $e\in T$;\\
+%{\bf(iv)}\ $T$ is maximally a cyclic,That is $T$ contains no cycle but $T+xy$ does for any two non-adjacent vertices $x,y\in T$.\\
+%{\bf  Corollary 0.7.2}\\
+%The vertices of a tree can always be enumerated,say as $v_1,...,v_n$,so that every $v_i$ with $i\geq 2$ has a unique neighbour in $\{v_1,...,v_{i-1}\}$.\\
+%{\bf   Corollary 0.7.3}\\
+%A connected graph with $n$ vertices is a tree if and only if it has $n-1$ edges.\\
+%{\bf   Corollary 0.7.4}\\
+%If $T$ is a tree and $G$ is any graph with $\delta (G)\geq \mid T\mid -1$,then $T\subseteq G$,that is $G$ has a subgraph isomorphic to $T$.\\
+%{\bf 0.7.5   Definition}\\
+%A tree $T$ with a fixed root $r$ is a rooted tree.Writting $x\leq y$ for $x\in rTy$ defines a partial ordering on $V(T)$,the tree-ordered associated with $T$ and $r$.If $x<y$,then $x$ lies below $y$ in $T$.We call $\lceil y \rceil:= \{ x| x\leq y\}$ and $\lfloor x \rfloor :=\{ y| \geq x\}$.The down-closure of $y$ and the up-closure of $x$.The root $r$ is the least element in the partial order.The leaves of $T$ are its maximal elements,the ends of any edge of $T$ are comparable and the down-closure of every vertex is a chain.The vertices at distance $k$ from $r$ have height $k$ and from the $k$th level of $T$.The rooted tree $T$ contained a graph $G$ is called normal in $G$ if the ends of every $T$-path in $G$ are comparable in the tree-order of $T$.\\
+\\
+{\bf $r$-partite graph}\\ Let $r\geq 2$ be an integer. A graph
+$G=(V,E)$ is called {\em $r$-partite} if $V$ admits a partition into
+$r$ classes such that every edge has its ends in different classes,
+vertices in the same partition class must not be adjacent. Instead
+of $2$-partite, one usually says {\em bipartite} that is a graph
+whose vertices can be partitioned into two disjoint sets $U$ and $W$
+such that every edge in the graph is incident to one vertex in $U$
+and one vertex in $W$.
+%A tree is a bipartite graph.\\
+
+An $r$-partite graph in which every two vertices from different
+partition classes are adjacent is called {\em complete (complete
+multi-partite)}; a complete bipartite graph in which $U$ has $n$
+vertices and $V$ has $m$ vertices is denoted by $K_{n,m}$. Graphs of
+the form $K_{1,n}$ are called {\em stars}; the vertex in the
+singleton partition class of this $K_{1,n}$ is the star's center. A
+bipartite graph cannot contain an odd cycle. A complete equipartite
+graph has $mn$ vertices, partitioned into $m$ disjoint parts of size
+$n$, so that any two vertices in different parts have one edge
+joining them while any two vertices in the same part have no edge
+joining them.
+\begin{prop}(Diestel, 2005)
+%{\bf   Proposition }(Diestel, 2005):\\
+A graph is bipartite if and only if it contains no odd cycle.
+\end{prop}
+%\textbf{0.9  Euler tours}\\
+%Let a closed walk in a graph referred to as Euler tour if it traverses every of the graph exactly once.A graph is Eulerian if it admits an Euler tour.\\
+%Let $E$ be an Euler tour of a graph $X$.The linear collision number of $E$,denoted $lc(E)$,is the largest $1$ such that every segment of $E$ of length $1$ is,in fact,a path.The linear collision number of $X$,denoted $lc(X)$,is the maximum $lc(E)$ over all Euler tours $E$ of $X$.\\
+%{\bf  Theorem 0.9.1}\\
+%A connected graph is Eulerian if and only if every vertex has even degree.\\
+{\bf Types of Graph}\\ A {\em hypergraph} is a pair $(V,E)$ of disjoint sets, where the element of $E$ are non-empty subsets (of any cardinality) of $V$ .\\
+A {\em directed graph (or digraph)} is a pair $(V,E)$ of disjoint
+sets (of vertices and edges ) together with two maps
+$init:E\rightarrow V$ and $ter:E\rightarrow V$ assigning to every
+edge $e$ an initial vertex $init(e)$ and a terminal vertex $ter(e)$.
+The edge $e$ is said to be {\em directed} from $init(e)$ to
+$ter(e)$. If $init(e)=ter(e)$, the edge is called a {\em loop}.
+
+A {\em perfect matching} or {\em $1$-factor}, denoted as $I$, of a
+graph $G$ of even order is a set of mutually non-adjacent edges,
+which covers all vertices. The graph $K_n-I$ is a complete graph
+minus a $1$-factor and the graph $K_n+I$ is a complete graph plus a
+$1$-factor.
+
+A relation $f:E\rightarrow \{ \{x,y\}|x,y\in V\}$ that maps to each
+edge a set of endpoints, is known as {\em edge-endpoint relation}.
+If $f$ is not injective, that is, if there exist $e,e'\in E$ such
+that $e\neq e',f(e)=f(e')$, then we say that $G$ is a {\em
+multigraph} and we call any such edges $e,e'\in E$ multiples edges.
+We call edges $e\in E$ such that $|f(e)|=1$ loops, that is, it makes its own neighbor and contributes two to its degree. \\
+{\em Parallel edges} or {\em multiple edges} are edges that have the
+same pair of end points.
+
+Graphs without multiple edges or loops are known as {\em simple graphs}.\\
+The graph denoted as $N_n$ that has $n$ vertices and no edges is
+known as {\em null graph}.
+
+If $G$ and $H$ are vertex-disjoint graphs, then the {\em join} of
+$G$ and $H$, denoted by $G\bowtie H$, is the graph obtained by
+taking the union of $G$ and $H$ together with all possible edges
+having one end in $G$ and the other end in $H$.
+
+A {\em wheel graph} $W_n$ of order $n$, sometimes simply called an
+{\em $n$-wheel} is a graph that contains a cycle of order $n-1$, and
+for which every graph vertex in the cycle is connect to one other
+graph vertex (which is known as {\em hub}, that is the central point
+in a wheel graph $W_n$). The edges of a wheel which include the hub
+are called {\em spokes}. The wheel $W_n$ can be defined as the graph
+$K_1+C_{n-1}$ where $K_1$ is the singleton graph and $C_n$ is the
+cycle graph. In a wheel graph, the hub has degree $n-1$ and other
+nodes have degree $3$. Wheel graphs are $3$ connected.
+The {\em Helm graph} $H_n$ is the graph obtained from an $n$-wheel graph by adjoining a pendant edge at each node of the cycle.\\
+A {\em Web graph} is a graph obtained by joining the pendant points
+of a helm to form a cycle and then adding a single pendant edge to
+each vertex of the outer cycle. {\em Crown} is a graph obtained by
+joining a single pendant edge to each
+vertex  of cycle $C_n$. The $\it{flower}$ $Fl_n$ is the graph obtained from a helm $H_n$ by joining each pendant vertex to the apex of the helm.\\ \ \\
+{\bf Graph product}\\
+The {\em cartesian graph product} of  simple graphs $G$ and $H$ is the graph  $G\Box H$ whose vertex set is $V(G)\times V(H)$ and whose edge set is the set of all pairs $(u_1,v_1)(u_2,v_2)$ such that either $u_1u_2\in E(G)$ and $v_1=v_2$, or $v_1v_2\in E(H)$ and $u_1=u_2$. Thus for each edge $u_1u_2$ of $G$ and each edge $v_1v_2$ of $H$, there are four edges in $G\Box H$.\\%, sometimes simply called the {\em graph product} of graphs $G_1\times G_2$ with disjoint points sets $V_1$ and $V_2$ and edge sets $X_1$ and $X_2$ is the graph with points set $V_1\times V_2$ and $u=(u_1,u_2)$ adjacent with $v=(v_1,v_2)$ whenever $[u_1=v_1$ and $u_2adj v_2]$ or$[u_2=v_2$ and $u_1 adj v_1]$.\\
+%M.E Watkins gives the definition of  the generalized Petersen's graph $P(n,k)$,where $n\geq 5$ and $1\leq k \leq n$,has vertex set $\{a_0,a_1,...,a_{n-1},b_0,b_1,...,b_{n-1}\}$ and edge set $\{a_ia_{i+1}|i=0,1,...,n-1\}\cup \{a_ib_i|i=0,1,...,n-1\} \cup \{b_ib_{i+k}|i=0,1,...,n-1\}$ where all subscripts are taken modulo $n$.The standard Petersen graph is $P(5,2)$.\\
+%\textbf{ 0.11 Matching of a Graph}\\
+%A set $M$ of independent edges in a graph $G=(V,E)$ is called a matching.\\
+%$M$ is a matching of $U\subseteq V$ if every vertex of $U$ is incident with an edge in $M$.The vertices in $U$ are then called matched (by $M$);vertices not incident with any edge of $M$ are unmatched.A $k$-regular spanning subgraph is called a $k$-factor.\\
+%Thus a subgraph $H\subseteq G$ is a $1$-factor of $G$ if and only if $E(H)$ is a matching of $V$.\\
+%A set $U\subseteq V$ a (vertex) cover of $E$ if every edge of $G$ is incident with a vertex in $U$.\\
+{\em Lexicographic product} of graphs $G$ and $H$  is the graph
+having the vertex set $V(G)\times V(H)$, and with an edge joining
+$(g_1,h_1)$ to $(g_2,h_2)$ if and only if there is an edge joining
+$g_1$ to $g_2$ in $G$; or $g_1=g_2$ and there is an edge joining
+$h_1$ to $h_2$ in $H$. Lexicographic product of graphs $G$ and $H$
+denoted by $G*H$ is obtained by replacing every vertex of $G$ by a
+copy of $H$ and every edge of $G$ by the complete bipartite graph
+$K_{|H|,|H|}$. The graph $K_n *\bar{K}_m$ is isomorphic to the
+complete $n$-partite graph in which each partite set has exactly $m$
+vertices. The graph $C_r *\bar{K}_m$ is an equipartite graph and the
+degree of any vertex in $C_r *\bar{K}_m$ is $2m$, the total number
+of edges in $C_r *\bar{K}_m$ is $rm^2$. For any graph $G$, we denote
+by $G(l)$, the lexicographic product of $G$ with the
+complement of complete graph on $l$ vertices, $G *\bar{K}_l$.\\
+The lexicographic product has the following useful property:
+\begin{prop}(Smith, 2008)
+For any graph $G$ and any positive integers $n$ and $t$,
+$$(G*\bar{K}_n)*\bar{K}_t=G*\bar{K}_{nt}.$$
+\end{prop}
+The {\em tensor product} of graph $G$ and $H$, $G\times H$ has vertex set $V(G)\times V(H)$ in which two vertices $(g_1,h_1)$ and $(g_2,h_2)$ are adjacent whenever $g_1g_2\in E(G)$ and $h_1h_2\in E(H)$.\\
+Let $G$ be a graph of order $n$ and $H$ any graph, the {\em corona} of $G$ with $H$, denoted by $G\odot H$, is the graph obtained by taking one copy of $G$ and $n$ copies of $H$ and joining the $i$-th vertex of $G$ with an edge to every vertex in the $i$-th copy of $H$. A special kind of corona graph is a cycle with pendants points which is known as {\em sunlet graph} or {\em n-sun graph} or {\em crown} . \\
+\\
+%{\bf  Definition 0.11.1}\\
+%Let $G=(V,E)$ be a fixed bipartite graph with bipartition $\{A,B\}$.A path in $G$ which starts in $A$ at an unmatched vertex and then contains, alternatively,edges from $E\backslash M$ and from $M$, is an alternating path with respect to $M$.\\
+%An alternating path $P$ that ends in an unmatched vertex $B$ is called the augmenting path,because we can use it to turn $M$ into a larger matching.\\
+%{\bf   Theorem 0.11.2}\\
+%The maximum cardinality of a matching in $G$(bipartite graph) is equal to the minimum cardinality of a vertex cover of its edges.\\
+%{\bf   Theorem 0.11.3}\\
+%$G$ (bipartite) contains a matching $A$ if and only if $|N(S)|\geq |S|$ for all $S\subseteq A$.\\
+%{\bf  Theorem 0.11.4}\\
+%If $G$ (bipartite) is $k$-regular with $k\geq 1$,then $G$ has a $1$-factor.\\
+%{\bf   Theorem 0.11.5}\\
+%Every regular graph of positive even degree has a $2$-factor.\\
+%{\bf  Definition 0.11.6}\\
+%Given a graph $G$ let$C_G$ denotes the set of its components,and by $q(G)$ the number of its odd components ,those of odd order .If $G$ has a $1$-factor, then $q(G-S)\leq |S|$ for all $S\subseteq V(G)$.\\
+%{\bf  Theorem 0.11.7}\\
+%A graph $G$ has a $1$-factor if and only if $q(G-S)\leq |S|$ for all $S\subseteq V(G)$.\\
+{\bf Hamilton path and cycle}\\
+A {\em Hamilton path} or {\em traceable path} is a path that visits each vertex exactly once.\\
+A graph that contains a Hamilton path is called a {\em traceable graph}.\\
+A graph is {\em Hamilton-connected} if for every pair of vertices there is a Hamiltonian path between the two vertices.\\
+A {\em Hamilton cycle, Hamilton circuit, vertex tour} or {\em graph cycle} is a cycle that visits each vertex exactly once (except the vertex which is both the start and end, and so is visited twice). A graph that contains a Hamiltonian cycle is called a {\em Hamiltonian graph}.\\
+%A Hamiltonian decomposition is an edge decomposition of a graph into Hamiltonian circuit.\\
+Examples of Hamiltonian graph are complete graph with more than two vertices and cycle.
+%\begin{enumerate}
+%\item[i.] A   is Hamiltonian
+%\item[ii.] Every cycle graph  is Hamiltonian.
+%\end{enumerate}
+Any Hamiltonian cycle  can be converted  to a Hamiltonian path  by removing one of its edges, but a Hamiltonian path can be extended to Hamiltonian cycle only if its endpoints are adjacent .\\
+The line graph of a Hamilton graph is Hamiltonian.\\
+\\
+%The closure $cl(G)$ is uniquely constructed from $G$ by successively adding for all non-adjacent pairs of vertices $u$ and $v$ with degree $(v) + degree (u) \geq n$ the new edge $uv$.\\
+%{\bf  Theorem 0.12.1 (Dirac)}\\
+%Every graph with $n\geq 3$ vertices and minimum degree at least $n/2$ has a Hamilton cycle.\\
+%{\bf  Theorem 0.12.2  (Bondy-chvatal)}\\
+%A graph is Hamiltonian if and only if its closure is hamiltonian.\\
+%{\bf   Theorem 0.12.3 (Ore)}\\
+%A graph with $n$ vertices $(n\geq 3)$ is hamiltonian if for each pair of non-adjacent vertices,the sum of their degrees is $n$ or greater.\\
+{\bf Cayley graph}\\
+ Let $S$ be a subset of a finite group $\Gamma$ satisfying
+ \begin{enumerate}
+\item[i.] $1\notin S$, where $1$ denotes the identity of $\Gamma$, and
+\item[ii.] $S=S^{-1}$, that is, $s\in S$ implies that $s^{-1}\in S$.
+\end{enumerate}
+A subset $S$ satisfying the above conditions is called a {\em Cayley subset}. The {\em Cayley graph} $X(\Gamma;S)$ is defined to be that graph whose vertices are the elements of $\Gamma$ and there is an edge between vertices $g$ and $h$ if and only if $h=gs$ for some $s\in S$. We call $S$ the connection set and say that $X(\Gamma;S)$ is a cayley graph on the group $\Gamma$.\\
+\\
+{\bf  Circulant graph}\\  Let $k$ be a positive integer and $L$ a subset of $\{ 1,2,...,\lfloor \frac{k}{2}\rfloor \}$. A {\em circulant graph} $X=X(k;L)$ is a graph with vertex set $V(X)=\{u_0,u_1,...,u_{k-1}\}$ and edge set $E(X)=\{ u_iu_{i+\ell}:i\in Z_k,\ell  \in L\}$. The edge $u_iu_{i+\ell}$, where $\ell\in L$, is said to be of length $\ell$, and $L$ is called the edge length set of the circulant $X$.\\
+When $k$ is even, the edge length $\frac{k}{2}$ is called the {\em diameter length}, and edges $u_iu_{i+\ell}$ and $u_{i+\frac{k}{2}}u_{i+\frac{k}{2}+\ell}$ of length $\ell$ are called {\em diametrically opposed}.\\
+Where $S=L\cup (-L)$, so that $S\subseteq \{1,...,k-1\}$ and $-S=S$, rather than by its edge length set $L$.\\
+A path $P$ in a circulant $X(k;L)$ with the property that no two
+edges of $p$ are of the same length is called a {\em zig-zag} path.
+The set of all edge lengths represented in $P$, denoted by $L(P)$,
+is called the edge length set of $P$.
+\section{Graph Decomposition}
+Let $G$ be a graph and $G_1,G_2,...,G_k$ be a family of subgraphs of $G$. Subgraphs $G_1,G_2,...,G_k$ {\em decomposes} $G$ if their edge set form a partition of the edge set of $G$. Any member of the family is called a {\em part} (of the decomposition). This decomposition is usually denoted by $G=G_1\oplus G_2\oplus...\oplus G_k$.\\
+A graph $G$ is said to be {\em $H$-decomposable} (or {\em has an
+$H$-decomposition}) if $G$ has decomposition in which  all of its
+parts are isomorphic to the graph $H$. We also say that $G$ has an
+isomorphic decomposition into the graph $H$. If $H$ is a spanning
+subgraph of $G$, then $H$ is called an {\em isofactor} of $G$ and
+$G$ has an isomorphic factorization into the graph $H$. We write
+$H|G$, if $H$ decomposes $G$. Clearly every nonempty graph $G$ has a
+$K_2$-decomposition and a $G$-decomposition (as well as
+$G$-factorization).
+
+A {\em factor} $F$ of a graph $G$ is a subgraph for which
+$V(F)=V(G)$. An {\em $r$-factor} of $G$ is a factor that is regular
+of degree $r$. Clearly, a $2$-factor is a disjoint union of cycles.
+An {\em $r$-factorization} of a graph $G$ is a partition of the edge
+set $E(G)$ into $r$-factors. Thus a graph $G$ having a
+$2$-factorization must be regular of even degree. An {\em
+${H_1,H_2,...,H_k }$-factorization} of a graph $G$ is a partition of
+the edge set $E(G)$ into factors such that each component of any
+factor is isomorphic to $H_i, 1\leq i\leq k$. In particular, an {\em
+$H$-factorization} of $G$ is a partitioning of $E(G)$ into factors
+such that each factor is a disjoint union of $H$'s.\\
+A resolvable $k$-cycle decomposition  (for short, $k$-RCD) of $G$,
+is a $2$-factorization of $G$ in which each $2$-factor  is a
+$C_k$-factor.  By a $C_k$-factorization of a graph $G$, we mean a
+$k$-RCD of $G$.
+
+%In this research work, we consider the crown graph as the sunlet graph denoted by $L_q$, that is sunlet graph on $q$ vertices.\\
+%Also, decomposition of a graph $G$ into sunlet graphs is known as the sunlet graph %decomposition.\\
+
+%Given a graph $G$, a decomposition of $G$ is a partition of the edge set $E(G)$ of $G$ into subgraphs $H_1,H_2,...,H_k$ which is denoted by $G=H_1\oplus H_2\oplus ...\oplus H_k$. If $G=H_1\oplus H_2\oplus ...\oplus H_k$, where $H_1,...,H_k$ are all isomorphic to $H$, then $G$ is said to be isomorphic to $H$, then $G$ is said to be $H$-decomposable  and $\{ H_1,...,H_k\}$ is an $H$-decomposition of $G$. In particular, $G$ is $C_m$-decomposable if it can be decomposed into subgraphs isomorphic to an $m$-cycle.\\
+An {\em Hamilton decomposition} of a graph $G$ is the decomposition
+of the graph $G$ into Hamilton cycles. {\em Path decomposition} is
+the decomposition of the graph $G$ into paths. A decomposition of
+$K_n$ into copies of $G$ is called {\em cyclic} if the automorphism
+group of the decomposition itself contains the cyclic group of order
+$n$. Decomposition of a graph $G$ into sunlet graphs is known as the
+{\em sunlet graph decomposition}
+
+A design is a pair $(X,A)$ such that the following properties are
+satisfied: \ben \item $X$ is a set of elements called points and
+\item $A$ is a collection of nonempty subset of $X$ called blocks.
+\een An $H$-decomposition of complete graph $K_n$ is also known as
+an {\em $H$-design} of order $n$. A {\em Balanced Incomplete Block
+Design} {\em (BIBD}) or {\em a $2-(n,k,\lambda)$ design} is an
+ordered pair $(X,B)$ where $X$ is a $n$-set and $B$ is a collection
+of $k$-element subsets (blocks) of $X$. Thus, each pair of elements
+of $X$  occur together in exactly $\lambda$ blocks of $B$. A {\em
+(BIBD}) is called an incomplete block design because $k<n$ and hence
+all its blocks are incomplete blocks. \\A {\em steiner triple system
+of order $n$}, {\em STS(n)} is a $2-(n,3,1)$ design and it is
+well-known that an $STS(n)$ exists if and only if $n\equiv 1\ \ or\
+\ 3(mod\ 6)$. The existence of an $STS(n)$ is equivalent to the
+existence of a $K_3$-decomposition of $K_n$, that is, decomposing
+$K_n$ into triangles. The existence of a $2-(n,k,\lambda)$ design
+can be obtained by finding the
+$K_k$-decomposition of $\lambda K_n$.\\
+A $K_k$-decomposition of complete $n$-partite graph is a $k$-Group
+Divisible Designs.
+
+
+
+\chapter{LITERATURE REVIEW }
+%\begin{document}
+%\begin{large}
+%%
+%% The title of the paper goes here.  Edit to your title.
+%
+%\begin{center}
+%\end{center}
+%By a decomposition of a nonempty graph $G$ is meant a family of subgraphs $G_1,G_2,...,G_k$ of $G$ such that their edge set form a partition of the edge set of $G$. Any member of the family is called a part (of the decomposition). This decomposition is usually denoted by $G=G_1\oplus G_2\oplus...\oplus G_k$.\\
+%A graph $G$ is said to be $H$-decomposable (or has an $H$-decomposition) if $G$ has decomposition in all of its parts are isomorphic to the graph $H$. We also say that $G$ has an isomorphic decomposition into the graph $H$. If $H$ is a spanning subgraph of $G$, then $H$ is called an isofactor of $G$ and $G$ has an isomorphic factorization into the graph $H$. Clearly every nonempty graph $G$ has a $K_2$-decomposition and a $G$-decomposition (as well as $G$-factorization).\\
+%A great deal of research has been done on the study of isomorphic decomposition of complete graphs. This appear to have been motivated by its close relationship to the theory of block designs. For this reason, an $H$-decomposition of $K_n$ is sometimes called an $H$-design on $K_n$. Nevertheless, the fundamental question of determining whether complete graph $K_n$, complete bipartite graphs, complete multipartite graphs has an $H$-decomposition for a given graph $H$ has not been solved in general.
+In this chapter, available work on graph decomposition  are reviewed
+as they relate to this study. The first two sections and the fourth review decompositions of complete graph into cycles, Hamilton graphs and blowing up cycles respectively. The third section is about partite graphs decomposition while the last section deals with sunlet graphs decomposition.
+\section{\protect\smallskip Cycle decomposition of complete graph $K_n$}
+
+The study of cycle decomposition of complete graphs has its root in the mid-nineteenth century works of Kirkman et al (See DeVries, 1984). %\cite{HLD}
+The authors determined the necessary and sufficient conditions for the existence of $3$-cycle  decompositions of complete graphs now known as Steiner triple systems. Walecki was credited with constructing Hamilton cycle decomposition of complete graphs in Lucas (1892) %\cite{DLR1}
+but the intense study of the general problem of determining the
+necessary and sufficient conditions for decomposing  complete graph
+$K_n$ into cycles of length $m$ did not start until 1960s.
+
+%An
+Extensive literature exists on isomorphic decomposition of complete
+graphs into cycles. Clearly if $K_n$ has a $C_m$-decomposition, then
+$n$ is odd and the number of edges of $K_n$ is a multiple of $m$.
+The following are the necessary conditions for the decomposition of
+complete graph $K_n$ into $m$-cycles:
+
+i. For length $m$, $3\leq m\leq n $;
+
+ii. $m$ is a factor of $\left|E(K_n)\right|$, where $E(K_n)$ is an
+edge set of $K_n$;
+
+iii. $n$ must be odd so that the degree is even.\\
+An old conjecture which was later stated by Alspach is as follows.
+\begin{conj} (Alspach, 1981) These necessary conditions are also sufficient for $K_n$ to be $C_m$-decomposable.
+\end{conj}
+The conjecture has been proved for many values of $n$ and $m$.
+
+Kotzig (1965) % \cite{AKON}
+ proved that the conjecture is true
+%that these necessary conditions for decomposing complete graph $K_n$ into cycle $C_m$ were sufficient
+for all even $m$ and $n\equiv 1 \mod 2m$ while  Wilson
+(1974 )%\cite{RWC1}
+   \;proved it for %when
+   $n$ %is
+   odd and large
+enough.
+%later showed that these necessary conditions for the decomposition of complete graph $K_n$ into cycles $C_m$ were sufficient for $n$ odd and large enough.\\
+Bermond et al (1978) %\cite{JC1}
+ showed that if the conjecture is true
+for $m$ even, $m \leq n \leq 3m$,
+%$m\leq n\leq 3n$,
+ then it is true for all $n\geq m$.
+%necessary conditions for the decomposition of complete graph $K_n$ into cycles are sufficient for $n$ odd and $m$ even in the range $m\leq n\leq 3m$ then they are sufficient for all $n\geq m$.  \\
+Alspach and Varma  (1980) %\cite{BA3}
+ proved the conjecture %was proved % showed that these necessary conditions for the decomposition of complete graph $K_n$ into cycles were sufficient
+for $m$ twice an odd prime power,  Hoffman et al (1989) %\cite{DHOR}
+ showed that the result of Bermond  et al (1978) %\cite{JC1}
+ also holds for $m$ odd
+and Bell (1991) %\cite{EBD}
+  proved the conjecture for all $m\leq 50$.
+
+%showed that these necessary conditions for the
+%decomposition of complete graph $K_n$ into cycle $C_m$ were
+%sufficient for all $m\leq 50,n$ odd.
+The necessary conditions for the decomposition of $K_n-I$ into
+cycles $C_m$ is that the number of edges in $K_n-I$ must be multiple
+of $m$ and $n$ even and
+it can be deduced from the work of  Haggkvist (1985)\;%\cite{RHA}
+ and Tarsi (1983) %\cite{MTD1}
+ that the  necessary condition for the decomposition of $K_n-I$ into cycles of even length $m$ are sufficient if the number of edges in $K_n-I$ is an even multiple of $m$.
+
+
+ Alspach and Marshall (1994) %\cite{BA4}
+  showed that these necessary
+ conditions are sufficient for $K_n-I$ to be $C_m$-decomposable for
+ $m$ even
+ %for the decomposition of the graph $K_n-I$ into cycles were sufficient for $K_n-I$ (n even) and $m$ even
+ and suggested that the result of Hoffman et al (1989) %\cite{DHOR}
+   can be extended to $K_n-I$ with $m$ odd. Also, they showed that the necessary conditions were sufficient for $K_n-I$ to be $C_m$-decomposable when $n$ is divisible by $4$ and $m$
+ even,
+ %into cycles of even length $m$ when $n$ is divisible  by $4$,
+ and still when the number of edges in $K_n-I$ is an odd multiple of $m$ and the congruence class of $n$ modulo $m$ lies between $\frac{m}{2}$ and $m$ (that is $n=qm+r$ where $q$ is a positive integer and $\frac{m}{2}\leq r <m$).
+
+Alspach and Gavlas (2001) %\cite{BA}
+   extended the problem of cycle decomposition to graphs of even order that are close to complete graphs but still simple, that is, a complete graphs minus a $1$-factor. They proved that the necessary conditions for decomposing complete graph $K_n$ or complete graph minus a $1$-factor $K_n-I$ into cycles of length $m$ are also sufficient whenever $m$ and $n$ are both odd or even. These results were extended by
+ Sajna (2002) %\cite{MS3}
+   %extended the result of Alspach and Gavlas (2001) %\cite{BA}
+   to the remaining two cases where $m$ and $n$  are of opposite parity, thereby completely solving the problem and Alspach et al (2003) %\cite{BA5}
+ also solved the closely related problem of decomposing complete directed graphs into directed cycles of equal length.
+
+Sajna (2003) %\cite{MS4}
+proved that these necessary conditions are sufficient for the
+decomposition of complete graph plus $1$-factor $K_n+I$ into cycle
+which extended  the work of
+Alspach-Gavlas-Sajna while Liang (2005) %\cite{ZLD1}
+showed that these necessary conditions are sufficient for the
+decomposition of complete graph $K_n$ into cycle of length $2K_k$
+while
+Shan and Kang (2006) %\cite{XSQ1}
+ proved that they (the necessary conditions) are sufficient for the decomposition of complete graphs into $(2k-1)$-cycles with one chord.
+
+%Maheo (1980) %\cite{MMS1}
+ These necessary conditions were proved by Maheo (1980) to be sufficient for the decomposition of complete graphs into $3$-dimensional cubes for $n$ even and Kotzig (1981) %\cite{AKD1}
+showed that they are sufficient for decomposition of complete graphs into $d$-dimensional cubes of even dimension $d$ and for the case when $d$ and $n$ are odd. Kotzig's result was extended by Bryant et al (2006) %\cite{DBS}
+ by decomposing complete graphs into $5$ cubes
+ and showed that the necessary conditions are sufficient.
+
+ % which extend the result of Kotzig (1981).  \cite{AKD1}.
+ %showed that these necessary conditions are sufficient for the decomposition of complete graphs into $5$ cubes which extends the result of Kotzig \cite{AKD1}.\\
+%Hoffman et, al. \cite{DHRO1} showed that if the necessary conditions are  sufficient  for all $n$ satisfying $k\leq n<3k$, then they are sufficient for all $n$. They also proved that there exists a $15$-cycle system of order $n$ if and only if $n\equiv 1,15,21\ \ \ or\ \ \ 25(mod\ \ \ 30)$ and there exist $21$-cycle system of order $n$ if and only if $n\equiv 1,7,15,\ \ \ or\ \ \ 21(mod\ \ \ 42),n\neq 7,15$.
+Bryant et al    (2010) %\cite{DBC1}
+showed that the necessary conditions for the existence of a
+decomposition of the complete multigraph of $n$ vertices and with
+$k$ edges joining each pair of distinct vertices into $m$-cycles, or
+into $m$-cycles and a perfect matching, are also sufficient. This
+result follows as consequence of more general results which were to
+be obtained on decompositions of complete multigraphs into cycles of
+different lengths.
+
+Alspach (1981) %\cite{BA7}
+  proposed the following conjecture on decomposition of complete graph.
+\begin{conj} (Alspach, 1981) For any $n$-admissible list $m_1,m_2,...m_t$, there is a decomposition of the complete graph $K_n$ into $t$-cycles having lengths $m_1,m_2,...,m_t$ if $n$ is odd or into $t$-cycle $m_1,m_2,...,m_t$ and a $1$-factor if $n$ is even. Furthermore, if such decomposition exist for a list $M=m_1,m_2,...,m_t$, then $K_n$ will have a $(M)^*$-decomposition.
+\end{conj}
+This conjecture was proved later by Bryant and Horsely (2009).
+ %\cite{DBH}.
+Bryant (2007) %\cite{DBC}
+proved the following result using edge coloring technique, which
+also yielded new proofs of various known results on graph
+factorizations, like a new construction for Hamilton cycle
+decomposition of complete graphs.
+\begin{thm} (Bryant, 2007)
+For $k=1,k=2$ the obvious necessary numerical conditions for packing
+$t$ pairwise edge-disjoint $k$-regular subgraphs of specified orders
+$m_1,m_2,...,m_t$ in the complete graph of order $n$ are also
+sufficient.
+\end{thm}
+
+Let $STS(v)=(V; T)$ be Steiner triple system  for the set of
+vertices $V$ and the set of triples. Doyen and Wilson (1973) showed
+that a $STS(u)$ is a subsystem of $STS(v)$ for every $u$ and $v$
+such that $u,v \equiv 1,3 \mod 6$ and $v > 2u$. Similar recursive
+construction method of $STS(2v + s)$ for $s = 1$ or $7$
+based on a given $STS(v)$  was given in Stanton and Goulden (1997). %\cite{RGG2}.\\
+Stanton et al  (1981) %\cite{RGG1}
+solved the problem of graph factorization . They studied One-factors
+and one-factorizations of the complete graph of even order $2n$,
+written as $K_{2n}$.
+
+ %\cite{FAR}
+The Enumeration of all $2$-factorizations of $K_9$ (by types) as
+well as those of several types for $K_{11}$ were done by Franek and
+Rosa  (2000) while
+Choi et al (2008)  %\cite{YKL}
+constructed $1$-factorizations of given complete graphs of even
+order, thereby giving new constructions of one-factorizations of a
+cyclic complete graph $K_{2n}$ depending on whether $2n / gcd(\alpha
+\; 2n)$ is even or odd (where $\alpha$ is a positive integer) in the
+set of all edge differences in $K_{2n}$ and by applying Doyen-Wilson
+theorem (1973) %\cite{JRW}
+on a recursive construction scheme, an infinite family of $STS(v)$
+was obtained.
+ \section{\protect\smallskip Hamilton decomposition of complete graph $K_n$}
+ A Hamiltonian decomposition of the complete graph $K_{2n+1}$ is an edge-colouring of $K_{2n+1}$ with
+$n$ colours in which each set of edges with the same colour is a
+circuit of length $2n+1$. Alspach et al (1990) %\cite{NAH1}
+constructed Walecki's Hamilton cycle decomposition. Using a
+novel method called amalgamated Hamiltonian decomposition, Hilton (1984) %\cite{JNH1}
+outlines a procedure for obtaining all Hamiltonian decompositions of
+$K_{2n+1}$. This result was applied to obtain a necessary and
+sufficient condition for an edge-coloring of $K_r $, $(r \leq 2n)$
+with $n$ colours to be extendible to a Hamiltonian decomposition of
+$K_{2n+1}$.
+
+Lucas (1892) % \cite{DLR1}
+posed a recreational problem as given $2n+1$ people, is it possible to arrange them around a single table on $n$ successive night  so that nobody is seated next to the same person on either side more than once?  Alspach (2006) %,\cite{BA1},
+related this problem to the graph theory noting that $2n+1$ people
+corresponds to the vertices of $K_{2n+1}$, complete graph of order
+$2n+1$, and the arrangement of them around a single table
+corresponds to a Hamilton cycle in $K_{2n+1}$. Graph decomposition
+is often described by the action of a permutation $\rho$.
+
+The decomposition of complete graph $K_{2n+1}$ of odd order into $n$
+Hamilton cycles was done by Walecki (Lucas, 1892). He went further to prove that
+complete graph $K_{2n}$ of even order can be decomposed into $n-1$
+Hamilton cycles and $1$-factor. By removing the vertex $u_0$ in the
+case of the decomposition of $K_{2n+1}$ into Hamilton cycles, gives
+a decomposition of the even order complete graph $K_{2n}$ into
+Hamilton paths. Walecki equally produced three fundamental
+decompositions all of which are variations on a common theme:\\
+ A decomposition of odd order complete graphs into Hamilton cycles, a
+decomposition of even order complete graphs into Hamilton paths, and
+a decomposition of even order complete graphs with a $1$-factor
+removed into Hamilton cycles.
+
+ %Wallis (1997) %\cite{WDOS}
+ Results  on one-factorization  of a complete graph were given by  Wallis (1997). He proved that the graph $K_n-I$ does
+have a decomposition into Hamilton cycles. Leach and Rodger (2004) %\cite{CDR3}
+ proved that there is a
+3-factor in $K_n$ such that if its edges are removed, the resulting
+graph is Hamiltonian decomposable and they in fact, proved that
+given any $2$-factor, there is a 3-factor containing the given
+$2$-factor such that the above statement is true.  Akiyama  et al (2004) %\cite{JA}
+ solved the problems on Hamilton cycle
+decomposition of the complete graph by constructing a  symmetric
+Hamilton cycle decomposition of $K_n$ different from Walecki's
+construction.
+
+ %\cite{MBD}
+Necessary and sufficient conditions  for the existence of a Hamilton
+cycle decomposition of $K_n$ that is invariant under a cyclic
+permutation of the vertices was presented by Burati and Delfra
+(2004) while decomposing $K_n-I$ into cycles of given uniform length
+was done by Bryant (2007).
+
+A symmetric Hamilton cycle in $K_{n,n}$ is a Hamilton cycle for
+which $i\bar j$ is an edge if and only if ?$\bar i j$ is an edge. In
+other words, a Hamilton cycle in $K_{n,n}$ is symmetric if and only
+if it is invariant under the involution $i\longrightarrow \bar i$. A
+symmetric Hamilton cycle decomposition of $K_{n,n}$ partitions the
+edges of $K_{n,n}$ into m symmetric Hamilton cycles.
+Brualdi and Schroeder (2010) %\cite{RAB}
+ established the
+decomposition of complete graph minus $1$-factor into symmetric
+Hamilton cycle. Meanwhile, Laskar (1978) %\cite{RL8}
+presented the necessary and sufficient condition for the existence
+of Hamilton cycle decomposition of a composite graph.
+
+With Auerbach, Laskar and Auerbach (1976) %\cite{RBO3}
+showed that the complete multipartite graph $K_{m(n)}$ has a
+Hamilton decomposition whenever the valency is even.
+
+
+ Let $K(n,r)$
+denote the complete $r$-partite graph $K(n,n,...,n)$. They confirmed
+that $K(n,r)$ is the union of $n(r-1)/2$ of its Hamilton circuits
+which are mutually edge-disjoint, and for all odd $n(r-1)\geq 1$,
+$K(n,r)$ is the union of $(n(r-1)-1)/2$ of its Hamilton circuits and
+a $1$-factor, all of which are mutually disjoint. In the end, they
+extended the solutions to the Hamilton cycle decomposition of cayley
+graphs.
+
+ Alspach (1984) %\cite{BA6} #
+ conjectured that any $2k$-regular connected  cayley graphs on a finite abelian group has a Hamiltonian decomposition which is clearly trivial for $k=1$. Bermond  et al (1989) %\cite{JC}
+ proved the conjecture for $k=2$
+ while Liu (1994) %\cite{JHD2}
+  established it  for the case of if $S=\{s_1,s_2,...,s_k\}$ is a minimal generating set of an abelian group $A$ of odd order. The author in (2003a) %\cite{JLH1}
+ also confirmed the conjecture in Alspach (1984) %\cite{BA6}
+for abelian group of even order.
+
+Liu (1996) %\cite{JHD5}
+ gave the necessary and sufficient conditions
+for the decomposition of cayley graphs into Hamilton cycles, Morris
+ et al (2009) %\cite{DWW}
+solved the problem of Hamiltonian cycle decomposition of $(2,3,c)$
+circulant graphs and Quin  et al (2009) %\cite{YWS1}
+using a linear algebra technique, found the conditions of
+Hamiltonicity of cayley graphs.
+
+\section{\protect\smallskip Cycle decomposition of complete bipartite, tripartite and multipartite graph}
+
+The same problem of decomposing  bipartite, tripartite and
+multipartite graphs into cycles were considered by some authors
+among which are
+ Bermond (1975), %\cite{JC2},
+ Bermond  and Faber (1976). They %\cite{JC4}
+ used composition method to solve the problem of  decomposition  of complete graph $K_m$ (complete directed graph $K_m^*$) into cycles (circuits) of given lengths and conjectured that necessary conditions for $K_{m,n}^*$ to admit cycle decomposition are sufficient.
+ Bermond and Sotteau  (1976) %\cite{JC3}
+ investigated the result of Bermond (1975) %\cite{JC2}
+ further and came out with an improvement that the necessary conditions for the decomposition of $K_n$ $(K_n^*)$ are in fact sufficient.
+
+Sotteau (1981) %\cite{DSD1}
+continued investigated further on the existence of cycle (circuit)
+decomposition of complete directed bipartite graphs and also gave
+the necessary and sufficient conditions for  $K_{m,n} (K_{m,n}^*)$
+to admit a decomposition into $2k$-cycles ($2k$-circuits) which
+answered the
+conjecture in Bermond (1975),  %\cite{JC2},
+ Bermond  and Faber (1976).  %\cite{JC2,JC4}.
+Later, Schmeichel (1982) %\cite{ESB1}
+ proved that bipartite graphs
+contain cycles of even length when $n>3$.
+
+Dirac (1972) %\cite{GDO}
+showed that for all odd $m\geq 1$, $K_{m,m}$ is the union of
+$\frac{m-1}{2}$ of its Hamilton circuits and a
+$1$-factor (which are mutually edge-disjoint ) and Laskar and Auerbach (1976) %\cite{RBO3}
+%make use of the result of Berge \cite{CBG1} to
+proved the following results:
+ \ben
+\item For all even $n(r-1)\geq 2$, the complete $r$-partite graph $K(n;r)$ is the union of $\frac{n}{2}(r-1)$ of its Hamilton circuits (which are mutually edge-disjoint).
+    \item For all odd $n(r-1)\geq 1$, the complete $r$-partite graph  $K(n;r)$ is the union of $\frac{1}{2}(n(r-1)-1)$ of its Hamilton  circuits and a $1$-factor  (which are mutually edge-disjoint).
+\een
+
+ Ramirez-Alfosin (1995) %\cite{JAC3}
+  used similar technique as Haggakvist's (Haggakvist, 1985) %\cite{RHA}
+   called the root path decomposition technique to prove
+ %that the conjecture posed in \cite{BA7} is true for some families of
+the following: \\
+For some families of integers $a_i, \ 3\leq a_i\leq n$:
+ \ben
+\item[i.] $<C_{n-1},C_{n-2},C_{n-3},...C_4,C_3,C_3|K_n>$, where $n$ is odd
+\item[ii.] $< nC_n,nC_{n+1}|K_{2n+1}>$, where $n$ is odd
+\item[iii.] $<2C_{2n-2},2C_{2n-4},...,2C_6,3C_4|K_{2n}-I>$, where $n$ is even.
+\een
+He also extended the work of Sotteau (1981) %\cite{DSD1}
+by proving that the complete $m$ partite graph  can be decomposed into certain families of cycles  as follows:\\
+$<\frac{t(t-1)}{2}C_3,\frac{t(t-1)}{2}C_5,...,\frac{t(t-1)}{2}C_{2m-1}|K_{\underbrace{m,m,...,m}_t}>$
+where $m$ and $t$ are odd and $t,m\geq 3$.
+
+For  $3$-cycle case, it is well known that a decomposition of
+complete  tripartite graph ($K_{m,m,m}$)  into triangle is
+equivalent to a latin square of order $m$. Mahmoodian and Mirzakhani (1995) %\cite{EMM1}
+obtained various result on $C_5$-decomposition of complete tripartite graph and Hoffman  et al (1989) %\cite{DHOR}
+ decomposed the complete tripartite graph $K(k,k,k)$ into $k$-cycles for odd $k$ which also holds for any $n$-partite graph when $n$ is odd and all partite sets have size $k$.
+
+Laskar and Auerbach (1976) %\cite{RBO3}
+proved that the complete tripartite graph $K(k,k,k)$ decomposed into
+$3k$-cycles for
+any $k$ while Cavenagh (1998) %\cite{NCD}
+ gave a necessary and sufficient conditions
+for the decomposition of the complete tripartite graph $(m,m,m)$
+into $k$-cycles for any $k\geq 3$ and likewise,
+Billington (1999) %\cite{EJB1}
+gave the necessary and sufficient conditions for  the decomposition
+of complete tripartite graph  $K(m,m,m)$ into cycles of length $3$
+and $4$.
+
+
+The necessary and sufficient conditions for the decomposition of
+complete multipartite graphs into cycles of length $4,6,8$ was given
+by Cavenagh  and Billington (2000) and
+Manikandan and Paulraja (2007) %\cite{RPC3}
+proved that the necessary conditions for the existence of a
+$C_5$-decomposition of complete multipartite graphs are sufficient.
+
+ A generalization to complete graph decomposition problem is to find a $C_k$-decomposition of $K_m*\bar{K_n}$, which is the complete $m$-partite graph in which each partite set has $n$ vertices.  In case of $p$ prime, the necessary and sufficient conditions for the existence of a $C_p$-decomposition of $K_m*\bar{K_n},p\geq 5$ was obtained by Manikandan and Paulraja (2007).%\cite{RPC3}.
+
+Similarly, for $p$ prime, the necessary and sufficient conditions
+for the existence of a $C_{2p}$-decomposition of
+$K_m*\bar{K_n},p\geq 5$ was obtained by Smith (2008). %\cite{BSD3}.
+For a prime $p\geq 3$. The same author in 2009 proved that
+$C_{3p}$-decomposition of $K_m*\bar{K_n},p\geq 5$ exists if the
+obvious necessary conditions are satisfied. Liu (2003b) %\cite{JLE1}
+also obtained a necessary and sufficient condition for the existence
+of a $k-RCD$ of $K_m*\bar{K_n},p\geq 5$. Billington  et al
+(1999) %\cite{EJB}
+solved the problem of decomposing complete multipartite graphs with
+multiple edges  ($K_m*\bar K_n)(\lambda)$ into $5$-cycles.
+
+ %Alspach  et. al. (1989) %\cite{BA2}
+ The necessary and sufficient conditions  on $C_k$-factorization of complete graph $K_n$ and multipartite graph $K_m*\bar K_n$ was done by Alspach  et al (1989) after which Piotrowski (1991) %\cite{WLP1}
+gave some results on $C_5$-factorization of complete multipartite
+graph as in the following theorem:
+\begin{thm}(Piotrowski, 1991)
+Let $k\geq 1,m\geq 3$, if $a_1,a_2,...,a_k$ are positive integers
+which are divisible by $m$ and $nm=\sum _ia_i$ then $F||C_m*\bar
+K_n$ where $F$ consists of $k$-cycles, namely
+$C_{a1},C_{a2},...,C_{ak}$, except in the cases: \ben
+\item[i.] $n=2$ and $m$ is odd
+\item[ii.] $n=6,m=3$ and $(a_1,a_2,...,a_k)=(3,3,...,3)$ in which case the contrary is true.
+\een
+\end{thm}
+Liu (2003b) %\cite{JLE1}
+ proved that the necessary conditions for
+the existence of a $C_k$-factorization of complete multipartite
+graph $K_m*\bar K_n$ are sufficient.
+Manikandan and Paulraja (2006) %\cite{RPC1}
+ proved that the obvious necessary conditions for the tensor product of complete graphs ($K_m\times K_n$),$m,n\geq 3$ to have a $C_p$-decomposition are sufficient where $p\geq 11$ is a prime.\\
+
+ Note that the graph $K_m\times K_n$ is a subgraph of $K_m*\bar K_n$, that is $K_m\times K_n=(K_m*\bar K_n) - nK_m$.
+ Manikandan and Paulraja (2006) %\cite{RPC1}
+  also proved that the necessary conditions for a $C_p$-factorization of $K_m\times K_n,m,m\geq 3$ are sufficient  for many values of $m,n$ and
+ Manikandan and Paulraja (2007) %\cite{RPC2}
+ proved that the obvious necessary conditions for $K_m\times K_n,m,n\geq 3$ to have $C_5$-decomposition are  sufficient.
+
+ Cameron (2009) %\cite{PCD}
+  partitioned the edge set of a complete bipartite graph into two parts, both of which are edge sets of arc-transitive graphs, one primitive and the other imprimitive.
+ Recently, Paulraja and Kumar (2011) %\cite{PPSK}
+  proved that the necessary conditions for the existence of a $k-RCD$ of $K_m\times K_n$ are sufficient when $k$ is even.
+
+\section{\protect\smallskip Decomposition of complete graph $K_n$ into blown up cycles}
+
+Froncek  et al (2010) %\cite{DPK}
+examined the decompositions of complete graph into graphs that arise
+from blowing-up cycles. In particular they investigated the
+existence of decompositions of $K_{8mk+1}$ into copies of
+$C_m*\bar{K}_2$, $C_m*\bar{K}_2$ being the graph which arises from
+the cycle $C_m$ by replacing each vertex $x_i$ by a pair of
+independent vertices $x_{i,1},x_{i,2}$ and each edge $x_ix_j$ by
+four edges
+$x_{i,1}x_{j,1},x_{i,1}x_{j,2},x_{i,2}x_{j,1},x_{i,2}x_{j,2}$. Also,
+they completely solved this problem, showing that if $m\geq 3$ is an
+integer, then $C_m*\bar{K}_2$ decomposes $K_{8mk+1}$ for every
+integer $k>0$. They also showed that the necessary conditions for
+the existence of a $C_m*\bar{K}_2$-decomposition of $K_n-I$, where
+$I$ is a $1$-factor of $K_n$ are sufficient and finally demonstrated
+that  the above main result combined with a lemma by Haggkvist
+(1985) %\cite{RHA}
+gave new decomposition of the complete graph into union of cycles of
+different length.
+
+  \section{\protect\smallskip Sunlet decomposition of Graphs}
+%ISGCI \cite{ISGC1} defines a (complete) $n$-sun graph as a graph on $2n$ vertices consisting of a central complete graph $k_n$ with an outer ring of $n$ vertices, each of which is joined to both endpoints of the closet outer edge of the central core. Which is sometimes known as a trampoline graph by Brandstadt \cite{ABL}.\\
+% Wallis \cite{WDD2},  Anitha and Lekshmi \cite{RA1} use the term $n$-sungraph to instead refer to the
+A $n$-sun  or sunlet graph is the graph on $2n$ vertices obtained by attaching $n$ pendant edges to a cycle graph $C_n$. %These graphs are referred to as sunlet graphs by ISGCI \cite{ISGC1}. \\
+ Barrientos (2002) referred to sunlet graph as a special kind of corona graph %\cite{CBG}
+  given by $C_n \odot K_1$, that is, a cycle with pendant points. %While Wallis  \cite{WDD2}, Anitha and Lekshmi  \cite{RA1} use the term $n$-sun graph to refer to sunlet graphs on $2n$ vertices. \\
+ The $6$-sunlet graph is also known as the net graph which is the graph on $6$ vertices.
+
+Anitha and Lekshmi (2007)  %\cite{RA1}
+  defined sunlet decomposition of the complete graph $K_n$ as the partitioning of the edge set into $n$-sunlet and a perfect matching if $n$ is odd and $n$-sunlet, a perfect matching and a Hamilton cycle if $n$ is even.
+  The following is an important property of sunlet graphs proposed by Anitha and Lekshmi (2007).
+  \begin{prop}
+  A graph is said to have total $n$-sunlet decomposition if every edge belongs to exactly one sunlet graph of the decomposition.
+  \end{prop}
+  % was given in Anitha and Lekshmi (2007). %\cite{RA1}.
+
+  Sunlet graph decomposition is a new kind of decomposition of graphs initiated by  Anitha and Lekshmi (2007). % \cite{RA1}.
+  Anitha and Lekshmi (2007,2008) established some results on sunlet graph decomposition of complete graphs, using the method of  labeling scheme and Walecki's construction for the Hamilton decomposition of complete graphs. Anitha and Lekshmi (2007)%\cite{RA}
+ proved %some results on the sunlet graph decomposition of
+that the complete bipartite graphs $K_{n,m}$ has sunlet decomposition for all $\frac{n}{2}$ odd. Also, Anitha and Lekshmi (2008) proved %in \cite{RA1}
+ that Harary graphs $H_{4,2n}$ and $H_{5,2n}$ has sunlet decomposition for all $n$.
+
+%Anitha and Lekshmi \cite{RA} gave an open problem that when can a complete graph $K_n$ admit a decomposition into edge-disjoint sunlet graph.
+\chapter{RESULTS}
+In this chapter, equipartite graph $C_r*\bar{K}_m$ was decomposed
+into sunlet graphs of length $rm,r,m$ respectively. Also, it was
+shown that the necessary condition for the decomposition is sufficient.
+%for the decomposition.
+Furthermore, equipartite graphs $K_n-I*\bar{K}_m$,
+$K_n+I*\bar{K}_m$ and $K_n*\bar{K}_m$ were decomposed into sunlet
+graphs $L_q$, for positive even integer $q$ and the necessary
+conditions for the decomposition were shown to be sufficient.
+Finally, it was found that for any graph $G$ with cycle
+decomposition, lexicographic product of $G$ and the complement of a
+complete graph on two or more vertices had a sunlet graph decomposition.
+\section{Decomposition of  $C_{r}*\bar{K}_{m}$ into edge-disjoint sunlet graphs $L_n$}
+We begin this section with the following result, where $L_{2r}$ denotes sunlet graph with $2r$ vertices.
+\begin{lem}\label{L:N1}
+For $r\geq 3$, $L_{2r}|C_{r}*\bar{K}_{2}$.
+\end{lem}
+\begin{proof}
+From the definition of the graph $C_{r}*\bar{K}_{2}$,  each vertex
+$x_i$ in $C_{r}$ is replaced by a pair of two independent vertices
+$x_{i,1},x_{i,2}$ and each edge $x_ix_j$ is replaced by four edges
+$x_{i,1}x_{j,1},x_{i,1}x_{j,2},x_{i,2}x_{j,1},x_{i,2}x_{j,2}$.  First we construct two base cycles $%
+C_{r}^1$ and $C_{r}^2$ as follows:
+%with vertex set$%
+%x_{i,1}$ and $x_{i,2}$ respectively, where $i=1,...,r$ as follows:\\
+%$x_{1,\alpha} x_{2,\beta}...x_{r-1,\alpha} x_{r,\beta}$. Therefore we have $2$ cycles
+ $$C_r^1=x_{1,1}x_{2,1}x_{3,1}...x_{r,1}$$and $$C_r^2=x_{1,2}x_{2,2}x_{3,2}...x_{r,2}$$
+Next, define a mapping $\phi $ on the vertices by $\phi
+(x_{i,1})=x_{i+1,2}$ and $\phi (x_{i,2})=x_{i+1,1}$, where
+%$i$ is
+the sum on the first suffix is taken modulo $r$. Also, $\phi
+(x_{i,1})$ and $\phi(x_{i,2})$ represents pendant vertices. Attach
+each pendant vertex $\phi (x_{i,1})$ to each vertex $x_{i,1}$ in
+$C_{r}^1$ and $\phi (x_{i,2})$ to each vertex $x_{i,2}$ in
+$C_{r}^2$. The cycles $C_{r}^1,C_{r}^2$ with pendant vertices
+$\phi(x_{i,1})$ and $\phi (x_{i,2})$ attached respectively gives two
+sunlet graphs with $2r$ vertices. Hence $C_{r}*\bar{K}_{2}$ can be
+decomposed into two sunlet graphs with $2r$ vertices.
+\end{proof}
+The next example illustrates the decomposition of  $C_r*\bar{K}_2$ into sunlet graphs.
+\begin{exm}\label{E:L10}
+The graph $C_{5}*\bar{K}_{2}$ is decomposable into two-copies of
+sunlet graph $L_{10}$.
+\end{exm}
+\begin{figure}
+\begin{center}
+\includegraphics{C:/hp/C52.jpg}
+%\includegraphics{C52.jpg}
+\caption{ $C_5*\bar{K}_2$}
+\end{center}
+\begin{center}
+\includegraphics[keepaspectratio=true]{C:/hp/l10.jpg}
+%\includegraphics[keepaspectratio=true]{l10.jpg}
+\caption{Sunlet graphs  $L_{10}$}
+\end{center}
+\end{figure}
+We construct  $2$ base-cycles $C_5$ from the graph
+$C_{5}*\bar{K}_{2}$ as follows:
+$$((1,1),(2,1),(3,1),(4,1),(5,1))$$
+$$((1,2),(2,2),(3,2),(4,2),(5,2))$$
+To get the pendant vertices $\phi(x_{i,j})$, where $i=1,2,...,5$ and
+$j=1,2$, define a function $\phi$ on the vertices of cycle $C_5$ as
+follows:
+$$\phi((1,1))=(2,2),\ \ \  \ \phi((2,1))=(3,2),\ \ \  \phi((3,1))=(4,2),\ \ \ \phi((4,1))=(5,2),$$ $$\ \ \ \phi((5,1))=(1,2)$$
+and $$\phi((1,2))=(2,1),\ \ \  \phi((2,2))=(3,1),\ \ \
+\phi((3,2))=(4,1),\ \ \  \phi((4,2))=(5,1),$$ $$\ \ \\
+\phi((5,2))=(1,1)$$ Now join each pendant vertex $\phi(x_{i,j})$ to
+each vertex $x_{i,j}$ of the cycle $C_5$ and we have $2$ sunlet
+graphs $L_{10}$ in figure $3.2$.
+\begin{thm}\label{T:LA1}(Laskar, 1978) %\cite{RL8}
+ The graph $C_r*\bar{K}_m$ has a Hamilton cycle decomposition.
+\end{thm}
+Now we consider the decomposition of  $C_r*\bar{K}_m$ into sunlet graphs, where $m>2$.
+\begin{lem}\label{L:N2}
+For any positive integer $r>2$ and a positive even integer $m$, % a positive even integer,
+the graph $C_r*\bar{K}_m$ has a decomposition into sunlet graph
+$L_n$, for $n=rm$.
+\end{lem}
+\begin{proof}
+Case 1: $r$ is even\\
+First observe that $C_{r}*\bar{K}_{2}$ can be decomposed into two
+sunlet graphs with $2r$ vertices. Then set $m=2t$ and decompose
+$C_{r}*\bar{K}_{t}$
+into cycles $C_{rt}$. To decompose $C_r*\bar{K}_t$ into $t$-cycles $C_{rt}$, denote vertices in $i-th$ part of $C_{r}*\bar{K}%
+_{t}$ by $x_{i,j}$ for $i=1,2,...,r$, $j=1,...,t$ and create $t$ base cycles $%
+x_{1,j}x_{2,j}x_{3,j}...x_{r-1,j}x_{r,j}$. Next combine these base
+cycles into one cycle $C_{rt}$ by replacing each edge
+$x_{1,j}x_{2,j}$ with $x_{1,j}x_{2,j+1}$. To create the remaining
+cycles $C_{rt}$, we now apply mappings $\phi _{s}$ on the vertices ,
+where $s=1,...,t-1$ defined as follows:
+$$\phi _{s}\left( x_{i,j}\right) =x_{i,j}\ \ \ for \ \ \  i\ \ \ odd\ \ $$ and
+$$\phi _{s}\left( x_{i,j}\right) =x_{i,j+s}\ \ \ for\  \ \ i\ \ \  even$$
+
+This is the desired decomposition into cycles $C_{rt}$. Now take each cycle $%
+C_{rt}$, make it back into $C_{rt}*\bar{K}_{2}$. Each
+$C_{rt}*\bar{K}_{2}$ decomposes  into two sunlet graphs $L_{2rt}$
+(by lemma \ref{L:N1}) and we have $C_r*\bar{K}_m$ decomposing into
+sunlet graphs with length $rm$ for $r$ even. Note that
+$C_r*\bar{K}_m=C_r*\bar{K}_{2t}=(C_r*\bar{K}_t)*\bar{K}_2$.\\
+Case 2: $r$ is odd\\
+Subcase 2.1: $m\equiv 2(mod\ 4)$\\
+We have $r-1$ even since $r$ is odd. Set $m=2t$. First create $t$ cycles $%
+C_{(r-1)t}$ in $C_{r-1}*\bar{K}_{t}$ as in the case $1$ above. Then
+take complete
+tripartite graph $K_{t,t,t}$ with partite sets $X_{i}=\{x_{ij}\}$ for $%
+i=1,r-1,r$ and $j=1,...,t$ and decompose it into triangles using
+well known construction via Latin square, that is,
+
+Construct $t\times t$ Latin square and consider each element in the form $%
+\left( a,b,c\right) $ where $a$ denotes the row, $b$ denotes the column and $%
+c $ denotes the entry with $1\leq a,b,c\leq t$. Each cycle is of the form $x_{%
+\left( 1,a\right)} ,x_{\left( r-1,b\right)} ,x_{\left( r,c\right)} $
+
+Then for every triangle $x_{1,a}x_{r-1,b}x_{r,c}$,  replace the edge $%
+x_{1,a}x_{r-1,b}$ in an appropriate $C_{(r-1)t}$ by the edges
+$x_{r-1,b}x_{r,c}$ and $x_{r,c}x_{1,a}$ to obtain cycle $C_{rt}$.
+
+Therefore $C_{rt}\mid C_{r}*\bar{K}_{t}$.
+
+Now take each cycle  $C_{rt}$, make it into $C_{rt}*\bar{K}_{2}$ and by Lemma \ref{L:N1}, $C_{rt}*\bar{K}_{2}$ has a decomposition into sunlet graphs $L_{2rt}=L_n$.\\
+Subcase 2.2:  $m\equiv 0(mod\ 4)$\\
+Set $m=2t$. The graph $C_r*\bar{K}_t$ decomposes into Hamilton cycle
+$C_{rt}$ by Theorem  \ref{T:LA1}. Next make each cycle $C_{rt}$ into
+$C_{rt}*\bar{K}_2$. Each graph $C_{rt}*\bar{K}_2$ decomposes into
+sunlet graph $L_{2rt}$ by Lemma \ref{L:N1}.
+\end{proof}
+\begin{rem}\label{R:N1}
+{\rm The results above shows among other things that if sunlet graph $L_{n}$ decomposes $C_{r}*\bar{K}_{m}$, for
+$n=rm$, then $m$ is an even integer}.
+\end{rem}
+%\begin{thm}\label{T:N3}
+%If $G=C_{r}*\bar{K}_{m}$ can be decomposed into cycle $C_{r}$ then
+%$G\left( 2\right) $ can be decomposed into $2m^{2}$ sunlet graphs
+%with $2r$ vertices.
+%\end{thm}
+%\begin{proof}
+%From the previous observation all we need to show is that
+%$C_{r}*\bar{K}_2$ decomposes into $2$ copies of sunlet graphs with
+%$2r$ vertices. By Lemma \ref{L:N1}, $C_{r}*\bar{K}_{2}$ can be
+%decomposed into $2$ sunlet graphs with $2r$ vertices. Hence we have
+%$2m^{2}$ sunlet graph $L_{2r}$ since we
+%have $m^{2}$ cycles $C_{r}$ from the cycle decomposition of $C_{r}*\bar{K}%
+%_{m}$
+%\end{proof}
+\begin{lem}\label{L:N4}
+Necessary conditions for $L_{n}$ to decompose $C_{r}*\bar{K}_{m}$ whenever $%
+n=rm$ are:
+
+(a) $m$ must be positive even integer.
+
+(b) $r\geq 3$
+
+(c) The number of edges in the sunlet graph $L_n$ divides the number of edges in $C_{r}*\bar{K}%
+_{m}$.
+\end{lem}
+\begin{proof}
+(a) By Remark \ref{R:N1}, $m$ must be an even integer.
+
+(b) It follows from Lemma \ref{L:N2}.
+
+(c) It follows from the fact that the number of edges  of $L_{n}$
+has to be a multiple of $m$ since the total number of edges in
+$C_{r}*\bar{K}_{m}$ is $rm^{2}$. Thus for such decomposition to
+exist, we have that $n|rm$
+\end{proof}
+\begin{rem}\label{R:N5}
+{\rm Let $r\geq 3$ and $m$ a positive even integer, $n=rm$, if
+sunlet graph $L_n$ decomposes $C_{r}*\bar{K}_{m}$, then the join of
+two sunlet graphs such that each vertex appears once with degree
+three and one in each sunlet graph is a four regular graph which can
+be decomposed into two Hamilton cycles.}
+\end{rem}
+The next Theorem gives the range of values of $m$ and $n$ for the decomposition of $C_{r}*\bar{K}_{m}$ into sunlet graphs to occur.
+\begin{thm}\label{T:N6}
+Let $r,m,n$ be positive even integers satisfying $3<r\leq m$.  If $C_{r}*\bar{K%
+}_{m}$ can be decomposed into sunlet graph $L_{n}$ of length $n=rm$
+for all $m$ in the range $r\leq m<2r$ with $m\left( m-2\right)
+\equiv 0\left( mod\ \ r\right) $, then $C_{r}*\bar{K}_{m}$ can be
+decomposed into sunlet graph of length $n$ for all $m\geq r$ with
+$m\left( m-2\right) \equiv 0\left( {mod}\ \ r\right) $.
+\end{thm}
+\begin{proof}
+Suppose that $C_{r}*\bar{K}_{m}$ can be decomposed into sunlet graphs $%
+L_{n} $ whenever $m\left( m-2\right) \equiv 0\left( {mod}\ r\right)
+$ and $r\leq m<2r$. Let $m$ and $r$ be positive even integers such
+that $m\left( m-2\right) \equiv 0\left( {mod}\ r\right) $. Let
+$m=pr+t$ for integers $p$ with $0<t<r$. Observe that $m\left(
+m-2\right) \equiv 0\left( {mod}\
+r\right) $ implies that $m$ or $m-2$ is a multiple of $r$. If $m=pr+t$ then $%
+t $ is either $0$ or $2$. Since $r$ is even, then $r\left(
+r-2\right) \equiv
+0\left( {mod}\ t\right) $ as well. Partition the edge set of $C_{r}*\bar{K}%
+_{m}$ into $m$ sets such that each set induces a subgraph isomorphic
+to sunlet graph $L_{n}$ in such a way that $\frac{mr}{t}$ vertices
+will have degree $3$ and $\frac{mr}{t}$ vertices will have degree
+$1$. If there exist a vertex $x_{i,j}$ such that the degree of the
+vertex $x_{i,j}$ is either $3$ or $1$, that is,  for $L_{n}$ to
+decompose $C_{r}*\bar{K}_{m}$, $$\sum_{i=1}^{n}\deg
+\left( x_{ij}\right) =2m, x_{ij}\in V\left( L_{n}\right) $$  We now use induction on $p$. It is true from Lemma \ref{L:N2} that $L_{n}$ decomposes $C_{r}*\bar{K}_{m}$ for $p=1$. \\ Suppose $p>1$%
+, assume that it is true for $p=k$. Suppose $p=k+1$, then $m=\left(
+k+1\right) r+t$.
+$$\sum_{i=1}^{n}\deg \left( x_{ij}\right) =\frac{3\left( \left( k+1\right)
+r+t\right) }{2}+\frac{\left( k+1\right) r+t}{2}=2\left( \left( k+1\right)
+r+t\right) =2m$$
+
+It is true for $p=k+1$, therefore it is true for all integer $p$. Therefore $%
+L_{n}$ decomposes $C_{r}*\bar{K}_{m}$ for all $m>r$. Hence the
+result
+\end{proof}
+Now we give the following useful results.
+\begin{lem}\label{L:ABQ}
+The graph $L_n*\bar{K}_l$ is decomposable into $l^2$ copies of
+sunlet graph $L_n$ for any positive integer $l$.
+\end{lem}
+\begin{proof}
+Label the vertices of the cycle contained in $L_n*\bar{K}_{l}$ as $x_{p,a}$, where $1\leq p\leq \frac{n}{2},1\leq a\leq l$. Then form the sunlet graphs $L_n^{1},...,L_n^{l^{2}}$ from $L_n*\bar{K%
+}_{l}$ as follows:\\
+%Form the cycle $C_r$ from $l\times l$ latin square as $\left(
+%1,u\right) \left( 2,v\right) \left( 3,u\right) ...\left( r-1,v\right) \left(r,\alpha \right) $
+From each $l^2$ element of $l\times l$ latin square, we can construct a $\frac{n}{2}$-cycle.\\
+If $\frac{n}{2}$ is even, each cycle is of the form $(1,u),(2,v),(3,u),...,(\frac{n}{2}-1,u),(\frac{n}{2},\alpha)$.\\
+If $\frac{n}{2}$ is odd, each cycle is of the form
+$(1,u),(2,v),(3,u),...,(\frac{n}{2}-1,v),(\frac{n}{2},\alpha)$,
+where $u$ is the row, $v$ is the column and $\alpha $ is the entry
+in the Latin square. Next join each
+vertex of the cycle to pendant vertices $x_{p,a}$ for $a=\alpha $ whenever $p<\frac{n}{2}$ and join each vertex of the cycle to pendant vertex $x_{p,\alpha +u}$ for $p=\frac{n}{2}$ and get sunlet graph $L_n$. \\ Therefore $L_n*\bar{K}_{l}$ $%
+=L_n^{1}\oplus L_n^{2}\oplus ...\oplus L_n^{l^{2}}$. Hence sunlet
+graph $L_n$ decomposes $L_n*\bar{K}_l$.
+\end{proof}
+
+\begin{lem}\label{L:ABQ1}
+The graph $L_n*\bar{K}_l$ is decomposable into $l$ copies of sunlet
+graph $L_{nl}$ for any positive integer $l$.
+\end{lem}
+\begin{proof}
+The cycle in $L_{n}$ give rise to $C_{\frac{n}{2}}*
+\bar{K}_{l}$ in $L_{n}\left( l\right) $.\\
+The graph $C_{\frac{n}{2}}*\bar{K}_{l}$ can be decomposed into $l$ cycles $C_{\frac{nl%
+}{2}}$ by Lemma \ref{L:N2}. Then join each vertex in each $l$ cycles $C_{%
+\frac{nl}{2}}$ to the pendant vertices $x_{i,j}^{l}$ to get $l$
+sunlet graphs $L_{nl}$, that is,
+$$L_{n}\left( l\right) =L_{nl(1)}\oplus L_{nl(2)}\oplus ...\oplus
+L_{nl(l)}$$ Hence sunlet graph $L_{nl}$ decomposes $L_n*\bar{K}_{l} $ for any positive
+integer $l$
+\end{proof}
+The following results present factorization of $G*\bar{K}_{2}$, where each factor consists of sunlet graphs.
+\begin{thm}\label{T:N7}
+Let $G=C_{r}*\bar{K}_{m}$ for $r,m$ even, $n=rm$, let $H$ be a
+collection of $m$ disjoint sunlet graphs $L_{2n}$.  Then $G\left(
+2\right) =L_{2n}^{^{\prime }}\oplus L_{2n}^{^{\prime \prime }}$ where $%
+L_{2n}^{^{\prime }}\simeq L_{2n}^{^{\prime \prime }}\simeq H$. Therefore $%
+H|G\left( 2\right) $.
+\end{thm}
+\begin{proof}
+First show that $G\left( 2\right) =L_{2n}^{^{\prime }}\oplus
+L_{2n}^{^{\prime \prime }}$. From Lemma \ref{L:N2}, sunlet graph $L_{n}$ decomposes $C_{r}*\bar{K%
+}_{m}$ into $m$ sunlet graph, that is, $\bigcup_{k=1}^{m}L_{n(k)}$
+decomposes $C_{r}*\bar{K}_{m}=G$. Next show that the graph $L_{2n(k)}$ decomposes $%
+G\left( 2\right) $. It is sufficient to show that $L_{n(k)}\left(
+2\right) $ can be decomposed into two copies of
+$L_{2n(k)},k=1,...,m$. The graph $L_{2n(k)}$ decomposes
+$L_{n(k)}(2)$ by Lemma \ref{L:ABQ1}.
+
+%By \ref{T:LA1}, form $2$
+%cycles $C_{n(k)}^{^{\prime }}$ and $C_{n(k)}^{^{\prime \prime }}$ from the cycle contained in $L_{n(k)}(2)$ with vertex set $x_{i}^{^{\prime }}$ and $x_{i}^{^{\prime \prime }}, 1\leq i\leq n$ as follows:\\
+%Form cycles  $C_{n(k)}^{^{\prime }}$ and $C_{n(k)}^{^{\prime \prime }}$, for $\frac{n}{2}$ even by Lemma 1.3 (case 1).\\
+%For $\frac{n}{2}$ odd, form the cycles $C_{n(k)}^{^{\prime }}$ and $C_{n(k)}^{^{\prime \prime }}$ as follows:\\
+%First form cycle $C_{(n-1)k}$ as in lemma 1.3 (case 1) above, then replace edge $x_{\frac{n-1}{2}}'x_1''$ by edges $x_{\frac{n-1}{2}}''x_{\frac{n}{2}}'$ and $x_{\frac{n}{2}}'x_1''$. Also replace edge $x_{\frac{n-1}{2}}'x_1'$ by edges $x_{\frac{n-1}{2}}'x_{\frac{n}{2}}'$ and $x_{\frac{n}{2}}'x_1'$. Replace edge $x_{\frac{n-1}{2}}''x_1'$ by edges $x_{\frac{n-1}{2}}''x_{\frac{n}{2}}''$ and $x_{\frac{n}{2}}''x_1'$ and edge $x_{\frac{n-1}{2}}''x_1''$ by edges $x_{\frac{n-1}{2}}''x_{\frac{n}{2}}''$ and $x_{\frac{n}{2}}''x_1''$. The resulting graph gives cycles $C_{n(k)}$.\\
+%  Define a mapping $%
+%f$ on the vertices by $f\left( x'_{i}\right) =y_{i}^{^{\prime }}$
+%and $f\left( x''_{i}\right) =y_{i}^{^{\prime \prime }}$ where
+%$y_{i}^{^{\prime
+%}},y_{i}^{^{\prime \prime }}$ represent the pendant vertices of $%
+%L_{n(k)}\left( 2\right) $. Attach each pendant vertex $f\left(
+%x_{i}^{^{\prime }}\right) ,f\left( x_{i}^{^{\prime \prime }}\right)
+%$to
+%each vertex $x_{i}^{^{\prime }},x_{i}^{^{\prime \prime }}$ in $%
+%C_{n(k)}^{^{\prime }},C_{n(k)}^{^{\prime \prime }}$ respectively. Cycles $%
+%C_{n(k)}^{^{\prime }},C_{n(k)}^{^{\prime \prime }}$ with pendant vertices $%
+%f\left( x_{i}^{^{\prime }}\right) ,f\left( x_{i}^{^{\prime \prime
+%}}\right) $ attached respectively gives $2$ sunlet graphs
+%$L_{2n(k)}^{^{\prime }},L_{2n(k)}^{^{\prime \prime }}$.
+Therefore $L_{n(k)}\left( 2\right) $ can be
+decomposed into $2$ sunlet graph $L_{2n(k)}^{^{\prime }}$ and $%
+L_{2n(k)}^{^{\prime \prime }}$, that is,
+
+$L_{n(k)}\left( 2\right) =L_{2n(k)}^{^{\prime }}\oplus
+L_{2n(k)}^{^{\prime \prime }}$. Therefore
+
+$$G\left( 2\right) =\bigcup_{k=1}^{m}L_{n(k)}\left( 2\right)
+=\bigcup_{k=1}^{m}L_{2n(k)}^{^{\prime }}\oplus
+\bigcup_{k=1}^{m}L_{2n(k)}^{^{\prime \prime }}=L_{2n}^{^{\prime }}\oplus
+L_{2n}^{^{\prime \prime }}$$ Where
+
+$L_{2n}=\bigcup_{k=1}^{m}L_{2n(k)}$. Hence $H|G\left( 2\right) $ since $%
+L_{2n}^{^{\prime }}\simeq L_{2n}^{^{\prime \prime }}\simeq H$
+\end{proof}
+\begin{thm}\label{T:N8}
+Let $G=C_{r}*\bar{K}_{m}$ , $r,m$ even and $H$ be a collection of
+$m$ disjoint sunlet graphs $L_{n}$, where $n=rm$. Then $G\left(
+2\right) =G_{1}\oplus G_{2}\oplus G_{3}\oplus G_{4}$ where
+$G_{1}\simeq G_{2}\simeq G_{3}\simeq G_{4}\simeq H$. Therefore
+$H|G\left( 2\right) $.
+\end{thm}
+\begin{proof}
+Assume that $H$ consist of disjoint sunlet graphs $L_{n}$ with lengths $%
+n_{1},n_{2},...,n_{m}$ where $\disp\sum_{k=1}^{m}rm^{2}=nm$. Let $G$
+consist of set of vertices $x_{i,j},i=1,...,r$ and $j=1,...,m$ with
+$rm^2$ edges and
+$G\left( 2\right) $ be a graph with $4rm^{2}$ edges and $2rm$ vertices. Let $%
+G_{1},G_{2},G_{3},G_{4}$ be the subgraph of $G\left( 2\right) $ with
+equal
+number of vertices and edges, as follows:\\
+$G_{1}$ contains the set of vertices $\{x_{i,j}^{^{\prime }}\}$,
+with edge set
+$\{x_{i,j}^{^{\prime }}x_{i+1,j}^{^{\prime }}\}$\\
+$G_{2}$ contains the set of vertices $\{x_{i,j}^{^{\prime \prime
+}}\}$, with
+edge set $\{x_{i,j}^{^{\prime \prime }}x_{i+1,j}^{^{\prime \prime }}\}$\\
+$G_{3}$ contains the set of vertices $\{x_{i,j}^{^{\prime
+}},x_{i+1,j}^{^{\prime \prime }}\}$, with edge set
+$\{x_{i,j}^{^{\prime
+}}x_{i+1,j}^{^{\prime \prime }}\}$ for $i$ odd and set of vertices $\{x_{i,j}'',x_{i+1,j}'\}$ with edge set $\{x_{i,j}'',x_{i+1,j}\}$ for $i$ even.\\
+$G_{4}$ contains the set of vertices $\{x_{i,j}^{^{\prime \prime
+}},x_{i+1,j}^{^{\prime }}\}$, with edge set $\{x_{i,j}^{^{\prime
+\prime }}x_{i+1,j}^{^{\prime }}\}$ for $i$ odd and set of vertices
+$\{x_{i,j}',x_{i+1,j}''\}$ with edge set $\{x_{i,j}',x_{i+1,j}''\}$
+for $i$ even.
+
+Since each $G_{a},a=1,2,3,4$ consists of $rm^{2}$ edges then $G_{a}$
+partitioned  $G\left( 2\right) $ that is $G\left( 2\right)
+=G_{1}\oplus G_{2}\oplus G_{3}\oplus G_{4}$. Each $G_{a}$ has sunlet
+graph
+decomposition which follows from lemma \ref{L:N2}. Then $G_{a}=%
+\disp\cup_{k=1}^{m}L_{n(k)}^{a}$. Therefore $G_{a}\simeq H $. Hence
+$H|G\left( 2\right) $
+\end{proof}
+%\begin{cor}\label{C:N1}
+%Let $G=C_{r}*\bar{K}_{m}$ be a graph with sunlet graph decomposition (that
+%is a decomposition into edge-disjoint sunlet graphs). Then any proper even
+%list of sunlet graphs $L_{n}$, for $n=rm$ packs $G\left( 2\right) $.
+%\end{cor}
+%\begin{proof}
+%A sunlet graph in $G\left( 2\right) $ is a cycle together with pendant
+%vertices attached to each vertex of the cycle. Assume that $$\delta =\left(
+%L_{n1},L_{n1},L_{n1},L_{n1},L_{n2},L_{n2},L_{n2},L_{n2},...,L_{nm},L_{nm},L_{nm},L_{nm}\right)
+%$$ is a proper even list of sunlet graphs on $n$ vertices. Where $n$ is the
+%order of $G$. Let $L_{n1}\oplus L_{n2}\oplus ...\oplus L_{nm}$ be a
+%sunlet graph decomposition of $G$.\\
+%Let $L_{n(k)}\simeq L_{n}$, where $k=1,...,m$. By
+%Theorem \ref{T:N8},
+
+%$L_{n(k)}\left( 2\right) =\bigcup_{k=1}^{m}L_{nk}^{a}$, where $a=1,2,3,4$, that is $L_{n(k)}\left(
+%2\right) =L_{n(k)}^{(1)}\oplus L_{n(k)}^{(2)}\oplus L_{n(k)}^{(3)}\oplus
+%L_{n(k)}^{(4)}$ where $L_{n(k)}^{(1)}\simeq L_{n(k)}^{(2)}\simeq L_{n(k)}^{(3)}\simeq
+%L_{n(k)}^{(4)}$ Whence
+%$$G\left( 2\right) =L_{n(1)}\left( 2\right) \oplus L_{n(2)}\left( 2\right)
+%\oplus ...\oplus L_{n(m)}\left( 2\right) $$
+%$$=L_{n(1)}^{(1)}\oplus L_{n(1)}^{(2)}\oplus L_{n(1)}^{(3)}\oplus
+%L_{n(1)}^{(4)}\oplus L_{n(2)}^{(1)}\oplus L_{n(2)}^{(2)}\oplus
+%L_{n(2)}^{(3)}\oplus L_{n(2)}^{(4)}\oplus\\ ... \oplus L_{n(m)}^{(1)}\oplus
+%L_{n(m)}^{(2)}\oplus L_{n(m)}^{(3)}\oplus L_{n(m)}^{(4)}$$
+%Therefore proper even list of sunlet graphs packs $G\left( 2\right)$. Hence
+%the result
+%\end{proof}
+We now give the following useful result known as blowing up of point.
+\begin{thm} (Blowing up)\label{T:N9}
+For any positive integer $r$ and a positive even integer $m$, the
+graph $C_{r}*\bar{K}_{ml}$ is decomposable into sunlet graphs $L_n$
+where $n=rm$.
+%Let the graph $C_{r}*\bar{K}_{m}$ decomposes into sunlet graph $%
+%L_{n},n=rm,r,m$ even, then the graph $C_{r}*\bar{K}_{ml}$ decomposes
+%into sunlet graphs $L_{n}$ for any positive integer $l$.
+\end{thm}
+\begin{proof}
+Combining Lemma \ref{L:N2}, \ref{L:ABQ} and the fact that
+$C_{r}*\bar{K}_{ml}=(C_r*\bar{K}_m)*\bar{K}_l$ gives the result.
+\end{proof}
+%From the previous observation $L_{n}$ decompose $C_{r}*\bar{K}_{m}$,
+%where $n=rm,m$
+%even and $r$ a positive integer. We need to  show that $L_{n}*\bar{K}_{l}$ can be decomposed into $l^{2}$ copies of sunlet graph $L_{n}$. Label the vertices of $L_{n}*\bar{K}_{l}$ as $x_{p,a}$, where $1\leq p\leq \frac{n}{2},1\leq a\leq l$. Then construct the sunlet graphs $L_{n}^{(1)},...,L_{n}^{(l^{2})}$ from $L_{n}*\bar{K%
+%}_{l}$ as follows:\\
+%Form the cycle $C_{\frac{n}{2}}$ from $l\times l$ Latin square as
+%$\left(
+%1,u\right) \left( 2,v\right) \left( 3,u\right) ...\left( \frac{n}{2}%
+%-1,v\right) \left( \frac{n}{2},\alpha \right) $ where $u$ is the
+%row, $v$ is the column and $\alpha $ is the entry in the Latin
+%square. Next join each
+%vertex of the cycle to pendant vertices $x_{p,a}$ for $a=\alpha $ whenever $p<\frac{n}{2}$ and join each vertex of the cycle to pendant vertex $x_{p,\alpha +u}$ for $p=\frac{n}{2}$ and get sunlet graph $L_{n}$. Therefore $L_{n}*\bar{K}_{l}$ $%
+%=L_{n(1)}\oplus L_{n(2)}\oplus ...\oplus L_{n(l^2)}$. Hence sunlet
+%graph $L_{n}$ decomposes $C_{r}*\bar{K}_{ml}$ for any positive
+%integer $l$
+%\end{proof}
+\begin{cor}\label{C:N2}
+Let $G=C_{r}*\bar{K}_{m}$ be a graph with sunlet graph decomposition
+then any even list of sunlet graph $L_{n}$ packs $G\left( l\right) $
+for any positive integer $l$.
+\end{cor}
+\begin{proof}
+Assume that $C_{r}*\bar{K}_{m}$ decomposes into $m$ sunlet graph
+$L_{n}$, from Theorem \ref{T:N9}, $L_{n}\left( l\right) $ decomposes
+into $l^{2}$ sunlet graph $L_{n}$ for any positive integer $l$.
+$$C_{r}*\bar{K}_{ml}=L_{n(1)}\left( l\right) \oplus L_{n(2)}\left( l\right)
+\oplus ...\oplus L_{n(m)}\left( l\right)$$
+ $$=L_{n(1)}^{(1)}\oplus
+...\oplus L_{n(1)}^{(l^{2})}\oplus ...\oplus L_{n(m)}^{(1)}\oplus
+...\oplus L_{n(m)}^{(l^{2})}$$
+Which is an even list of $L_{n}$. Hence any proper even list of sunlet graph $%
+L_{n}$ packs $G\left( l\right) $ for any positive integer $l$
+\end{proof}
+\begin{thm}\label{T:N10}
+For any positive integer $r$ and a positive even integer $m$, the
+graph $C_{r}*\bar{K}_{ml}$ is decomposable into sunlet graphs
+$L_{nl}$ where $n=rm$.
+
+%Let the sunlet graph $L_n$ decomposes the graph $C_{r}*\bar{K}_{m}$, where $n=rm, r$ a positive integer and $m$ a positive even integer, then the graph $C_{r}*\bar{K}_{ml}$ decomposes into sunlet graph $%
+%L_{nl}$ for any positive integer $l$.
+\end{thm}
+\begin{proof}
+Combining Lemma \ref{L:N2}, \ref{L:ABQ1} and the fact that
+$C_{r}*\bar{K}_{ml}=(C_r*\bar{K}_m)*\bar{K}_l$ gives the result.
+
+%Suppose $C_{r}*\bar{K}_{m}$ decomposes into $m$ sunlet graphs
+%$L_{n}$ which follows from Lemma \ref{L:N2}. It is sufficient to
+%show that $L_{n}\left( l\right) $ can be decompose into sunlet graph
+%$L_{nl}$ where $L_{nl}$ is a
+%sunlet graph on $nl$ vertices. Next, construct sunlet graph $L_{nl}$ from $%
+%L_{n}\left( l\right) $. The cycle in $L_{n}$ give rise to
+%$C_{\frac{n}{2}}*
+%\bar{K}_{l}$ in $L_{n}\left( l\right) $.\\
+%The graph $C_{\frac{n}{2}}*\bar{K}_{l}$ can be decomposed into $l$ cycles $C_{\frac{nl%
+%}{2}}$ by Lemma \ref{L:N2}. Then join each vertex in each $l$ cycles $C_{%
+%\frac{nl}{2}}$ to the pendant vertices $x_{i,j}^{l}$ to get $l$
+%sunlet graphs $L_{nl}$, that is,
+
+%$$L_{n}\left( l\right) =L_{nl(1)}\oplus L_{nl(2)}\oplus ...\oplus
+%L_{nl(l)}$$ Hence sunlet graph $L_{nl}$ decomposes $C_{r}*\bar{K}_{ml} $ for any positive
+%integer $l$
+\end{proof}
+\begin{cor}\label{C:N3}
+Let $G=C_{r}*\bar{K}_{m}$ be a graph with sunlet graph
+decomposition, then any proper even list of sunlet graph $L_{nl}$
+packs $G\left( l\right) $ for any positive integer $l$.
+\end{cor}
+\begin{proof}
+Assume that proper list of sunlet graphs $$\delta =\left(
+L_{nl(1)}^{(1)},L_{nl(1)}^{(2)},...,L_{nl(1)}^{(l)},L_{nl(2)}^{(1)},...,L_{nl(2)}^{(l)},...,L_{nl(m)}^{(1)},...,L_{nl(m)}^{(l)}\right)
+$$ is the proper list of sunlet graphs $L_{nl}$. Let $L_{n(1)}\oplus
+L_{n(2)}\oplus ...\oplus L_{n(m)}$ be a sunlet graph decomposition of $G$, that is, $L_{n(k)}\simeq L_{n},k=1,...,m$. By Theorem \ref{T:N10},
+$L_{n(k)}\left( l\right)
+=L_{nl(k)}^{(1)}\oplus $ $L_{nl(k)}^{(2)}\oplus ...\oplus L_{nl(k)}^{(l)}$.
+
+$L_{nl(k)}^{(1)}\simeq L_{nl(k)}^{(2)}\simeq ...\simeq
+L_{nl(k)}^{(l)}\simeq L_{nl}$ Whence
+$$G\left( l\right) =L_{n(1)}\left( l\right) \oplus L_{n(2)}\left( l\right)
+\oplus ...\oplus L_{n(m)}\left( l\right) $$
+$$=L_{nl(1)}^{(1)}\oplus ...\oplus L_{nl(1)}^{(l)}\oplus
+L_{nl(2)}^{(1)}\oplus ...\oplus L_{nl(2)}^{(l)}\oplus ...\oplus
+L_{nl(m)}^{(1)}\oplus ...\oplus L_{nl(m)}^{(l)}$$
+Therefore any even list of sunlet graphs $L_{nl}$ packs $G\left(
+l\right) $
+\end{proof}
+\section{Decomposition of  $C_{r}*\bar{K}_{m}$ into edge-disjoint sunlet graphs $L_r$}
+We present some lemmas, examples and corollary in this section, whereby the first lemma present the decomposition of $C_{r}*\bar{K}_{m}$ into sunlet graphs $L_r$ , while the other lemma shows the decomposition of $C_{r}*\bar{K}_{m}$ into sunlet graphs $L_{2r}$. Also, we present some corollary that relates to blowing up of points.
+ \begin{lem}\label{L:R1}
+ Let $r,m$ be a positive integer satisfying $r,m\equiv 0(mod \ \ 4)$, the graph $C_r*\bar{K}_m$ is decomposable into sunlet graphs $L_r$.
+ \end{lem}
+ \begin{proof}
+ Let the partite sets (layers) of the $r$-partite graph $C_r*\bar{K}_m$ be $U_1,U_2,...,U_r$. Set $m=2t$, obtain a new graph from $C_r*\bar{K}_m$ as follows:\\
+ Identify the subsets of vertices  $\{x_{i,j}\}$, for $1\leq i\leq r$ and $1\leq j\leq \frac{m}{2}$ into new vertices $x_i^1$ and identify the subset of vertices $\{x_{i,j}\}$  for $1\leq i\leq r$ and $\frac{m}{2}+1\leq j\leq m$ into new vertices $x_i^2$ and  two of these vertices $x_i^k$, where $k=1,2$ are adjacent if and only if the corresponding subsets of vertices in $C_r*\bar{K}_m$ induce $K_{t,t}$. The resulting graph is isomorphic to $C_r*\bar{K}_2$. Next decompose $C_r*\bar{K}_2$ into cycles $C_{\frac{r}{2}}$ as follows:
+ $$x_{k,1}x_{k+1,1},...,x_{d,1}x_{d-1,2},...,x_{k+1,2},x_{k,1}$$
+ where
+ $$k=1,\frac{r}{4}+1,\frac{r}{2}+1,\frac{3r}{4}+1,...,r-\frac{r}{4}+1\ \ and\ \  d=\frac{r}{4}+k.$$ Also $k,d$ are calculated modulo $r$.\\
+ To construct the remaining cycle, apply mapping $\phi$ on the vertices defined by:\\
+ $\phi(x_{i,j})=x_{i,j+1}$ for $i$ odd  in each cycle.\\
+ $\phi(x_{i,j})=x_{i,j}$ for $i$ even in each cycle.\\
+ This is the desired decomposition of $C_r*\bar{K}_2$ into cycles $C_{\frac{r}{2}}$.\\
+ By lifting back these cycles $C_\frac{r}{2}$ of $C_r*\bar{K}_2$ to $C_r*\bar{K}_{2t}$, we get edge-disjoint subgraphs isomorphic to $C_{\frac{r}{2}}*\bar{K}_t$. Also $t$ is even since $m\equiv 0(mod\ 4)$. \\
+ Obtain a new graph again from $C_{\frac{r}{2}}*\bar{K}_t$ by setting $t=2t'$ as follows:\\
+ for each $j,\ \ 1\leq j\leq \frac{t}{2}$, identify the subsets of vertices $\{x_{i,2j-1},x_{i,2j}\}$, where $1\leq i\leq \frac{r}{2}$ into new vertices $x_i^j$ and two of these vertices $x_i^j$ are adjacent if and only if the corresponding subsets of vertices in $C_{\frac{r}{2}}*\bar{K}_t$ induce $K_{2,2}$. The resulting graph is isomorphic to $C_{\frac{r}{2}}*\bar{K}_{t'}$. Then decompose $C_{\frac{r}{2}}*\bar{K}_{t'}$ into  cycles $C_{\frac{r}{2}}$. Each  $C_{\frac{r}{2}}*\bar{K}_{t'}$ decomposes into cycles $C_{\frac{r}{2}}$ (by Lemma \ref{L:N2}). By lifting back these cycles $C_{\frac{r}{2}}$ of $C_{\frac{r}{2}}*\bar{K}_{t'}$ to $C_{\frac{r}{2}}*\bar{K}_t$, we get edge-disjoint subgraph isomorphic to $C_{\frac{r}{2}}*\bar{K}_2$. Finally each $C_{\frac{r}{2}}*\bar{K}_2$ decomposes  into two sunlet graphs $L_r$ (by Lemma \ref{L:N1}) and we have $C_r*\bar{K}_m$ decomposing into sunlet graphs $L_r$ as required.
+ \end{proof}
+ \begin{exm}\label{E:R1}
+ The graph $C_8*\bar{K}_{12}$ is decomposable into copies of sunlet
+ graphs $L_8$.
+ \end{exm}
+{\em Solution}.
+
+ Identify the subset of vertices $x_{i,j}$ for $1\leq i\leq 8$ and
+ $1\leq j\leq 6$ into new vertices $x_i^1$ and identify the subset
+ of vertices $x_{i,j}$ for $1\leq i\leq 8$ and $7\leq j\leq 12$ into
+ new vertices $x_i^2$ and the two of these vertices $x_i^1$ and
+ $x_i^2$ are adjacent if and only if the corresponding subsets of
+ vertices in $C_8*\bar{K}_{12}$ induces bipartite graph $K_{6,6}$.
+ The resulting graph is isomorphic to $C_8*\bar{K}_2$.
+
+ Next decompose $C_8*\bar{K}_2$ into cycles $C_4$ as follows:
+ $$x_{1,1}x_{2,1}x_{3,1}x_{2,2}x_{1,1}$$
+ $$x_{3,1}x_{4,1}x_{5,1}x_{4,2}x_{3,1}$$
+ $$x_{5,1}x_{6,1}x_{7,1}x_{6,2}x_{5,1}$$
+ $$x_{7,1}x_{8,1}x_{1,1}x_{8,2}x_{7,1}$$
+ Then construct the remaining cycles by applying mapping $\phi$ on
+ the vertices of the base cycles as follows:\\
+$\phi(x_{i,j})=x_{i,j+1}$ for $i$ odd in each base cycle.\\
+$\phi(x_{i,j})=x_{i,j}$ for $i$ even in each base cycle.\\
+That is,
+$$x_{1,2}x_{2,1}x_{3,2}x_{2,2}x_{1,2}$$
+$$x_{3,2}x_{4,1}x_{5,2}x_{4,2}x_{3,2}$$
+$$x_{5,2}x_{6,1}x_{7,2}x_{6,2}x_{5,2}$$
+$$x_{7,2}x_{8,1}x_{1,2}x_{8,2}x_{7,2}$$
+This is the desired decomposition of $C_8*\bar{K}_2$ into cycles
+$C_4$.
+
+Then lift back these cycles of $C_8*\bar{K}_2$ to
+$C_8*\bar{K}_{12}$, we get edge-disjoint subgraphs isomorphic to
+$C_4*\bar{K}_6$.\\
+Also, obtain a new graph from each $C_4*\bar{K}_6$ as follows:\\
+Identify the subset of vertices:\\
+$\{x_{1,1},x_{1,2}\}$, $\{x_{1,3},x_{1,4}\}$, $\{x_{1,5},x_{1,6}\}$,
+$\{x_{2,1},x_{2,2}\}$, $\{x_{2,3},x_{2,4}\}$, $\{x_{2,5},x_{2,6}\}$,
+$\{x_{3,1},x_{3,2}\}$, $\{x_{3,3},x_{3,4}\}$, $\{x_{3,5},x_{3,6}\}$,
+$\{x_{4,1},x_{4,2}\}$, $\{x_{4,3},x_{4,4}\}$ and
+$\{x_{4,5},x_{4,6}\}$ into new vertices $x_1^1$, $x_1^2$, $x_1^3$,
+$x_2^1$, $x_2^2$, $x_2^3$, $x_3^1$, $x_3^2$, $x_3^3$, $x_4^1$,
+$x_4^2$ and $x_4^3$ respectively.
+
+Also, two of these new vertices $x_i^j$ are adjacent if and only if
+the corresponding subsets of vertices in $C_4*\bar{K}_6$ induce
+bipartite graph $K_{2,2}$. The resulting graph is isomorphic to
+$C_4*\bar{K}_3$.\\
+Next, decompose the graph $C_4*\bar{K}_3$ into cycles $C_4$, that
+is:\\
+$\{x_{1,1}x_{2,1}x_{3,1}x_{4,2},x_{1,1}\}$,
+$\{x_{1,1}x_{2,2}x_{3,1}x_{4,3},x_{1,1}\}$,
+$\{x_{1,1}x_{2,3}x_{3,1}x_{4,1},x_{1,1}\}$,
+$\{x_{1,2}x_{2,1}x_{3,2}x_{4,3},x_{1,2}\}$,
+$\{x_{1,2}x_{2,2}x_{3,2}x_{4,1},x_{1,2}\}$,
+$\{x_{1,2}x_{2,3}x_{3,2}x_{4,2},x_{1,2}\}$,
+$\{x_{1,3}x_{2,1}x_{3,3}x_{4,1},x_{1,3}\}$,
+$\{x_{1,3}x_{2,2}x_{3,3}x_{4,2},x_{1,3}\}$,
+$\{x_{1,3}x_{2,3}x_{3,3}x_{4,3},x_{1,3}\}$.
+
+Also, lifting back each cycle $C_4$ of $C_4*\bar{K}_3$ to
+$C_4*\bar{K}_6$, we get edge-disjoint subgraph isomorphic to
+$C_4*\bar{K}_2$.\\
+Finally, each  graph $C_4*\bar{K}_2$ is decomposable into two sunlet
+graphs $L_8$ by Lemma \ref{L:N1}.
+
+
+
+ \begin{rem}
+{\rm The graph $C_r*\bar{K}_m$ has total sunlet decomposition
+whenever $r,m\equiv 0(mod \ 4)$}.
+\end{rem}
+  \begin{lem}
+ Necessary conditions for $L_r$ to decompose $C_r*\bar{K}_m$ are:
+ \ben
+ \item $\frac{r}{2}$ even
+ \item $\frac{m}{2}$ even
+ \item The number of edges in $L_r$ must divide the number of edges in $C_r*\bar{K}_m$.
+ \een
+ \end{lem}
+ \begin{proof}
+ Conditions $(1)$ and $(2)$ follow from Lemma \ref{L:R1}. Condition $(3)$ follows from the fact that the number of edges in $C_r*\bar{K}_m$ has to be a multiple of the edges in $L_r$, that is, for such decomposition to exist, $r$ must divides $rm^2$ since $C_r*\bar{K}_m$ contains $rm^2$ edges.
+ \end{proof}
+ \begin{thm}\label{T:FR1}(Froncek  et al, 2010) %\cite{DPK}
+  A cycle $C_m$ decomposes $C_k*\bar{K}_m$ for every even $m> 3$.
+ \end{thm}
+ \begin{thm}\label{T:MT1}(Muthusamy and Paulraja, 1995) %\cite{MUTP}
+ If $m$ and $k$ are integers, $k\geq 3$, then $C_k$ decomposes
+$C_k*\bar{K}_m$.
+\end{thm}
+
+\begin{thm}
+For any positive integer $r$ and a positive even integer $m$, the
+ graph $C_r*\bar{K}_m$ is decomposable into sunlet graphs $L_{2r}$.
+\end{thm}
+\begin{proof}
+Let $m=2t$, the cycle $C_r$ decomposes $C_r*\bar{K}_t$ by Theorem
+\ref{T:MT1}. Next make each cycle $C_r$ into $C_r*\bar{K}_2$ and
+each $C_r*\bar{K}_2$ decomposes into two sunlet graphs by Lemma
+\ref{L:N1} and we have $C_r*\bar{K}_m$ decomposing into sunlet
+graphs $L_{2r}$.
+\end{proof}
+The following example illustrates the Theorem above.
+\begin{exm}
+The graph $C_7*\bar{K}_6$ is decomposable into sunlet graphs
+$L_{14}$.
+\end{exm}
+{\em Solution}.
+
+Recall that $C_7*\bar{K}_6=(C_7*\bar{K}_3)*\bar{K}_2$. Consider the
+graph $C_7*\bar{K}_3$ and decompose it into cycles $C_7$. First
+consider the graph $C_6*\bar{K}_3$ and decompose it into cycles
+$C_6$ as follows:\\
+$\{x_{1,1}x_{2,1}x_{3,1}x_{4,1}x_{5,1}x_{6,1}x_{1,1}\}$,
+$\{x_{1,2}x_{2,1}x_{3,2}x_{4,1}x_{5,2}x_{6,1}x_{1,2}\}$,
+$\{x_{1,3}x_{2,1}x_{3,3}x_{4,1}x_{5,3}x_{6,1}x_{1,3}\}$,
+$\{x_{1,2}x_{2,2}x_{3,2}x_{4,2}x_{5,2}x_{6,2}x_{1,2}\}$,
+$\{x_{1,3}x_{2,2}x_{3,3}x_{4,2}x_{5,3}x_{6,2}x_{1,3}\}$,
+$\{x_{1,1}x_{2,2}x_{3,1}x_{4,2}x_{5,1}x_{6,2}x_{1,1}\}$,
+$\{x_{1,3}x_{2,3}x_{3,3}x_{4,3}x_{5,3}x_{6,3}x_{1,3}\}$,
+$\{x_{1,1}x_{2,3}x_{3,1}x_{4,3}x_{5,1}x_{6,3}x_{1,1}\}$,
+$\{x_{1,2}x_{2,3}x_{3,2}x_{4,3}x_{5,2}x_{6,3}x_{1,2}\}$.
+
+Next consider complete tripartite graph $X_i$, where $i=1,6,7$ and
+decompose it into triangles using $3\times 3$ Latin square.\\
+$$\begin{tabular}{c|ccc}\\
++ & 1& 2 & 3\\
+\hline
+1 & 2 & 3 & 1\\
+2 & 3 & 1 & 2\\
+3 & 1 & 2 & 3\\
+\end{tabular}$$
+form the triangles $x_{1,a}x_{6,b}x_{7,c}x_{1,a}$, where $a,b,c$ are
+row,
+column and the entry respectively, that is,\\
+$\{x_{1,1}x_{6,1}x_{7,2}x_{1,1}\}$,
+$\{x_{1,1}x_{6,2}x_{7,3}x_{1,1}\}$,
+$\{x_{1,1}x_{6,3}x_{7,1}x_{1,1}\}$,
+$\{x_{1,2}x_{6,1}x_{7,3}x_{1,2}\}$,\\
+$\{x_{1,2}x_{6,2}x_{7,1}x_{1,2}\}$,
+$\{x_{1,2}x_{6,3}x_{7,2}x_{1,2}\}$,
+$\{x_{1,3}x_{6,1}x_{7,1}x_{1,3}\}$,
+$\{x_{1,3}x_{6,2}x_{7,2}x_{1,3}\}$,
+$\{x_{1,3}x_{6,3}x_{7,3}x_{1,3}\}$.\\
+ Then for every triangle, replace the edge $x_{1,a}x_{6,b}$ in and
+ appropriate cycle $C_6$ by the edges $x_{6,b}x_{7,c}$ and
+ $x_{7,c}x_{1,a}$ to obtain cycle $C_7$ as follows:\\
+$\{x_{1,1}x_{2,1}x_{3,1}x_{4,1}x_{5,1}x_{6,1}x_{7,2}x_{1,1}\}$,
+$\{x_{1,2}x_{2,1}x_{3,2}x_{4,1}x_{5,2}x_{6,1}x_{7,3}x_{1,2}\}$,\\
+$\{x_{1,3}x_{2,1}x_{3,3}x_{4,1}x_{5,3}x_{6,1}x_{7,1}x_{1,3}\}$,
+$\{x_{1,2}x_{2,2}x_{3,2}x_{4,2}x_{5,2}x_{6,2}x_{7,1}x_{1,2}\}$,\\
+$\{x_{1,3}x_{2,2}x_{3,3}x_{4,2}x_{5,3}x_{6,2}x_{7,2}x_{1,3}\}$,
+$\{x_{1,1}x_{2,2}x_{3,1}x_{4,2}x_{5,1}x_{6,2}x_{7,3}x_{1,1}\}$,\\
+$\{x_{1,3}x_{2,3}x_{3,3}x_{4,3}x_{5,3}x_{6,3}x_{7,3}x_{1,3}\}$,
+$\{x_{1,1}x_{2,3}x_{3,1}x_{4,3}x_{5,1}x_{6,3}x_{7,1}x_{1,1}\}$,\\
+$\{x_{1,2}x_{2,3}x_{3,2}x_{4,3}x_{5,2}x_{6,3}x_{7,2}x_{1,2}\}$.\\
+This is the desired decomposition of $C_7*\bar{K}_3$ into cycles
+$C_7$. Next, make each cycle $C_7$ into $C_7*\bar{K}_2$ and
+decompose it into sunlet graphs $L_{14}$. Finally, each graph
+$C_7*\bar{K}_2$ is decomposable into sunlet graphs $L_{14}$ by Lemma
+\ref{L:N1}.
+\begin{cor}\label{C:R}
+Let $r,m$ be a positive even integer satisfying $r,m\equiv 0(mod\
+4)$, then the sunlet graph $L_r$ decomposes $C_r*\bar{K}_{ml}$ for
+any positive integer $l$.
+\end{cor}
+\begin{proof}
+Recall that sunlet graph $L_r$ decomposes  $C_r*\bar{K}_m$ for
+$r\equiv 0(mod\ 4)$ (by Lemma \ref{L:R1}). Combining Lemma
+\ref{L:ABQ}, \ref{L:R1} and the fact that
+$C_r*\bar{K}_{ml}=(C_r*\bar{K}_m)*\bar{K}_l$ gives the result.
+%It is sufficient to show
+%that sunlet graph $L_r$ decomposes  $L_r*\bar{K}_l$. Sunlet graph
+%$L_r$ decomposes $L_r*\bar{K}_l$ into $l^2$ sunlet graph $L_r$ (by
+%Theorem \ref{T:N9}), that is, $$L_r(l)=L_r^{(1)}\oplus ...\oplus
+%L_r^{(l)}\oplus...\oplus L_r^{(l^2)}$$ Hence sunlet graph $L_r$
+%decomposes $C_r*\bar{K}_{ml}$ for any positive integer $l$
+\end{proof}
+\begin{cor}\label{C:R1}
+For any positive even integers $r,m$ satisfying $r,m\equiv 0(mod\
+4)$,
+ %If the graph $C_r*\bar{K}_m$ decomposes into sunlet graph
+%$L_r$, then
+the graph $C_r*\bar{K}_{ml}$ is decomposable into sunlet graphs
+$L_{rl}$ for any positive integer $l$.
+\end{cor}
+\begin{proof}
+Recall that sunlet graph $L_r$ decomposes  $C_r*\bar{K}_m$ for
+$r\equiv 0(mod\ 4)$ (by Lemma \ref{L:R1}). Combining Lemma
+\ref{L:ABQ1}, \ref{L:R1} and the fact that
+$C_r*\bar{K}_{ml}=(C_r*\bar{K}_m)*\bar{K}_l$ gives the result.
+
+%Suppose $C_r*\bar{K}_m$ decomposes into $m^2$ sunlet graphs $L_r$
+%which follows from Lemma \ref{L:R1} then we need to show that
+%$L_r(l)$ can be decompose  into sunlet graph $L_{rl}$ where $L_{rl}$
+%is a sunlet graph of order $rl$. By Theorem \ref{T:N10}, $L_{rl}$
+%decomposes $L_r*\bar{K}_l$ into $l$ sunlet graph $L_{rl}$, that is,
+%$$L_r(l)=L_{rl(1)}\oplus L_{rl(2)}\oplus...\oplus L_{rl(l)}$$ Hence
+%$L_{rl}$ decomposes $C_r*\bar{K}_{ml}$ for any positive integer $l$.
+\end{proof}
+\begin{cor}\label{C:R2}
+For $r,m\equiv 0(mod\ 4)$, $L_r|C_{rl}*\bar{K}_m$ for any positive
+integer $l$.
+\end{cor}
+\begin{proof}
+ Set $m=2t$ and obtain a new graph $C_{rl}*\bar{K}_2$ from the graph $C_{rl}*\bar{K}_m$ as in Lemma \ref{L:R1} above. Denote the vertices in the $i-th$ path of $C_{rl}*\bar{K}_2$ by $x_{i,j}$ where $j=1,2$ and $i=1,...,rl$. Next construct the cycle $C_{\frac{r}{2}}$ as follows:
+ $$x_{k,1}x_{k+1,1}...x_{d,1}x_{d-1,2}x_{d-2,2}...x_{k+1,2}$$
+ where $$k=1,\frac{r}{4}+1,\frac{r}{2}+1,\frac{3r}{4}+1,...,(rl-\frac{r}{4})+1$$ and $d=\frac{r}{4}+k$. $k$ and $d$ are calculated modulo $rl$.\\
+ To construct the remaining cycle, apply mapping $\phi$ on the vertices defined by\\
+ $\phi(x_{i,j})=x_{i,j+1}$ for $i$ odd  in each cycle.\\
+ $\phi(x_{i,j})=x_{i,j}$ for $i$ even in each cycle.\\
+  This is the desired decomposition of $C_{rl}*\bar{K}_2$ into cycles $C_{\frac{r}{2}}$.\\
+ By lifting back these cycles $C_\frac{r}{2}$ of $C_{rl}*\bar{K}_2$ to $C_{rl}*\bar{K}_{m}$, we get edge-disjoint subgraphs isomorphic to $C_{\frac{r}{2}}*\bar{K}_t$.
+If $t=2$, apply Lemma \ref{L:N1} and get the result. If $t>2$, % Also
+%$t$ is even since $\frac{m}{2}$ is even.
+ set $t=2t'$ and obtain a new graph $C_{\frac{r}{2}}*\bar{K}_{t'}$
+from $C_{\frac{r}{2}}*\bar{K}_t$ as in Lemma \ref{L:R1} above. The
+cycle $C_{\frac{r}{2}}$ decomposes $C_{\frac{r}{2}}*\bar{K}_t$ by
+\ref{T:MT1}. By lifting back these cycles $C_{\frac{r}{2}}$ of
+$C_{\frac{r}{2}}*\bar{K}_{t'}$ to $C_{\frac{r}{2}}*\bar{K}_t$, we
+get edge-disjoint subgraph isomorphic to
+$C_{\frac{r}{2}}*\bar{K}_2$. Finally each
+$C_{\frac{r}{2}}*\bar{K}_2$  decomposes into two sunlet graphs $L_r$
+(by Lemma \ref{L:N1}) and  $C_{rl}*\bar{K}_m$ have a decomposition
+into sunlet graphs $L_r$ as required.
+\end{proof}
+\begin{exm}
+The graph $C_{24}*\bar{K}_4$ is decomposable into sunlet graphs
+$L_8$.
+\end{exm}
+{\em Solution}.
+
+Obtain an new graph $C_{24}*\bar{K}_2$ from the graph
+$C_{24}*\bar{K}_4$ as in example \ref{E:R1} above. Next construct
+cycle $C_4$ as follows:\\
+$\{x_{1,1}x_{2,1}x_{3,1}x_{2,2}x_{1,1}\}$,
+$\{x_{1,2}x_{2,1}x_{3,2}x_{2,2}x_{1,2}\}$,
+$\{x_{3,1}x_{4,1}x_{5,1}x_{4,2}x_{3,1}\}$,
+$\{x_{3,2}x_{4,1}x_{5,2}x_{4,2}x_{3,2}\}$,
+$\{x_{5,1}x_{6,1}x_{7,1}x_{6,2}x_{5,1}\}$,
+$\{x_{5,2}x_{6,1}x_{7,2}x_{6,2}x_{5,2}\}$,
+$\{x_{7,1}x_{8,1}x_{9,1}x_{8,2}x_{7,1}\}$,
+$\{x_{7,2}x_{8,1}x_{9,2}x_{8,2}x_{7,2}\}$,
+$\{x_{9,1}x_{10,1}x_{11,1}x_{10,2}x_{9,1}\}$,
+$\{x_{9,2}x_{10,1}x_{11,2}x_{10,2}x_{9,2}\}$,
+$\{x_{11,1}x_{12,1}x_{13,1}x_{12,2}x_{11,1}\}$,\\
+$\{x_{11,2}x_{12,1}x_{13,2}x_{12,2}x_{11,2}\}$,
+$\{x_{13,1}x_{14,1}x_{15,1}x_{14,2}x_{13,1}\}$,
+$\{x_{13,2}x_{14,1}x_{15,2}x_{14,2}x_{13,2}\}$,
+$\{x_{15,1}x_{16,1}x_{17,1}x_{16,2}x_{15,1}\}$,
+$\{x_{15,2}x_{16,1}x_{17,2}x_{16,2}x_{15,2}\}$,
+$\{x_{17,1}x_{18,1}x_{19,1}x_{18,2}x_{17,1}\}$,
+$\{x_{17,2}x_{18,1}x_{19,2}x_{18,2}x_{17,2}\}$,
+$\{x_{19,1}x_{20,1}x_{21,1}x_{20,2}x_{19,1}\}$,
+$\{x_{19,2}x_{20,1}x_{21,2}x_{20,2}x_{19,2}\}$,
+$\{x_{21,1}x_{22,1}x_{23,1}x_{22,2}x_{21,1}\}$,
+$\{x_{21,2}x_{22,1}x_{23,2}x_{22,2}x_{21,2}\}$,
+$\{x_{23,1}x_{24,1}x_{1,1}x_{24,2}x_{23,1}\}$,\\
+$\{x_{23,2}x_{24,1}x_{1,2}x_{24,2}x_{23,2}\}$.
+
+By lifting back these cycles $C_4$ of $C_{24}*\bar{K}_2$ to
+$C_{24}*\bar{K}_4$, we get edge-disjoint subgraphs isomorphic to
+$C_4*\bar{K}_2$. Each graph $C_4*\bar{K}_2$ is decomposable into
+sunlet graphs $L_8$ by Lemma \ref{L:N1}.\\
+Therefore, the graph $C_{24}*\bar{K}_4$ is decomposable into sunlet
+graphs $L_8$.
+
+%\begin{thm}
+%If $r,l,m$ are positive integers such that $m\equiv 0(mod\ 4)$ and
+%$l\equiv 0(mod2)$, then the sunlet graph $L_{rl}$ decomposes
+%$C_r*\bar{K}_m$ if and only if $l\leq m$ and $m\equiv 0(mod\ l)$.
+%\end{thm}
+%\begin{proof}
+%The necessary condition has been proved by Lemma \ref{L:R1} and Corollary \ref{C:R1} and we prove the sufficiency in two cases.\\
+%
+%Case 1: Suppose $l=m$\\
+%Sunlet graph $L_{rl}$ decomposes $C_r*\bar{K}_m$ (by Lemma \ref{L:N2}) and so we have $C_r*\bar{K}_m$ decomposing into sunlet graphs $L_{rl}$.\\
+%Case 2: Suppose $l<m$ and $m\equiv 0(mod\ l)$\\
+%Let $m=wl$, where $w$ is a positive integer.
+%%From case 1 above, sunlet graph $L_{rl}$ decomposes $C_r*\bar{K}_m$ for $l=m$.
+%Then we have
+%$$C_r*\bar{K}_m=(C_r*\bar{K}_l)*\bar{K}_w=(L_{rl}*\bar{K}_w)\oplus...\oplus
+%(L_{rl}*\bar{K}_w)$$ The graph $L_{rl}*\bar{K}_w$ decomposes into
+%sunlet graph $L_{rl}$ (by Corollary \ref{C:R}) and so we have
+%$C_r*\bar{K}_m$ decomposing into sunlet graphs $L_{rl}$ for $l<m$.
+%\end{proof}
+\section{Decomposition of  $C_{r}*\bar{K}_{m}$ into edge-disjoint sunlet graphs $L_m$}
+In this section, we decompose $C_{r}*\bar{K}_{m}$ into sunlet graphs $L_m$.
+\begin{thm}
+Let $m$ be a positive even integer, then the graph $ C_3*\bar{K}_m$
+is decomposable into $3m$ sunlet graph $L_m$.
+\end{thm}
+\begin{proof}
+Set $m=2t$ and split the problem into following two distinct cases:
+%We proof the theorem for two cases:\\
+Case 1: $t$  odd\\
+Cycle $C_t$ decomposes $C_3*\bar{K}_t$ by Theorem \ref{T:MT1}.
+Therefore
+$$C_3*\bar{K}_t=C_t\oplus C_t\oplus...\oplus C_t$$
+Then make each cycle $C_t$ into $C_t*\bar{K}_2$. Now each $C_t*\bar{K}_2$ decomposes into sunlet graph $L_{2t}$ (by Lemma \ref{L:N1}) and we have  $C_3*\bar{K}_m$ decomposing into sunlet graph $L_m$.\\
+Case 2:  $t$  even\\
+Cycle $C_t$ decomposes $C_3*\bar{K}_t$ by Theorem \ref{T:FR1}. Then make each cycle $C_t$ into $C_t*\bar{K}_2$ and sunlet graph $L_{2t}$ decomposes $C_t*\bar{K}_2$ (by Lemma \ref{L:N1}) and we have $C_3*\bar{K}_m$ decomposing into sunlet graph $L_m$.\\
+This completes the proof.
+\end{proof}
+\begin{exm}\label{E:M1}
+The graph $C_3*\bar{K}_{10}$ is decomposable into sunlet graph
+$L_{10}$.
+\end{exm}
+{\em Solution}.
+
+Recall that the graph $C_3*\bar{K}_{10}=(C_3*\bar{K}_5)*\bar{K}_2$
+and decompose the graph $C_3*\bar{K}_5$ into cycles $C_5$ as
+follows:\\
+$\{x_{1,1}x_{2,1}x_{3,1}x_{1,2}x_{2,3}x_{1,1}\}$,
+$\{x_{1,2}x_{2,2}x_{3,2}x_{1,3}x_{2,4}x_{1,2}\}$,
+$\{x_{1,3}x_{2,3}x_{3,3}x_{1,4}x_{2,5}x_{1,3}\}$,\\
+$\{x_{1,4}x_{2,4}x_{3,4}x_{1,5}x_{2,1}x_{1,4}\}$,
+$\{x_{1,5}x_{2,5}x_{3,5}x_{1,1}x_{2,2}x_{1,5}\}$,
+$\{x_{2,1}x_{3,2}x_{1,1}x_{2,4}x_{3,3}x_{2,1}\}$,\\
+$\{x_{2,2}x_{3,3}x_{1,2}x_{2,5}x_{3,4}x_{2,2}\}$,
+$\{x_{2,3}x_{3,4}x_{1,3}x_{2,1}x_{3,5}x_{2,3}\}$,
+$\{x_{2,4}x_{3,5}x_{1,4}x_{2,2}x_{3,1}x_{2,4}\}$,\\
+$\{x_{2,5}x_{3,1}x_{1,5}x_{2,3}x_{3,2}x_{2,5}\}$,
+$\{x_{3,1}x_{1,1}x_{2,5}x_{3,3}x_{1,5}x_{3,1}\}$,
+$\{x_{3,2}x_{1,2}x_{2,1}x_{3,4}x_{1,1}x_{3,2}\}$,\\
+$\{x_{3,3}x_{1,3}x_{2,2}x_{3,5}x_{1,2}x_{3,3}\}$,
+$\{x_{3,4}x_{1,4}x_{2,3}x_{3,1}x_{1,3}x_{3,4}\}$,
+$\{x_{3,5}x_{1,5}x_{2,4}x_{3,2}x_{1,4}x_{3,5}\}$.
+
+Then make each cycle $C_5$ into $C_5*\bar{K}_2$. Each graph
+$C_5*\bar{K}_2$ is decomposable into sunlet graphs $L_{10}$ by
+Example \ref{E:L10}.
+\begin{thm}\label{T:RAF} (Ramirez-Alfonsin, 1995)%\cite{JAC3}
+If $m$ and $k\geq 3$ are odd integers, then $C_m$ decomposes
+$C_k*\bar{K}_m$.
+\end{thm}
+\begin{thm}\label{T:M1}
+Sunlet graph $L_m$ decomposes  $C_{r}*\bar{K}_{m}$ if and only if
+either one of the following conditions is satisfied.
+ \ben
+\item $r$ a positive odd integer and  $m$ a positive even integer.
+\item $r,m$ are positive even integer with $m\equiv 0(\mod\ 4)$.
+\een
+\end{thm}
+\begin{proof}
+\ben
+\item  %The necessary conditions are obvious and we prove the sufficiency in two cases.\\
+% Subcase 1.1: $m\equiv 2(mod\ 4)$\\
+ Set $m=2t$, where $t$ is a positive integer. Let the partite sets (layers) of the $r$-partite graph $C_{r}*\bar{K}_{m}$ be $U_1,U_2,...,U_r$. For each $j$, where $1\leq j\leq t$, identify the subsets of vertices $\{x_{i,2j-1},x_{i,2j}\}$, for $1\leq i\leq r$ into new vertices $x_i^j$ and two of these vertices $x_i^j$ are adjacent if and only if the corresponding subsets of vertices in $C_{r}*\bar{K}_{m}$ induce $K_{2,2}$. The resulting graph is isomorphic to $C_{r}*\bar{K}_{t}$. Then decompose $C_{r}*\bar{K}_{t}$ into cycles $C_t$.\\
+Now $C_t|C_r*\bar{K}_t$ by Theorem  \ref{T:FR1} if $t$ is even and
+$C_t|C_r*\bar{K}_t$ by Theorem \ref{T:RAF} if $t$ is odd. By lifting
+back these $t$-cycles of $C_{r}*\bar{K}_{t}$ to
+$C_{r}*\bar{K}_{2t}$, we get edge-disjoint subgraphs isomorphic to
+$C_t*\bar{K}_2$. Now each $C_t*\bar{K}_2$ decomposes into sunlet
+graphs of length $2t$ (by Lemma \ref{L:N1}) and we have
+$C_r*\bar{K}_m$ decomposing into sunlet graphs of length $m$ as
+required.
+\item % $m\equiv 0(mod\ 4)$\\
+Set $m=2t$, where $t$ is an even integer since $m\equiv 0(\mod\ 4)$.\\
+Obtain a new graph $C_r*\bar{K}_t$ from the graph $C_r*\bar{K}_m$ as
+in Case 1 above. By Theorem \ref{T:FR1}, $C_t|C_r*\bar{K}_t$.
+Lifting back these $t$-cycles of $C_r*\bar{K}_t$ to
+$C_r*\bar{K}_{2t}$, we get edge-disjoint subgraphs isomorphic to
+$C_t*\bar{K}_2$. Now each $C_t*\bar{K}_2$ decomposes into sunlet
+graph of length $2t$ (by Lemma \ref{L:N1}). Therefore
+$L_m|C_r*\bar{K}_m$ as required.
+%\item The proof is similar to the proof of subcase 1.2 above.
+\een
+\end{proof}
+\begin{thm}
+If sunlet graph $L_m$ decomposes  $C_{r}*\bar{K}_{m}$ then the graph
+$C_{r}*\bar{K}_{ml}$ can be decomposed into sunlet graph $L_m$ for
+any positive integer $l$.
+\end{thm}
+\begin{proof}
+By the previous observation, sunlet graph $L_m$ decomposes
+$C_{r}*\bar{K}_{m}$ by Theorem  \ref{T:M1}. Combining \ref{T:M1},
+\ref{L:ABQ} and the fact that
+$C_r*\bar{K}_{ml}=(C_r*\bar{K}_m)*\bar{K}_l$ gives the result.
+%Next show that $L_m(l)$ can be decompose into $l^2$ copies of sunlet graph $L_m$.\\
+%sunlet graph $L_m$ decomposes $L_m(l)$ (by Theorem \ref{T:N9}).
+%Hence the result.
+\end{proof}
+\begin{thm}
+If the graph $C_{r}*\bar{K}_{m}$ decomposes into sunlet graph $L_m$
+then the graph $C_{r}*\bar{K}_{ml}$ can be decomposed  into sunlet
+graph $L_{ml}$ for any positive integer $l$.
+\end{thm}
+\begin{proof}
+The proof follows immediately from Theorem \ref{T:N10}.
+\end{proof}
+Now, we show that the necessary condition for the decomposition of $C_{r}*\bar{K}_{m}$ into sunlet graphs is sufficient.
+\begin{thm}
+For any even integer $m\geq 2$, the graph $C_{r}*\bar{K}_{m}$ is
+decomposable into sunlet graphs $L_{q}$ if and only if $q$ divides
+$rm^{2}$.
+\end{thm}
+\begin{proof}
+The number of edges in $C_{r}*\bar{K}_{m}$ is $rm^{2}$, so from the
+obvious necessary condition, $q$ must divides $rm^{2}$ for a
+decomposition to occur. To show that if $q|rm^{2}$ then sunlet graph
+$L_{q}$ decomposes $C_{r}*\bar{K}_{m}$, it is sufficient to show
+that if $r|q$ and $m|q$ then $q|rm^{2}$. \\
+Case 1: $r$ divides $q$
+
+Write $q=rw^{2}t$ where $t,w$ is a positive integer and from the necessary condition, $rw^{2}t|rm^{2}$, so $wt|m$, and we can write $m=ww^{^{\prime }}t$ where $w'$ is any positive integer. Also $%
+rw^{2}t\leq rww^{^{\prime }}t$, and we have  $w'\geq w$.\\
+%Now suppose $w=w'$.\\
+Subcase  1.1: Suppose $w=w'$\\%$r$ is odd\\
+ Let $r,t,w$ be any positive integer such that $w\equiv 0(\mod \ 2)$. Then we have $(C_r*\bar{K}_w)*\bar{K}_w*\bar{K}_t$. By Theorem \ref{T:LA1}, we have $(C_{rw}*\bar{K}_w)*\bar{K}_t$. By Lemma \ref{L:N2} we have $L_{rw^2}*\bar{K}_t$. Also, by Lemma \ref{L:ABQ1} we have $L_{rw^2t}$.\\
+ Subcase 1.2: Suppose $w<w'$ and assume that $w=1$, where $w'$ and $t$ are positive integer with opposite parity. Then $C_r*\bar{K}_{w'wt}=(C_r*\bar{K}_{wt})*\bar{K}_{w'}$ for $w'$ even and $t$ odd.\\
+ Now $C_r*\bar{K}_{wt}$ decomposes into $wt$ cycles $C_{rwt}$ by Theorem \ref{T:LA1}. Then we have $$C_{rwt}*\bar{K}_{w'}\oplus...\oplus C_{rwt}*\bar{K}_{w'}$$ Each graph $C_{rwt}*\bar{K}_{w'}$ decomposes into sunlet graph $L_{rww't} $ by Lemma \ref{L:N2}.\\
+ The graph $C_r*\bar{K}_{w'wt}=(C_r*\bar{K}_{w'w})*\bar{K}_t$ for $t$ even and $w'$ odd. \\ Similarly, the graph $(C_r*\bar{K}_{ww'})*\bar{K}_t$ decomposes into sunlet graph $L_{rww't}$ by Lemma \ref{L:N2}, where $t$ is an odd integer and $w'$ is an even integer.\\
+ %Subcase 1.1.1: $r$ is odd, $w\equiv 0(mod\ 2)$ and $t$ is any  positive integer.\\ The graph $C_r*\bar{K}_{w^2t}=(C_r*\bar{K}_t)*\bar{K}_{w^2}$. \\
+ %$C_r*\bar{K}_{t}$ decomposes into cycles $C_{rt}$ (by Laska \cite{RL8}). Then $$(C_r*\bar{K}_t)*\bar{K}_{w^2}=(C_{rt}*\bar{K}_{w^2})\oplus...\oplus (C_{rt}*\bar{K}_{w^2})$$
+ %Each graph $C_{rt}*\bar{K}_{w^2}$ decomposes into sunlet graph $L_{rw^2t}$ by Lemma
+%~\ref{L:N2}.\\
+%Subcase 1.1.2: $r$ is odd, $w$ is a prime number and $t\equiv 0(mod\ 2)$\\
+ %The graph $C_r*\bar{K}_{w^2t}=(C_r*\bar{K}_{w^2})*\bar{K}_{t}$.\\
+ %The graph $C_r*\bar{K}_{{w^2}}$ decomposes into cycle $C_{rw^2}$ (by Liu \cite{RL8}). Then
+ %$$(C_r*\bar{K}_{w^2})*\bar{K}_{t}=(C_{rw^2}*\bar{K}_{t})\oplus...\oplus (C_{rw^2}*\bar{K}_{t})$$
+ %Each graph $C_{rw^2}*\bar{K}_{t}$ decomposes into sunlet graph $L_{rw^2t}$ by Lemma \ref{L:N2}.\\
+ % Subcase 1.2: $r\equiv 2(mod\ 4)$, $w\equiv 0(mod\ 2)$ and $t$ is any positive integer.\\
+ %The graph $C_r*\bar{K}_{w^2t}$ decomposes into sunlet graph $L_{rw^2t}$ by Lemma \ref{L:N2}\\
+ Subcase 1.3:  Suppose $q=r$ and consider the graph $C_r*\bar{K}_{w^2t}$ where $m=w^2t$. Let  $r\equiv 0(\mod\ 4)$, $w\equiv 0(\mod\ 2)$ and $t$ is any positive integer..\\
+ The graph $C_r*\bar{K}_{w^2t}=(C_r*\bar{K}_t)*\bar{K}_{w^2}$.\\ $C_r*\bar{K}_{t}$ decomposes into cycle $C_r$ by Theorem \ref{T:MT1}). Therefore $$(C_r*\bar{K}_t)*\bar{K}_{w^2}=(C_{r}*\bar{K}_{w^2})\oplus...\oplus (C_{r}*\bar{K}_{w^2})$$ Each graph $C_r*\bar{K}_{w^2}$ decomposes into sunlet graph $L_r$ by Theorem \ref{L:R1}.\\
+Case 2: $m$ divides $q$\\
+ Suppose $w=w'$ and $m=q$, then $m=q=w^2t$.\\
+%$m=q=w^2t$\\
+Subcase 2.1:  Let $r,t,w$ be positive integers such that $w\equiv 0(\mod\ 2)$.\\
+%$r$ is any positive integer, $w\equiv 0(mod\ 2)$ and $t$ is any positive integer.\\
+The graph $C_r*\bar{K}_{w^2t}=(C_r*\bar{K}_w)*\bar{K}_{tw}$\\
+$C_r*\bar{K}_w$ decomposes into cycle $C_w$ by Theorem \ref{T:FR1}.
+Then we have
+$$(C_r*\bar{K}_{w})*\bar{K}_{tw}=(C_{w}*\bar{K}_{tw})\oplus...\oplus
+(C_{w}*\bar{K}_{tw})$$
+Each graph $C_w*\bar{K}_{tw}$ decomposes into sunlet graph $L_{w^2t}$ by Lemma \ref{L:N2}.\\
+Subcase 2.2: Suppose $w=1$ and $w<w'$.\\
+Then  $C_r*\bar{K}_{ww't}=C_r*\bar{K}_{wt}*\bar{K}_{w'}$, for $t$ even and $w'$ odd. Sunlet graph $L_{wt}$ decomposes $C_r*\bar{K}_{wt}$ by Theorem \ref{T:M1}. Therefore $L_{wt}*\bar{K}_{w'}$ decomposes into sunlet graph $L_{ww't}$ by Theorem \ref{T:N10}.\\
+ The prove for the case $q>m$ follows from case 1 above. This complete the proof.
+%$r$ is odd, $w$ is any prime number and $t\equiv 0(mod\ 2)$\\
+%The graph $C_r*\bar{K}_{w^2t}=(C_r*\bar{K}_{w^2})*\bar{K}_{t}$\\
+%The graph $C_r*\bar{K}_{w^2}$ decomposes into cycle $C_w^2$ (by Froncek  et. al .. \cite{DPK}).
+%$$(C_r*\bar{K}_{w^2})*\bar{K}_{t}=(C_{w^2}*\bar{K}_{t})\oplus...\oplus (C_{w^2}*\bar{K}_{t})$$
+%Each graph $C_{w^2}*\bar{K}_{t}$ decomposes into sunlet graph  $L_{w^2t}$.\\
+ %The prove for the case where $q>m$ follows from case 1 above, \\(since $m=w^2t$).  This complete the proof.
+\end{proof}
+Next, we present the decomposition of $C_{r}*\bar{K}_{m}$ into sunlet graphs $L_q$, where $q=r+m$.
+\begin{thm}
+The sunlet graph $L_q,q=r+m$ decomposes $C_{r}*\bar{K}_{m}$ if and
+only if $r=m$ and $r,m$ even.
+\end{thm}
+\begin{proof}
+Suppose $r=m$ and $r,m$ even,
+%Consider the graph $C_{r}*\bar{K}_{m}$ where $r,m$ are even and $r=m$.\\
+set $m=2t$. Decompose the graph $C_{r}*\bar{K}_{t}$ into $t^2$ cycle $C_r$ which follows from Lemma \ref{L:N2}  \\
+Next take each cycle $C_r$, make it into $C_{r}*\bar{K}_{2}$ and
+decompose it into two sunlet graphs with $2r$ vertices.
+$$2r=q=r+m$$ since $r=m$.\\
+Also, suppose $L_q|C_{r}*\bar{K}_{m},q=r+m$.\\
+Clearly, for $L_q$ to decompose $C_{r}*\bar{K}_{m}$, $q$ must divide
+$rm^2$ i.e \\$rm^2\equiv 0(\mod q)$ $\Rightarrow rm^2=wq$ for any
+positive integer $w$.
+Then $\frac{rm^2}{w}=q$\\
+from the decomposition, $\frac{m^2}{w}=2$, then we have $2r=r+m$ which implies that $r=m$.\\
+Hence $L_q|C_{r}*\bar{K}_{m},q=r+m$ if and only if $r=m$.
+\end{proof}
+\section{Decomposition of  $(K_n-I)*\bar{K}_m$ into edge-disjoint sunlet graphs }
+\begin{thm}\label{T:ALW}(Alspach, 2006) %\cite{BA1}
+ The complete graph of order $2n+1$ has a Hamilton decomposition for
+all $n\geq 1$.
+\end{thm}
+Next, we present the decomposition of $K_n-I$ into edge-disjoint sunlet graphs $L_n$.
+\begin{thm}\label{T:I1}
+For an even integer $n$ such that $n\equiv 2(\mod\ 4)$, the graph
+$K_n-I$ is decomposable into sunlet graphs $L_n$, where $I$ is a
+$1$-factor of $K_n$.
+\end{thm}
+\begin{proof}
+Note that  $K_n-I\simeq K_{\frac{n}{2}}*\bar{K}_{2}$. %since $n\equiv 2(mod\ 4)$.\\
+Now consider the graph $K_{\frac{n}{2}}$.\\
+Using Walecki's construction on the graph $K_{\frac{n}{2}}$, we have
+Hamilton cycle $C_{\frac{n}{2}}$ decomposing  $K_{\frac{n}{2}}$ by
+Theorem \ref{T:ALW}, that is
+$$K_{\frac{n}{2}}=C_{\frac{n}{2}}\oplus C_{\frac{n}{2}}\oplus...\oplus C_{\frac{n}{2}}.$$
+Therefore,
+ $$K_{\frac{n}{2}}*\bar{K}_{2}=(C_{\frac{n}{2}}*\bar{K}_2)\oplus (C_{\frac{n}{2}}*\bar{K}_2)\oplus...\oplus (C_{\frac{n}{2}}*\bar{K}_2).$$
+Now  each $C_{\frac{n}{2}}*\bar{K}_2$ decomposes into sunlet graph
+$L_n$ by Lemma \ref{L:N1}. Hence sunlet graph $L_n$ decomposes
+$K_n-I$ for $n\equiv 2 (\mod\ 4)$
+\end{proof}
+
+\begin{thm}
+Let $n$ be a positive even integer such that $n\equiv 0(\mod\ 4)$,
+then the graph $K_n-I$ can be decomposed into $\frac{n}{2}-2$ sunlet
+graph $L_n$ and $\frac{n}{4}$ cycle $C_4$.
+\end{thm}
+\begin{proof}
+Clearly $K_n-I\simeq K_{\frac{n}{2}}*\bar{K}_{2}$.\\
+Now consider the graph $K_{\frac{n}{2}},\frac{n}{2}$ even. Using Walecki's construction, $K_{\frac{n}{2}}$ can be decomposed into $\frac{n}{4}-1$ hamilton cycle $C_{\frac{n}{2}}$ and one- factor $I$.\\
+Next take each cycle ${C_{\frac{n}{2}}}_i,i=1,...,\frac{n}{4}-1$, make it into  $C_{\frac{n}{2}}*\bar{K}_{2}$ and by Lemma \ref{L:N1}, $C_{\frac{n}{2}}*\bar{K}_{2}$  decomposes into two sunlet graphs with $n$ vertices which gives $\frac{n}{2}-2$ sunlet graphs $L_n$.\\
+Also, consider one-factor $I$ and make it into $I*\bar{K}_{2}$ which gives $\frac{n}{4}$ cycle $C_4$.\\
+Hence $K_n-I$ can be decompose into $\frac{n}{2}-2$ sunlet graphs
+$L_n$ and $\frac{n}{4}$ cycle $C_4$ for $n\equiv 0(\mod\ 4)$.
+\end{proof}
+\begin{thm}\label{T:I2}
+Let $n$ be a positive even integer such that $n\equiv 2(\mod \ 4)$,
+then the graph $(K_n-I)*\bar{K}_{l}$ can be decomposed into sunlet
+graph $L_n$  for any positive integer $l$.
+\end{thm}
+\begin{proof}
+Combining Theorem \ref{T:I1} and Lemma \ref{L:ABQ} gives the result.
+ %From Theorem \ref{T:I1},  $K_n-I$ decomposes into sunlet graph $L_n,n\equiv 2(mod \ 4)$. All we need to show is that $L_n*\bar{K}_{l}$ decomposes into copies  of sunlet graph $L_n$. By Theorem \ref{T:N9}, $L_n*\bar{K}_{l}$  decomposes into $l^2$ sunlet graph $L_n$.\\
+%Hence sunlet graph $L_n$ decomposes $K_n-I*\bar{K}_{l}$ for $n\equiv
+%2(mod \ 4)$
+\end{proof}
+\begin{thm}
+Let $n$ be a positive even integer such that $n\equiv 2(\mod\ 4)$,
+then the graph $(K_n-I)*\bar{K}_{l}$ can be decomposed into sunlet
+graph $L_{nl}$ for any positive integer $l$.
+\end{thm}
+\begin{proof}
+Combining Theorem \ref{T:I1} and Lemma \ref{L:ABQ1} gives the
+result.
+%By Theorem \ref{T:I1}, sunlet graph $L_n$ decomposes $K_n-I$ for $n\equiv 2(mod\ 4)$. All we need to show next is that $L_n*\bar{K}_{l}$  decomposes into sunlet graph $L_{nl}$. By Theorem \ref{T:N10}, $L_{nl}$ decomposes  $L_n*\bar{K}_{l}$.\\
+%Hence $L_{nl}$  decomposes  $K_n-I*\bar{K}_{l}$  with $n\equiv
+%2(mod\ 4)$ odd for any positive integer $l$.
+\end{proof}
+\begin{cor}
+Let $n$ be a positive even integer such that $n\equiv 2(\mod\ 4)$ and
+$m$ be a positive odd integer, then the graph $(K_n-I)*\bar{K}_m$ is
+decomposable into edge-disjoint sunlet graphs $L_{2m}$.
+\end{cor}
+\begin{proof}
+Recall that $K_n-I\simeq K_{\frac{n}{2}}*\bar{K}_2$ and
+$(K_{\frac{n}{2}}*\bar{K}_2)*\bar{K}_m=K_{\frac{n}{2}}*\bar{K}_m*\bar{K}_2$.\\
+Each complete graph $K_{\frac{n}{2}}$ is decomposable into Hamilton
+cycles $C_{\frac{n}{2}}$ by Theorem \ref{T:ALW}. The graph
+$$K_{\frac{n}{2}}*\bar{K}_m=C_{\frac{n}{2}}*\bar{K}_m\oplus...\oplus
+C_{\frac{n}{2}}*\bar{K}_m.$$ Each graph $C_{\frac{n}{2}}*\bar{K}_m$
+is decomposable into
+edge-disjoint cycles $C_m$ by Theorem \ref{T:RAF}.\\
+Make each cycle $C_m$ into $C_m*\bar{K}_2$ and decompose it into
+edge-disjoint sunlet graphs $L_{2m}$ by Lemma \ref{L:N1}.
+\end{proof}
+\begin{exm}
+The graph $(K_{10}-I)*\bar{K}_7$ is decomposable into edge-disjoint
+sunlet graphs $L_{14}$.
+\end{exm}
+{\em Solution}.
+ Recall that $K_{10}-I\simeq K_5*\bar{K}_2$. Each
+complete graph $K_5$ is decomposable into Hamilton cycles $C_5$ as
+follows:
+$$\{u_1u_2u_3u_5u_4\},\{u_1u_3u_4u_2u_5\}.$$
+Make each cycle $C_5$ into $C_5*\bar{K}_{14}$ and note that
+$C_5*\bar{K}_{14}=(C_5*\bar{K}_7)*\bar{K}_2$. Decompose the graph
+$C_5*\bar{K}_7$ into
+edge-disjoint cycles $C_7$ as follows:\\
+$\{x_{1,1}x_{2,1}x_{3,1}x_{4,1}x_{5,1}x_{1,2}x_{2,3}\}$,
+$\{x_{1,2}x_{2,2}x_{3,2}x_{4,2}x_{5,2}x_{1,3}x_{2,4}\}$,
+$\{x_{1,3}x_{2,3}x_{3,3}x_{4,3}x_{5,3}x_{1,4}x_{2,5}\}$,
+$\{x_{1,4}x_{2,4}x_{3,4}x_{4,4}x_{5,4}x_{1,5}x_{2,6}\}$,
+$\{x_{1,5}x_{2,5}x_{3,5}x_{4,5}x_{5,5}x_{1,6}x_{2,7}\}$,
+$\{x_{1,6}x_{2,6}x_{3,6}x_{4,6}x_{5,6}x_{1,7}x_{2,1}\}$,
+$\{x_{1,7}x_{2,7}x_{3,7}x_{4,7}x_{5,7}x_{1,1}x_{2,2}\}$,
+$\{x_{2,1}x_{3,2}x_{4,3}x_{5,5}x_{1,1}x_{2,4}x_{3,3}\}$,
+$\{x_{2,2}x_{3,3}x_{4,4}x_{5,6}x_{1,2}x_{2,5}x_{3,4}\}$,
+$\{x_{2,3}x_{3,4}x_{4,5}x_{5,7}x_{1,3}x_{2,6}x_{3,5}\}$,
+$\{x_{2,4}x_{3,5}x_{4,6}x_{5,1}x_{1,4}x_{2,7}x_{3,6}\}$,
+$\{x_{2,5}x_{3,6}x_{4,7}x_{5,2}x_{1,5}x_{2,1}x_{3,7}\}$,
+$\{x_{2,6}x_{3,7}x_{4,1}x_{5,3}x_{1,6}x_{2,2}x_{3,1}\}$,
+$\{x_{2,7}x_{3,1}x_{4,2}x_{5,4}x_{1,7}x_{2,3}x_{3,2}\}$,
+$\{x_{3,1}x_{4,3}x_{5,6}x_{1,1}x_{2,5}x_{3,3}x_{4,6}\}$,
+$\{x_{3,2}x_{4,4}x_{5,7}x_{1,2}x_{2,6}x_{3,4}x_{4,7}\}$,
+$\{x_{3,3}x_{4,5}x_{5,1}x_{1,3}x_{2,7}x_{3,5}x_{4,1}\}$,
+$\{x_{3,4}x_{4,6}x_{5,2}x_{1,4}x_{2,1}x_{3,6}x_{4,2}\}$,
+$\{x_{3,5}x_{4,7}x_{5,3}x_{1,5}x_{2,2}x_{3,7}x_{4,3}\}$,
+$\{x_{3,6}x_{4,1}x_{5,4}x_{1,6}x_{2,3}x_{3,1}x_{4,4}\}$,
+$\{x_{3,7}x_{4,2}x_{5,5}x_{1,7}x_{2,4}x_{3,2}x_{4,5}\}$,
+$\{x_{4,1}x_{5,2}x_{1,1}x_{2,6}x_{3,3}x_{4,7}x_{5,5}\}$,
+$\{x_{4,2}x_{5,3}x_{1,2}x_{2,7}x_{3,4}x_{4,1}x_{5,6}\}$,
+$\{x_{4,3}x_{5,4}x_{1,3}x_{2,1}x_{3,5}x_{4,2}x_{5,7}\}$,
+$\{x_{4,4}x_{5,5}x_{1,4}x_{2,2}x_{3,6}x_{4,3}x_{5,1}\}$,
+$\{x_{4,5}x_{5,6}x_{1,5}x_{2,3}x_{3,7}x_{4,4}x_{5,2}\}$,
+$\{x_{4,6}x_{5,3}x_{1,6}x_{2,4}x_{3,1}x_{4,5}x_{5,3}\}$,
+$\{x_{4,7}x_{5,4}x_{1,7}x_{2,5}x_{3,2}x_{4,6}x_{5,4}\}$,
+$\{x_{5,1}x_{1,1}x_{2,7}x_{3,4}x_{4,1}x_{5,7}x_{1,5}\}$,
+$\{x_{5,2}x_{1,2}x_{2,1}x_{3,5}x_{4,2}x_{5,1}x_{1,6}\}$,
+$\{x_{5,3}x_{1,3}x_{2,2}x_{3,6}x_{4,3}x_{5,2}x_{1,7}\}$,
+$\{x_{5,4}x_{1,4}x_{2,3}x_{3,7}x_{4,4}x_{5,3}x_{1,1}\}$,
+$\{x_{5,5}x_{1,5}x_{2,4}x_{3,1}x_{4,5}x_{5,4}x_{1,2}\}$,
+$\{x_{5,6}x_{1,6}x_{2,5}x_{3,2}x_{4,6}x_{5,5}x_{1,3}\}$,
+$\{x_{5,7}x_{1,7}x_{2,6}x_{3,3}x_{4,7}x_{5,6}x_{1,4}\}$.\\
+Make each cycle $C_7$ into $C_7*\bar{K}_2$ and decompose it into
+sunlet graphs $L_{14}$ by lemma \ref{L:N1}.
+\begin{cor}
+Let $n$ be a positive even integer, the sunlet graph $L_n$
+decomposes the graph $K_n-I$ if and only if $n\equiv 2(\mod\ 4)$.
+\end{cor}
+\begin{proof}
+The proof follows immediately from Theorem \ref{T:I1}.
+\end{proof}
+The following theorems present the decomposition of $(K_{n+2}-I)*\bar{K}_m$ into edge-disjoint sunlet graphs.
+\begin{thm}
+Let $m,n,q$ be positive even integers satisfying $n\equiv 2(\mod\ 4)$
+and $m\equiv 0(\mod\ 4)$, then the graph $(K_{n+2}-I)*\bar{K}_m$ is
+decomposable into sunlet graphs $L_n$.
+\end{thm}
+\begin{proof}
+Note that cycle $C_n$ decomposes the graph $K_{n+2}-I$ by Alspach
+and Gavlas (2001). Therefore we have
+$$(K_{n+2}-I)*\bar{K}_m=C_n*\bar{K}_m\oplus...\oplus C_n*\bar{K}_m$$
+Applying Lemma \ref{L:R1} gives the result.
+\end{proof}
+\begin{thm}
+Let $m,n,q$ be positive even integers satisfying $n\equiv 2 (\mod\
+4)$, then the graph $(K_{n+2}-I)*\bar{K}_m$ is decomposable into
+sunlet graphs $L_{2n}$.
+\end{thm}
+\begin{proof}
+Set $m=2t$ and consider the graph $(K_{n+2}-I)*\bar{K}_m$ as
+$((K_{n+2}-I)*\bar{K}_2)*\bar{K}_t$. Recall that cycle $C_n$
+decomposes the graph $K_{n+2}$. Then we have
+$$(K_{n+2}-I)*\bar{K}_2=(C_n*\bar{K}_2)\oplus...\oplus(C_n*\bar{K}_2).$$
+Each graph $C_n*\bar{K}_2$ decomposes into sunlet graphs $L_{2n}$ by
+Lemma \ref{L:N1}. Also, applying Lemma \ref{L:ABQ} to each graph
+$L_{2n}*\bar{K}_t$ gives the result.
+\end{proof}
+\begin{thm}
+Let $m,n,q$ be even integers satisfying $n\equiv 2(\mod\ 4)$, then
+the graph $(K_{n+2}-I)*\bar{K}_m$ is decomposable into sunlet graphs
+$L_{nm}$.
+\end{thm}
+\begin{proof}
+Applying Lemma \ref{L:N2} and the fact that cycle $C_n$ decomposes
+$(K_{n+2}-I)*\bar{K}_m$ gives the result.
+\end{proof}
+\begin{thm}\label{T:AGA}(Alspach and Gavlas, 2001) %\cite{BA}
+ For positive even integers $m$ and $n$ with $4\leq m\leq n$, the
+graph $K_n-I$ can be decomposed into cycles of length $m$ if and
+only if the number of edges in $K_n-I$ is a multiple of $m$.
+\end{thm}
+\begin{thm}\label{T:SNA}(Sajna, 2002) %\cite{MS3}
+ Let $n$ be an even integer and $m$ be an odd integer with $3\leq
+m\leq n$. The graph $K_n-I$ can be decomposed into cycles of length
+$m$ whenever $m$ divides the number of edges in $K_n-I$.
+\end{thm}
+\begin{thm}\label{T:ALW1}(Alspach, 2006) %\cite{BA1}
+ The complete graph of order $2n$ with a $1$-factor removed has a
+Hamilton decomposition for all $n\geq 1$.
+\end{thm}
+The next theorem shows that the necessary condition for the decomposition of $(K_n-I)*\bar{K}_m$ into sunlet graphs $L_q$ is sufficient.
+\begin{thm}\label{T:NM1}
+For even integers $m,n,q$ with $q\geq 6$, the sunlet graph $L_q$
+decomposes $(K_n-I)*\bar{K}_m$ (where $I$ is a $1$-factor of $K_n$) if
+and only if $$\frac{n(n-2)m^2}{2}\equiv 0(\mod\ q)$$
+\end{thm}
+\begin{proof}
+The necessary condition is obvious and we prove the sufficiency in two cases.\\
+Case $1$.  \ \ \ \ $ q|m$\\
+We first consider the case $m=q$ and prove the theorem in two cases.\\
+Subcase 1.1:\ \ \ $m\equiv 0(\mod \  4)$\\
+Set $m=2t$ and we have $((K_n-I)*\bar{K}_t)*\bar{K}_2$. First
+consider the graph $(K_n-I)*\bar{K}_t$. Since  $C_r|K_n-I$ for $r$
+an even integer by Theorem \ref{T:AGA}, we have
+$$(K_n-I)*\bar{K}_t=(C_r*\bar{K}_t)\oplus
+(C_r*\bar{K}_t)\oplus...\oplus(C_r*\bar{K}_t)$$
+Each graph $(C_r*\bar{K}_t)$ decomposes into cycle $C_t$ by Theorem \ref{T:FR1}.\\
+ Also cycle $C_r$ decomposes $K_n-I$ for $r$ odd by Theorem \ref{T:SNA}, we have $$(K_n-I)*\bar{K}_t=(C_r*\bar{K}_t)\oplus (C_r*\bar{K}_t)\oplus...\oplus (C_r*\bar{K}_t)$$
+Each graph $(C_r*\bar{K}_t)$ decomposes into cycle $C_t$ by Theorem
+\ref{T:FR1}. Now make each cycle $C_t$ into $C_t*\bar{K}_2$. Each
+graph $C_t*\bar{K}_2$ decomposes into sunlet graphs $L_{2t}$ and so
+we have  $K_n-I*\bar{K}_m$ decomposing into sunlet graph $L_m$.
+\\
+Subcase $1.2$:\ \ \ \ $m\equiv 2 (\mod\ 4)$\\
+Set $m=2t$ and we have $((K_n-I)*\bar{K}_t)*\bar{K}_2$. Now consider
+the graph $(K_n-I)*\bar{K}_t$. Cycle $C_r$ decomposes $K_n-I$ for
+$r$ odd by Theorem \ref{T:SNA} and we have
+$$(K_n-I)*\bar{K}_t=(C_r*\bar{K}_t)\oplus (C_r*\bar{K}_t)\oplus...\oplus(C_r*\bar{K}_t)$$
+Each graph $(C_r*\bar{K}_t)$ decomposes into cycle $C_t$ by Theorem \ref{T:RAF}, where $t\geq r$\\
+%Also cycle $C_r$ decomposes $K_n- I$ for $r$ even by Theorem
+%\ref{T:AGA}, we have $$K_n-I*\bar{K}_t=(C_r*\bar{K}_t)\oplus
+%(C_r*\bar{K}_t)\oplus...\oplus(C_r*\bar{K}_t)$$
+%Each graph $(C_r*\bar{K}_t)$ decomposes into cycle $C_t$ by \cite{DPK}.
+ Now make each cycle $C_t$ into $C_t*\bar{K}_2$. Each graph $C_t*\bar{K}_2$ decomposes into sunlet graphs $L_{2t}$ and we have  $K_n-I*\bar{K}_m$ decomposing into sunlet graph $L_m$.\\
+Suppose $m>q$, Let $m=qt$, for any positive integer $t$, then
+$(K_n-I)*\bar{K}_m\simeq ((K_n-I)*\bar{K}_q)*\bar{K}_t$. By Subcase
+1.1 and 1.2 we have  $(K_n-I*\bar{K}_q)*\bar{K}_t=(L_q*\bar{K}_t)
+\oplus ...\oplus (L_q*\bar{K}_t)$. The graph $L_q*\bar{K}_t$
+decomposes into sunlet graph of length $q$ (by Lemma \ref{L:ABQ})
+and we have $(K_n-I)*\bar{K}_m$ decomposing into sunlet graphs $L_q$
+for $m>q$.
+\\
+Case $2$.\ \ $q|n$\\
+We first consider the case $n=q$ and prove the theorem in two cases.\\
+Subcase $2.1$\ \ \ $n\equiv 0(\mod\ 4)$\\
+The graph $K_n-I$ decomposes into cycle $C_n$ by Theorem
+\ref{T:ALW1}. Therefore we have
+$$(K_n-I)*\bar{K}_m=(C_n*\bar{K}_m)\oplus (C_n*\bar{K}_m)\oplus...\oplus(C_n*\bar{K}_m)$$
+Now each graph $C_n*\bar{K}_m$ decomposes into sunlet graphs $L_n$
+for $m\equiv 0(\mod\ 4)$ (by Lemma \ref{L:R1}). Therefore, the graph
+$(K_n-I)*\bar{K}_m$ decomposes into sunlet graphs $L_n$ as required.
+\\
+Subcase 2.2.\ \ \ \ $n\equiv 2(\mod \ 4)$\\
+Sunlet graph $L_n$ decomposes $K_n-I$ (by Theorem \ref{T:I1}) and by Theorem \ref{T:I2}, sunlet graph $L_n$ decomposes $(K_n-I)*\bar{K}_m$. Therefore, we have that $K_n-I*\bar{K}_m$ decomposing into sunlet graphs $L_n$.\\
+Suppose $n>q$ and $q\equiv 0(\mod\ 4)$, Let $n=qt$, for any positive
+integer $t$, then $(K_n-I)*\bar{K}_m\simeq (K_{qt}-I)*\bar{K}_m$.
+The graph $((K_{qt}-I)*\bar{K}_m)=(C_{qt}*\bar{K}_m) \oplus
+...\oplus (C_{qt}*\bar{K}_m)$ by Theorem \ref{T:ALW1}. The graph
+$C_{qt}*\bar{K}_m$ decomposes into sunlet graph of length $q$ (by
+Corollary \ref{C:R2}) and so we have  $(K_n-I)*\bar{K}_m$
+decomposing into sunlet graphs $L_q$ for $n>q$
+\end{proof}
+\begin{exm}
+The graph $(K_{20}-I)*\bar{K}_{12}$ is decomposable into
+edge-disjoint sunlet graphs $L_{20}$.
+\end{exm}
+{\em Solution}. The graph $K_{20}-I$ is decomposable into
+edge-disjoint Hamilton cycles as follows:
+$$\{u_1u_2u_3u_{20}u_4u_{19}u_5u_{18}u_6u_{17}u_7u_{16}u_8u_{15}u_9u_{14}u_{10}u_{13}u_{11}u_{12}\}$$
+$$\{u_1u_3u_4u_2u_5u_{20}u_6u_{19}u_7u_{18}u_8u_{17}u_9u_{16}u_{10}u_{15}u_{11}u_{14}u_{12}u_{13}\},$$
+$$\{u_1u_4u_5u_3u_6u_{2}u_7u_{20}u_8u_{19}u_9u_{18}u_{10}u_{17}u_{11}u_{16}u_{12}u_{15}u_{13}u_{14}\},$$
+$$\{u_1u_5u_6u_4u_7u_{3}u_8u_{2}u_9u_{20}u_{10}u_{19}u_{11}u_{18}u_{12}u_{17}u_{13}u_{16}u_{14}u_{15}\},$$
+$$\{u_1u_6u_7u_5u_8u_{4}u_9u_{3}u_{10}u_{2}u_{11}u_{20}u_{12}u_{19}u_{13}u_{18}u_{14}u_{17}u_{15}u_{16}\},$$
+$$\{u_1u_7u_8u_6u_9u_{5}u_{10}u_{4}u_{11}u_{3}u_{12}u_{2}u_{13}u_{20}u_{14}u_{19}u_{15}u_{18}u_{16}u_{17}\},$$
+$$\{u_1u_8u_9u_7u_{10}u_{6}u_{11}u_{5}u_{12}u_{4}u_{13}u_{3}u_{14}u_{2}u_{15}u_{20}u_{16}u_{19}u_{17}u_{18}\},$$
+$$\{u_1u_9u_{10}u_8u_{11}u_{7}u_{12}u_{6}u_{13}u_{5}u_{14}u_{4}u_{15}u_{3}u_{16}u_{2}u_{17}u_{20}u_{18}u_{19}\},$$
+$$\{u_1u_{10}u_{11}u_9u_{12}u_{8}u_{13}u_{7}u_{14}u_{6}u_{15}u_{5}u_{16}u_{4}u_{17}u_{3}u_{18}u_{2}u_{19}u_{20}\},$$
+$$\{u_1u_{11}u_{12}u_{10}u_{13}u_{9}u_{14}u_{8}u_{15}u_{7}u_{16}u_{6}u_{17}u_{5}u_{18}u_{4}u_{19}u_{3}u_{20}u_{2}\}.$$
+Next make each cycle $C_{20}$ into $C_{20}*\bar{K}_{12}$ and
+decompose it into edge-disjoint sunlet graphs $L_{20}$ as in example
+\ref{E:R1}.
+\begin{cor}
+If $K_n-I$ for $n$  even is $C_m$ decomposable, where $m$
+is a positive integer, then the graph $(K_n-I)*\bar{K}_{2}$ can be decomposed into sunlet graphs with $2m$ vertices.
+\end{cor}
+\begin{proof}
+Combining Theorems \ref{T:AGA} and \ref{T:SNA}, the graph $K_n-I$ is $C_m$-decomposable.
+%By Theorem \ref{T:AGA} and \ref{T:AGA1},  $K_n (K_n-I)$ can be decomposed into cycle $C_m$ if and only if $m$ divides the number of edges in $K_n(K_n-I)$ with $m$ and $n$ of the same parity.\\
+%Also by Theorem \ref{T:SNA} and \ref{T:SNA4}, $K_n(K_n-I)$ can be decomposed into cycle $C_m$ if and only if $m$ divides the number of edges in $K_n(K_n-I)$ with $m$ and $n$ of opposite parity.\\
+Next take each cycle $C_m$  and make it into the graph
+$C_m*\bar{K}_{2}$. By Lemma \ref{L:N1}, $C_m*\bar{K}_{2}$ can be
+decomposed into two sunlet graphs with $2m$ vertices. Hence sunlet
+graph $L_{2m}$ decomposes $(K_n-I)*\bar{K}_{2}$
+\end{proof}
+\begin{thm}
+If sunlet graph $L_q$ decomposes the complete graph
+$(K_n-I)*\bar{K}_{m}$, then the graph
+$ (K_n-I)*\bar{K}_{ml}$ can be decomposed into
+sunlet graph $L_q$ for any positive integer $l$.
+\end{thm}
+\begin{proof}
+Combining Theorem \ref{T:NM1} and Lemma \ref{L:ABQ}
+gives the result.
+\end{proof}
+\section{Decomposition of  $(K_n+I)*\bar{K}_m$ into edge-disjoint sunlet graphs }
+\begin{thm}\label{T:SNA1}(Sajna, 2003) %\cite{MS4}
+ Let $n\geq 4$ be an even integer. Then $K_n+I$ is
+$C_n$-decomposable.
+\end{thm}
+\begin{thm}\label{T:SNA2}(Sajna, 2003) %\cite{MS4}
+ The graph $K_{2m}+I$ is $C_m$-decomposable.
+\end{thm}
+\begin{thm}\label{T:SNA3}(Sajna, 2003) %\cite{MS4}
+ Let $m$ and $n$ be integers with $m$ odd, $n\equiv 0(\mod\ 4)$,
+$3\leq m\leq n<2m$ and $n^2\equiv 0(\mod\ 2m)$. Then $K_n+I$ is
+$C_m$-decomposable.
+\end{thm}
+The next theorem shows that the necessary condition for the decomposition of $(K_n+I)*\bar{K}_m$ into sunlet graphs $L_q$ is sufficient.
+\begin{thm}
+For any even integers $m\geq 2, n>2$ and $q\geq 6$, sunlet graph
+$L_q$ decomposes $(K_n+I)*\bar{K}_m$ if and only if
+$\frac{n^2m^2}{2}\equiv 0(\mod\ q)$
+\end{thm}
+\begin{proof}
+The necessity of the condition is obvious and so we need only prove the sufficiency. We split the problem into the following three cases.\\
+Case 1: $q|n$\\
+Subcase 1.1: $n>q$, $n\equiv 0(\mod\ 8)$ and $m\equiv 0(\mod\ 4)$\\
+Set $q=\frac{n}{2}$, cycle $C_q$ decomposes $K_n+I$ by Theorem
+\ref{T:SNA2}, we have
+$$C_q*\bar{K}_m|(K_n+I)*\bar{K}_m$$
+Each graph $C_q*\bar{K}_m$ decomposes into sunlet graph $L_q$ by
+Lemma \ref{L:R1} and we have $(K_n+I)*\bar{K}_m$ decomposing
+into sunlet graph $L_q$, where $n>q$.\\
+Subcase 1.2: $q=n$\\
+First , consider when $n\equiv 0(\mod\ 4)$\\
+ Cycle $C_q$ decomposes
+$K_q+I$ by Theorem \ref{T:SNA1} and we have
+$$(K_q+I)*\bar{K}_m=(C_q*\bar{K}_m)\oplus (C_q*\bar{K}_m)\oplus. . .\oplus (C_q*\bar{K}_m)$$
+Now sunlet graph $L_q|(C_q*\bar{K}_m)$ by Lemma \ref{L:R1} and hence sunlet graph $L_q$ decomposes $(K_n+I)*\bar{K}_m$.\\
+Also, consider when $n\equiv 2(\mod\ 4)$\\
+Suppose $m=2t$. Cycle $C_{\frac{q}{2}}$ decomposes $K_q+I$ by
+Theorem \ref{T:SNA2} and we have
+$$(K_q+I)*\bar{K}_{2t}=(C_{\frac{q}{2}}*\bar{K}_{2t})\oplus
+(C_{\frac{q}{2}}*\bar{K}_{2t})\oplus. . .\oplus
+(C_{\frac{q}{2}}*\bar{K}_{2t})$$
+Now sunlet graph $L_q$ decomposes $C_{\frac{q}{2}}*\bar{K}_{2t}$ by Lemma \ref{T:N9} and  we have $(K_n+I)*\bar{K}_m$ decomposing into sunlet graphs of length $q$.\\
+
+%Subcase 1.3: $n>q$\\
+%Cycle $C_n$ decomposes $K_n+I$ by Theorem \ref{T:SNA1}, we have
+%$$K_n+I*\bar{K}_m=(C_n*\bar{K}_m)\oplus (C_n*\bar{K}_m)\oplus. . .\oplus (C_n*\bar{K}_m)$$
+%Each graph $C_n*\bar{K}_m$ decomposes into sunlet graph $L_q$, where $q=nm$ by Lemma \ref{L:N2} and  we have $K_n+I*\bar{K}_m$ decomposing into sunlet graph $L_q$, where $q>n$.\\
+Case 2: $q|m$\\
+Subcase 2.1: $m\equiv 0(\mod\ 4)$\\
+Suppose $m=q$ and by Theorem \ref{T:SNA1}, cycle $C_n$ decomposes
+$K_n+I$ and we have $$(K_ n+I)*\bar{K}_q=(C_n*\bar{K}_q)\oplus
+(C_n*\bar{K}_q)\oplus. . .\oplus (C_n*\bar{K}_q).$$
+Also, sunlet graph $L_q$ decomposes each $C_n*\bar{K}_q$ by Theorem \ref{T:M1} and  we have sunlet graph $L_q$ decomposing $(K_n+I)*\bar{K}_m$.\\
+Subcase 2.2: $m\equiv 2(\mod\ 4)$ and $m=q$\\
+Cycle $C_r$ decomposes $K_n+I$, where $r$ is an odd integer by
+Theorem \ref{T:SNA3} and we have
+$$(K_ n+I)*\bar{K}_q=(C_r*\bar{K}_q)\oplus (C_r*\bar{K}_q)\oplus. . .\oplus (C_r*\bar{K}_q).$$
+Now each $C_r*\bar{K}_q$ decomposes into sunlet graph $L_q$ by
+Theorem \ref{T:M1} and  we have
+$(K_n+I)*\bar{K}_m$ decomposing into sunlet graph $L_q$ as required.\\
+Subcase 2.3: $m>q$\\
+Set  $m=wq$, where $w$ is any positive integer, then by subcase 2.1
+and  subcase 2.2 above, we have
+$$((K_ n+I)*\bar{K}_q)*\bar{K}_w=(L_q*\bar{K}_w)\oplus (L_q*\bar{K}_w)\oplus. . .\oplus (L_q*\bar{K}_w).$$
+Each graph $L_q*\bar{K}_w$ decomposes into sunlet graph $L_q$ by
+Lemma \ref{T:N9} and we have $K_n+I*\bar{K}_m$ decomposing into
+sunlet graph $L_q$.\\
+Case 3: $q|nm$, $q>n$ and $m$.\\
+Let $q=nm$ and all other values of $q$ can be obtained by blowing up
+points . Cycle $C_n$ decomposes $K_n+I$ by Theorem \ref{T:SNA1}, we
+have $$C_n*\bar{K}_m|(K_n+I)*\bar{K}_m.$$ Each graph $C_n*\bar{K}_m$
+decomposes into sunlet graph $L_q$, where $q=nm$ by Lemma \ref{L:N1}
+and we have $(K_n+I)*\bar{K}_m$ decomposing into sunlet graph $L_q$.
+\end{proof}
+\begin{exm}
+The graph $(K_{30}+I)*\bar{K}_{16}$ is decomposable into sunlet
+graphs $L_{16}$.
+\end{exm}
+{\em Solution}. The graph $K_{30}+I$ is decomposable into
+edge-disjoint Hamilton cycles as follows:
+$$\{u_1u_2u_{30}u_3u_{29}u_4u_{28}u_5u_{27}u_6u_{26}u_7u_{25}u_8u_{24}u_9u_{23}u_{10}u_{22}u_{11}u_{21}u_{12}u_{20}u_{13}u_{19}u_{14}u_{18}u_{15}u_{17}u_{16}u_1\},$$
+$$\{u_2u_3u_{1}u_4u_{30}u_5u_{29}u_6u_{28}u_7u_{27}u_8u_{26}u_9u_{25}u_{10}u_{24}u_{11}u_{23}u_{12}u_{22}u_{13}u_{21}u_{14}u_{20}u_{15}u_{19}u_{16}u_{18}u_{17}u_2\},$$
+$$\{u_3u_4u_{2}u_5u_{1}u_6u_{30}u_7u_{29}u_8u_{28}u_9u_{27}u_{10}u_{26}u_{11}u_{25}u_{12}u_{24}u_{13}u_{23}u_{14}u_{22}u_{15}u_{21}u_{16}u_{20}u_{17}u_{19}u_{18}u_3\},$$
+$$\{u_4u_5u_{3}u_6u_{2}u_7u_{1}u_8u_{30}u_9u_{29}u_{10}u_{28}u_{11}u_{27}u_{12}u_{26}u_{13}u_{25}u_{14}u_{24}u_{15}u_{23}u_{16}u_{22}u_{17}u_{21}u_{18}u_{20}u_{19}u_4\},$$
+$$\{u_5u_6u_{4}u_7u_{3}u_8u_{2}u_9u_{1}u_{10}u_{30}u_{11}u_{29}u_{12}u_{28}u_{13}u_{27}u_{14}u_{26}u_{15}u_{25}u_{16}u_{24}u_{17}u_{23}u_{18}u_{22}u_{19}u_{21}u_{20}u_5\},$$
+$$\{u_6u_7u_{5}u_8u_{4}u_9u_{3}u_{10}u_{2}u_{11}u_{1}u_{12}u_{30}u_{13}u_{29}u_{14}u_{28}u_{15}u_{27}u_{16}u_{26}u_{17}u_{25}u_{18}u_{24}u_{19}u_{23}u_{20}u_{22}u_{21}u_6\},$$
+$$\{u_7u_8u_{6}u_9u_{5}u_{10}u_{4}u_{11}u_{3}u_{12}u_{2}u_{13}u_{1}u_{14}u_{30}u_{15}u_{29}u_{16}u_{28}u_{17}u_{27}u_{18}u_{26}u_{19}u_{25}u_{20}u_{24}u_{21}u_{23}u_{22}u_7\},$$
+$$\{u_8u_9u_{7}u_{10}u_{6}u_{11}u_{5}u_{12}u_{4}u_{13}u_{3}u_{14}u_{2}u_{15}u_{1}u_{16}u_{30}u_{17}u_{29}u_{18}u_{28}u_{19}u_{27}u_{20}u_{26}u_{21}u_{25}u_{22}u_{24}u_{23}u_8\},$$
+$$\{u_9u_{10}u_{8}u_{11}u_{7}u_{12}u_{6}u_{13}u_{5}u_{14}u_{4}u_{15}u_{3}u_{16}u_{2}u_{17}u_{1}u_{18}u_{30}u_{19}u_{29}u_{20}u_{28}u_{21}u_{27}u_{22}u_{26}u_{23}u_{25}u_{24}u_9\},$$
+$$\{u_{10}u_{11}u_{9}u_{12}u_{8}u_{13}u_{7}u_{14}u_{6}u_{15}u_{5}u_{16}u_{4}u_{17}u_{3}u_{18}u_{2}u_{19}u_{1}u_{20}u_{30}u_{21}u_{29}u_{22}u_{28}u_{23}u_{27}u_{24}u_{26}u_{25}u_{10}\},$$
+$$\{u_{11}u_{12}u_{10}u_{13}u_{9}u_{14}u_{8}u_{15}u_{7}u_{16}u_{6}u_{17}u_{5}u_{18}u_{4}u_{19}u_{3}u_{20}u_{2}u_{21}u_{1}u_{22}u_{30}u_{23}u_{29}u_{24}u_{28}u_{25}u_{27}u_{26}u_{11}\},$$
+$$\{u_{12}u_{13}u_{11}u_{14}u_{10}u_{15}u_{9}u_{16}u_{8}u_{17}u_{7}u_{18}u_{6}u_{19}u_{5}u_{20}u_{4}u_{21}u_{3}u_{22}u_{2}u_{23}u_{1}u_{24}u_{30}u_{25}u_{29}u_{26}u_{28}u_{27}u_{12}\},$$
+$$\{u_{13}u_{14}u_{12}u_{15}u_{11}u_{16}u_{10}u_{17}u_{9}u_{18}u_{8}u_{19}u_{7}u_{20}u_{6}u_{21}u_{5}u_{22}u_{4}u_{23}u_{3}u_{24}u_{2}u_{25}u_{1}u_{26}u_{30}u_{27}u_{29}u_{28}u_{13}\},$$
+$$\{u_{14}u_{15}u_{13}u_{16}u_{12}u_{17}u_{11}u_{18}u_{10}u_{19}u_{9}u_{20}u_{8}u_{21}u_{7}u_{22}u_{6}u_{23}u_{5}u_{24}u_{4}u_{25}u_{3}u_{26}u_{2}u_{27}u_{1}u_{28}u_{30}u_{29}u_{14}\},$$
+$$\{u_{15}u_{16}u_{14}u_{17}u_{13}u_{18}u_{12}u_{19}u_{11}u_{20}u_{10}u_{21}u_{9}u_{22}u_{8}u_{23}u_{7}u_{24}u_{6}u_{25}u_{5}u_{26}u_{4}u_{27}u_{3}u_{28}u_{2}u_{29}u_{1}u_{30}u_{15}\}.$$
+Therefore $K_{30}+I$ decomposed into Hamilton cycle $C_{30}$ which
+implies that $C_{30}*\bar{K}_8$ decomposes $(K_{30}+I)*\bar{K}_m$.\\
+Recall that $C_{30}*\bar{K}_{16}\simeq C_{30}*\bar{K}_8*\bar{K}_2$,
+also note that each edge in the graph $C_{30}$ forms % give rise to
+bipartite graph $K_{8,8}$ in $C_{30}*\bar{K}_8$. By example
+\ref{E:M1}, the graph $C_{30}*\bar{K}_8$ is decomposable into cycles
+$C_8$. Next make each cycle $C_8$ into $C_8*\bar{K}_2$ and by Lemma
+\ref{L:N1}, we have the result.
+\begin{cor}
+If the graph $K_n+I$ is $C_m$ decomposable, where $m$ is a positive
+integer, then the graph $(K_n+I)*\bar{K}_2$ is decomposable into
+sunlet graphs with $2m$ vertices.
+\end{cor}
+\begin{cor}
+If sunlet graph $L_q$ decomposes the graph $(K_n+I)*\bar{K}_m$, then
+$(K_n+I)*\bar{K}_{ml}$ is decomposable into sunlet graphs $L_q$ for
+any positive integer $l$.
+\end{cor}
+
+\section{Decomposition of complete n-partite graph $K_n*\bar{K}_m$ into edge-disjoint sunlet graphs }
+We use the following results.
+\begin{thm}\label{T:AGA1}(Alspach and Gavlas, 2001) %\cite{BA}
+For positive odd integers $m$ and $n$ with $3\leq m\leq n$, the
+graph $K_n$ can be decomposed into cycles of length $m$ if and only
+if the number of edges in $K_n$ is a multiple of $m$.
+\end{thm}
+\begin{thm}\label{T:SNA4}(Sajna, 2002) %\cite{MS3}
+ Let $n$ be an odd integer and $m$ be an even integer with $3\leq
+m\leq n$. The graph $K_n$ can be decomposed into cycles of length
+$m$ whenever $m$ divides the number of edges in $K_n$
+\end{thm}
+\begin{thm}\label{T:SOT}(Sotteau, 1981) %\cite{DSD1}
+$K_{m,n}$ can be decomposed into $2k$-cycles if and only if $m$ and
+$n$ are even, $m\geq k$, $n\geq k$ and $2k$ divides $mn$.
+\end{thm}
+\begin{thm}\label{T:AET}(Alspach  et al, 1990) %\cite{NAH1}
+The complete graph $K_n$ is Hamilton cycle decomposable for all
+$n\geq 3$.
+\end{thm}
+\begin{thm}\label{T:IU}(Liu, 2003) %\cite{JLE1}
+For $k\geq 3$ and $m\geq 3$, $K_m*\bar{K}_n$ has a
+$C_k$-factorization if and only if $k$ divides $mn$ and $(m-1)n$
+even, $k$ is even if $m=2$, and $(m,n,k)\neq
+(3,2,3),(3,6,3),(6,2,3),(2,6,6)$.
+\end{thm}
+The next theorem gives the decomposition of $K_n*\bar{K}_m$ into edge-disjoint sunlet graphs with $2n$ vertices.
+\begin{thm}
+Let $n$ be a positive integer, then for any positive even integer
+$m$, the graph $K_n*\bar{K}_m$ is decomposable into sunlet graphs
+$L_{2n}$.
+\end{thm}
+\begin{proof}
+We split the problem into the following two cases.\\
+Case 1. $n$ even with $m\equiv 0(\mod\ 8)$.\\
+Set $m=2t$ and recall that $K_n*\bar{K}_2=K_{2n}-I$, where $I$ is a
+$1$-factor of complete graph $K_{2n}$. Cycle $C_{2n}$ decomposes
+$K_{2n}$ by Theorem \ref{T:ALW1}. Therefore we have
+$$K_n*\bar{K}_{2t}=C_{2n}*\bar{K}_t\oplus...\oplus C_{2n}*\bar{K}_t.$$
+Applying Lemma \ref{L:R1} to $C_{2n}*\bar{K}_t$, we have the result
+since $t\equiv 0(\mod\
+4)$.\\
+
+Case 2. $n$ odd.\\
+Set $m=2t$, then
+$K_n*\bar{K}_m=K_n*\bar{K}_2*\bar{K}_t=K_{2n}-I*\bar{K}_t$. Applying
+Theorem \ref{T:I1}, we have $K_{2n}-I$ decomposing into sunlet
+graphs $L_{2n}$. Therefore $$K_{2n}-I*\bar{K}_t=
+L_{2n}*\bar{K}_t\oplus...\oplus L_{2n}*\bar{K}_t.$$ By blowing up
+point, we have each graph $L_{2n}*\bar{K}_t$ decomposing into sunlet
+graphs $L_{2n}$.
+\end{proof}
+The next theorem shows that the necessary condition for the decomposition of $K_n*\bar{K}_m$ into sunlet graphs $L_q$ is sufficient.
+\begin{thm}\label{T:NM2}
+Let $n$ be a positive integer, then for any positive even integer
+$m,q$ with $q\geq 6$,
+%For any even integer $m,q$ with $q\geq 6$,
+the sunlet graph $L_q$ decomposes $K_n*\bar{K}_m$ if and only if
+$$\frac{n(n-1)m^2}{2}\equiv 0(\mod\
+q)$$
+\end{thm}
+\begin{proof}
+The necessity of the condition is obvious and so we need only to prove the sufficiency. We split the problem into four cases.\\
+Case $1$.\ \ \ $q|m$ and $n$ is odd.\\
+First, we solve the problem for the case when $m=q$ in two cases.\\
+Subcase 1.1.\ \ \ $q\equiv 2(\mod\ 4)$\\
+Set $q=2t$ and obtain a new graph $K_n*\bar{K}_t$ from
+$K_n*\bar{K}_m$ as in Lemma \ref{L:R1}. Cycle $C_r$ decomposes the
+complete graph $K_n$ for $r$ odd by Theorem \ref{T:AGA1}. Therefore,
+we have
+$$K_n*\bar{K}_t=(C_r*\bar{K}_t)\oplus (C_r*\bar{K}_t)\oplus...\oplus
+(C_r*\bar{K}_t)$$
+Now each $C_r*\bar{K}_t$ decomposes into cycle $C_t$ by Theorem \ref{T:RAF}.\\
+By lifting back these $t$-cycles of $K_n*\bar{K}_t$ to
+$K_n*\bar{K}_q$ as in Lemma \ref{L:R1}, we get edge-disjoint
+subgraphs isomorphic to $C_t*\bar{K}_2$. Now each  $C_t*\bar{K}_2$
+decomposes into sunlet graph of length $2t=q$ (by Lemma \ref{L:N1})
+and we have that $K_n*\bar{K}_m$ decomposing into sunlet graph of
+length $q$.
+\\
+Subcase 1.2.\ \ \ $q\equiv 0(\mod\ 4)$\\
+The complete graph $K_n$ decomposes into cycle $C_r$ for $r$ even by
+Theorem \ref{T:SNA4} and $r$ odd by Theorem \ref{T:AGA1} . Therefore
+$$K_n*\bar{K}_q=C_r*\bar{K}_q\oplus C_r*\bar{K}_q\oplus...\oplus
+C_r*\bar{K}_q$$ The graph $C_r*\bar{K}_q$ decomposes into sunlet
+graph with $q$ vertices (by Theorem \ref{T:M1}). Therefore
+$$C_r*\bar{K}_q=L_q\oplus L_q\oplus...\oplus L_q$$ Suppose $m>q$.
+Let $m=rq$ for any positive integer $r$.   The graph
+$K_n*\bar{K}_{rq}=(K_n*\bar{K}_q)*\bar{K}_r$. By the prove above, we
+have $$(K_n*\bar{K}_q)*\bar{K}_r=(L_q*\bar{K}_r)\oplus
+(L_q*\bar{K}_r)\oplus...\oplus(L_q*\bar{K}_r)$$ The graph
+$L_q*\bar{K}_r$ decomposes into sunlet graph $L_q$ (by Lemma
+\ref{L:ABQ}) and we have $K_n*\bar{K}_{rq}$ decomposing into sunlet
+graph $L_q$ for $m>q$.
+\\
+Case 2.\ \ \ $q|m$ and $n$ is even.\\
+We first solve the problem  for the case when $q=m$. Let $q\equiv
+0(\mod\ 4)$ and set $q=2t$. Note that
+$K_n*\bar{K}_{2t}=(K_n*\bar{K}_t)*\bar{K}_2$. First consider the
+graph $K_n*\bar{K}_t$ and note that
+$$K_n*\bar{K}_t=(K_2*\bar{K}_t)\oplus (K_2*\bar{K}_t)\oplus...\oplus
+(K_2*\bar{K}_t)$$ Each graph $K_2*\bar{K}_t$ decomposes into cycle $C_t$
+by Theorem \ref{T:SOT}, since $t$ is an even integer. Now we have
+$$K_n*\bar{K}_{2t}=(K_n*\bar{K}_t)*\bar{K}_2=C_t*\bar{K}_2\oplus...\oplus
+C_t*\bar{K}_2$$
+Each graph $C_t*\bar{K}_2$ decomposes into sunlet graph with $2t=q$ vertices (by Lemma \ref{L:N1}) and so we have that sunlet graph $L_m$ decomposes $K_n*\bar{K}_m$ for $n$ even and $m\equiv 0(\mod\ 4)$.\\
+Suppose $m>q$. Let $m=rq$ for any positive integer $r$.   The graph
+$K_n*\bar{K}_{rq}=(K_n*\bar{K}_q)*\bar{K}_r$. By case (2) above, we
+have $$(K_n*\bar{K}_q)*\bar{K}_r=(L_q*\bar{K}_r)\oplus
+(L_q*\bar{K}_r)\oplus...\oplus(L_q*\bar{K}_r)$$ The graph
+$L_q*\bar{K}_r$ decomposes into sunlet graph $L_q$ (by Lemma
+\ref{L:ABQ}) and we have $K_n*\bar{K}_{rq}$ decomposing into sunlet
+graphs $L_q$ for $m>q$.
+\\
+Case 3. \ \ \ $q|n$, $n\equiv 0(\mod\ 4)$ and $m\equiv 0(\mod\ 8)$\\
+%\ \ \ $n,m\equiv 0(\mod\ 4)$\\
+We first solve the problem  for the case when $q=n$. Let $q\equiv
+0(\mod\ 4)$ and set
+$q=2t$. Note that %complete graph $K_n$ decomposes into hamilton
+%cycle $C_n$ by Theorem \ref{T:AET}. Therefore we have
+%$$K_n*\bar{K}_m=C_n*\bar{K}_m\oplus ...\oplus C_n*\bar{K}_m$$
+%Now each $C_n*\bar{K}_m$ decomposes into sunlet graph $L_n$ by Lemma %\cite{L:R1} and so sunlet graph $L_q$ decomposes $K_n*\bar{K}_m$ for $n=q$.\\
+ $K_n*\bar{K}_{2t}=(K_n*\bar{K}_2)*\bar{K}_t$. First consider that graph $K_n*\bar{K}_2$. Cycle $C_n$ decomposes the graph $K_n*\bar{K}_2$ by Theorem \ref{T:IU} and  we have $$(K_n*\bar{K}_2)*\bar{K}_t=(C_n*\bar{K}_t)\oplus (C_n*\bar{K}_t)\oplus...\oplus (C_n*\bar{K}_t)$$
+Now each graph $C_n*\bar{K}_t$ decomposes into sunlet graph $L_n$ (by Lemma \ref{L:R1}) and so sunlet graph $L_n$ decomposes $K_n*\bar{K}_m$.\\
+%Suppose $n>q$, set $n=ql$. Cycle $C_{ql}$ decomposes the graph
+%$K_{ql}$ and  we have
+%$$(K_{ql}*\bar{K}_m)*\bar{K}_t=C_{ql}*\bar{K}_m\oplus
+%C_{ql}*\bar{K}_m\oplus...\oplus C_{ql}*\bar{K}_m$$ Now each graph
+%$C_{ql}*\bar{K}_m$ decomposes into sunlet graph $L_q$ (by Corollary
+%\ref{C:R2}) and  we have $K_n*\bar{K}_m$ decomposing into sunlet
+%graph $L_q$ for $n>q$.
+Suppose $n>q$, set $n=ql$ and $m=2t$, where $l$ is a positive
+integer. Recall that $K_{ql}*\bar{K}_2=K_{2ql}-I$ where $I$ is a
+$1$-factor of complete graph $K_{2ql}$. Cycle $C_{2ql}$ decomposes
+$K_{2ql}-I$ by Theorem \ref{T:AET}, then we have
+$$K_{ql}*\bar{K}_{2t}=C_{q(2l)}*\bar{K}_t\oplus...\oplus
+C_{q(2l)}*\bar{K}_t.$$ Applying Corollary \ref{C:R2} to each $C_{q(2l)}*\bar{K}_t$ gives the result.
+\\
+Case 4. $q$ greater than both $n$ and $m$\\
+Subcase 4.1.    $q=nm$\\
+Subcase 4.1.1\ \ \ \ Let $n$ be an odd integer and $m\equiv 2(\mod\ 4)$\\
+The complete graph $K_n$ decomposes into Hamilton cycle $C_n$ by
+Theorem \ref{T:AET}. Therefore $$K_n*\bar{K}_m=(C_n*\bar{K}_m)\oplus
+(C_n*\bar{K}_m)\oplus...\oplus (C_n*\bar{K}_m)$$ Each
+$C_n*\bar{K}_m$ decomposes into sunlet graph $L_{nm}$ (by Lemma
+\ref{L:N2}). Hence sunlet graph $L_{nm}$ decomposes the graph
+$K_n*\bar{K}_m$ for $n$ odd and $m\equiv 2(\mod\ 4)$.
+\\
+Subcase 4.1.2.\ \ \ Let $n$ be an odd integer  and $m\equiv 0(\mod \ 4)$.\\
+Set $ m=2t$ and note that $K_n*\bar{K}_2\simeq K_{2n}-I$, where $I$
+is a $1$-factor of $K_{2n}$. The graph $K_{2n}-I$ decomposes into
+Hamilton cycle $C_{2n}$ (by Theorem \ref{T:SNA}). Therefore we have
+$$K_{2n}-I*\bar{K}_t=(C_{2n}*\bar{K}_t)\oplus
+(C_{2n}*\bar{K}_t)\oplus...\oplus (C_{2n}*\bar{K}_t)$$ Now each
+graph $C_{2n}*\bar{K}_t$ decomposes into sunlet graph $L_{2nt}$ (by
+Lemma \ref{L:N1}). Hence sunlet graph $L_q$  decomposes  the graph
+$K_n*\bar{K}_m$ for $q=nm$.
+\\
+Subcase 4.1.3.\ \ \ \ Let $n$ be an even integer and $m\equiv 0(\mod\ 4)$.\\
+The proof is similar to the proof of case 4.1.2.\\
+Subcase 4.2\ \ \ \ $q=nl$, where $l$ is a positive even integer less
+than $m$ and
+% Set $q=nl$, where
+$n$  a positive odd integer.\\
+Decompose the complete graph $K_n$ into
+Hamilton cycles. Therefore we have% to give
+$K_n*\bar{K}_m=C_n*\bar{K}_m\oplus...\oplus C_n*\bar{K}_m$. Also set
+$m=tl$, this implies that each graph
+$C_n*\bar{K}_m=C_n*\bar{K}_l*\bar{K}_t$. Applying Lemma \ref{L:N2}
+and \ref{L:ABQ} gives the result.\\
+Subcase 4.3\ \ \ \ $q=ml$, where $l$ is a positive integer less than
+$n$.\\
+The complete graph $K_n$ decomposes into cycles $C_l$ by Theorem
+\ref{T:AGA1} and \ref{T:SNA4}, where $l$ is a positive integer less
+than $n$. Applying Lemma \ref{L:N2} gives the result.
+\end{proof}
+\begin{cor}
+If $K_n$ for $n$ odd is $C_m$ decomposable, where $m$
+is a positive integer, then the graph $K_n*\bar{K}_{2}$ can be decomposed into sunlet graphs with $2m$
+vertices.
+\end{cor}
+\begin{proof}
+Combining Theorems \ref{T:AGA1} and \ref{T:SNA4}, the graph $K_n$ is $C_m$-decomposable.
+%By Theorem \ref{T:AGA} and \ref{T:AGA1},  $K_n (K_n-I)$ can be decomposed into cycle $C_m$ if and only if $m$ divides the number of edges in $K_n(K_n-I)$ with $m$ and $n$ of the same parity.\\
+%Also by Theorem \ref{T:SNA} and \ref{T:SNA4}, $K_n(K_n-I)$ can be decomposed into cycle $C_m$ if and only if $m$ divides the number of edges in $K_n(K_n-I)$ with $m$ and $n$ of opposite parity.\\
+Next take each cycle $C_m$  and make it into the graph
+$C_m*\bar{K}_{2}$. By Lemma \ref{L:N1}, $C_m*\bar{K}_{2}$ can be
+decomposed into two sunlet graphs with $2m$ vertices. Hence sunlet
+graph $L_{2m}$ decomposes $K_n*\bar{K}_{2}$
+\end{proof}
+\begin{thm}
+If sunlet graph $L_q$ decomposes the complete graph
+$K_n*\bar{K}_{m}$, then the graph
+$K_n*\bar{K}_{ml}$ can be decomposed into
+sunlet graph $L_q$ for any positive integer $l$.
+\end{thm}
+\begin{proof}
+Combining Theorem \ref{T:NM2} and Lemma \ref{L:ABQ}
+gives the result.
+%By Theorem \ref{T:NM1} and \ref{T:NM2}, $K_n-I*\bar{K}_m,K_n*\bar{K}_m$ can be decomposed into sunlet graph $L_q$ respectively.\\
+%It is sufficient to show that $L_q*\bar{k}_l$ can be decompose into $l^2$ sunlet graph $L_q$. Also by Theorem \ref{T:N9}, sunlet graph $L_q$ decomposes $L_q*\bar{K}_l$.\\
+%Hence if $Kn-I*\bar{K}_m,K_n*\bar{K}_m$ are sunlet graph
+%decomposable then sunlet graph $L_q$ decomposes $K_n-I*\bar{K}_{ml}$
+%and $K_n*\bar{K}_{ml}$ respectively.
+\end{proof}
+\chapter{CONCLUSION}
+In this chapter we state all the results obtained, their applications, how they contribute to knowledge and areas for further research
+\section{Summary}
+From this research work, we can conclude that sunlet decomposition
+of equipartite graphs is a generalization of cycle-decomposition of
+equipartite graphs. The results obtained are as follows:\\
+%its contribution to knowledge is given below:\\
+1. The graph $C_r*\bar{K}_m$ decomposes into edge-disjoint sunlet graphs $L_{rm}$,  $L_r$ and $L_m$
+respectively. Also, necessary conditions for the decomposition to occur were shown to be sufficient.\\
+2. The graph $(K_n-I)*\bar{K}_m$ decomposes into sunlet graphs $L_q$, where $q$ is a positive even integer. It was shown that the necessary condition for the decomposition to occur are sufficient.\\
+3. The graph $(K_n+I)*\bar{K}_m$ decomposes into sunlet graphs $L_q$, for $q$  a positive even integer. The necessary and sufficient condition for the decomposition to occur was established.\\
+4. The necessary and sufficient condition for the decomposition of $K_n*\bar{K}_m$ into edge-disjoint sunlet graphs was established.\\
+5. A graph $G$ with cycle decomposition is decomposable into edge-disjoint sunlet graphs.\\
+6. Lexicographic product of graph $G$ and the complement of a complete graph with $l$ vertices are decomposable into edge-disjoint sunlet graphs.
+\section{Application of Results and Contribution to knowledge}
+Here, we state the possible applications of the research work and how the results contribute to existing knowledge in the area of decomposition of graphs \\
+% is given below:
+We have only begun to %scratch the surface of
+solve the most general problem of finding the $L_q$-decomposition of equipartite graphs, where $L_q$ is a sunlet graph on $q$ vertices. Using Theorem \ref{T:NM2} and the fact that all the vertices in a part of $K_n*\bar{K}_m$ have the same degree, we were able to establish the necessary and sufficient conditions for the existence of $L_q$-designs that should be helpful for solving the overall general problem of $L_q$-designs in experimental designs.
+
+
+Also, using Theorem \ref{T:NM2}, we generalised  the Oberwolfach problem as follows:\\
+At a gathering, there are $n$ delegations each having $m$ people. Is it possible to arrange a seating of $nm$ people present at $s$ tables in form of sunlet graph $L_{q(1)},L_{q(2)},...L_{q(s)}$ (where each $L_{q(i)}$ can accommodate $q_i>4, i=1,2,...,s$ even people and $ \sum q_i=nm$ for $k$ different meals so that each persons has every other persons not in the same delegation for a neighbor exactly once?\\
+In graph theory, the problem above is equivalent to the following:\\
+When does the complete equipartite graph $K_n*\bar{K}_m$ have a
+$L_q$-factorization in which each $L_q$-factor consists of sunlet
+graphs of length $q_1,q_2,q_3,...,q_s$.\\
+ The problem has been solved completely for sunlet graphs by Theorem
+ \ref{T:NM2}.
+
+
+Furthermore, the result obtained in this research work could be used to create a sharing scheme of work. For example:\\
+Consider a department in a University with $rm$ Lecturers of different $r$ cadre and there are $rm$ undergraduate courses to be taught by these $rm$ lecturers. How can the courses be shared among the Lectures in such a way that two Lecturers of consecutive cadre will teach a course?\\
+In graph theory, this problem is equivalent to decomposition of $C_r*\bar{K}_m$ into edge-disjoint sunlet graph $L_{rm}$ which has been completely solved by Lemma \ref{L:N2}.\\
+In addition, the results could be used to give a good scheduling of jobs.\\
+For example, there are $nm$ event to be handled by an organization in such a way that $m$ events is for $n$ set of people. There are $\frac{n(n-1)}{2}$ staffs on ground to participate in these event. How can the organization do the scheduling in such a way that each staff will be involved in only $2$ events whereby each event is for different set of people?\\
+In graph theory, the above question is equivalent to the decomposition of equipartite graph $K_n*\bar{K}_m$ into edge-disjoint sunlet graph which has been completely solved by Theorem \ref{T:NM2}.\\
+
+
+The results obtained in this research work generalise the result of Anitha and Lekishmi (2008).\\ %\cite{RA}.\\
+Furthermore, the results obtained generalise cycle decomposition of
+equipartite graphs.\\
+Also, it can be deduced from Lemma \ref{L:N2} that there exist
+balanced complete block design of the graph $C_r*\bar{K}_m$, that
+is, $(rm,rm,1)$-design. Furthermore, there exist balanced incomplete
+block designs, that is, $(rm,r,1)$-design and $(rm,m,1)$-design
+which follows from Lemma \ref{L:R1} and Theorem \ref{T:M1}
+respectively.\\
+
+
+Decomposition of $K_n-I$ into sunlet graphs $L_n$ gives
+balanced complete block design $(n,n,1)$ and decomposition of
+$(K_{n+2}-I)*\bar{K}_m$ into sunlet graphs $L_n,L_{2n},L_{nm}$ gives
+balanced incomplete block designs $((n+2)m,n,1),((n+2)m,2n,1)$ and
+$((n+2)m,nm,1)$ respectively. In addition, decomposition of
+$(K_{n}+I)*\bar{K}_m$ into sunlet graphs gives balanced incomplete
+block design. Furthermore, decomposition of complete $n$-partite
+graph into sunlet graphs $L_q$ gives Group Divisible design
+$(nm,q,1)$.\\
+
+%sunlet decompositions.
+\section{Further study}
+The necessary and sufficient conditions
+obtained in this work would open a new trend of research concerning sunlet decompositions of other graphs.
+Research can be carried out on decomposition of tensor product of graphs into sunlet graphs since we have only done that of lexicographic products. Also, necessary and sufficient conditions for such decomposition can be established.
+
+%should be investigate.
+%established.
+\begin{newpage}
+\baselineskip 18pt \vskip 2.0cm
+%\begin{thebibliography}{99}
+\noindent{\Huge\textbf{REFERENCES}}\\
+%\bibitem{PA}
+\addcontentsline{toc}{chapter}{REFERENCES}
+\begin{description}
+\item Adams, P. and  Bryant, D. 2006. Two factorizations of complete
+graphs of order fifteen and seventeen. {\it Australasian Journal
+of Combinatorics} 35: 113-118.
+%\bibitem{JA}
+\item Akiyama, J., Kobayashi, M., Nakamura, G. 2004. Symmetric Hamilton
+cycle Decompositions of the complete graphs. {\it Journal of Combinatorial Designs} 12: 39-45.
+\item Alspach, B. 1981. Research problem. {\it Discrete Mathematics} 36, 3: 333.
+%\bibitem{BA6}
+\item Alspach, B. 1984. Reasearch problem 59. {\it Discrete Mathematics} 50: 115.
+\item Alspach, B. April 2006. The wonderful Walecki construction, Alspach
+lecture note. Retrived from
+http://www.math.mtu.edu/~kreher\\/ABOUTME/syllabus/Walecki.ps. on 19/08/2009.
+\item Alspach, B., Bermond, J. C.,  Sotteau, D. 1990. Decomposition into
+cycles 1. {\it Hamilton decompositions} in: G. Hahn, et al
+Eds), cycles and Rays, Kluwer Academic Publishers. 9-18.
+%\bibitem{BA}
+\item Alspach, B. and Gavlas, H. 2001. Cycle decomposition of $K_n$ and
+$K_n-I$. {\it Journal of Combinatorial Theory, Series B} 81: 77-99.
+\item Alspach, B., Gavlas, H., Sajna, M., Verrall, H. 2003. Cycle
+decompostion IV: complete directed graphs and fixed length
+directed cycles. {\it Journal of Combinatorial Theory Series A} 103: 165-208.
+%\bibitem{BA1}
+\item Alspach, B. and Marshall, S. 1994. Even cycle decomposition of
+complete graphs minus a $1$-factor. {\it Journal of Combinatorial Designs } 6:
+441-458.
+% \bibitem{BA2}
+\item Alspach, B., Schellenberg, P. I., Stison, D. R.,Wagner, D. 1989. The
+oberwolfach problem and factors of uniform odd length cycles.
+{\it Journal of Combinatorial Theory Series A} 52: 20-43.
+%\bibitem{BA3}
+\item Alspach, B. and Varma, B.N. 1980. Decomposing complete graphs into cycles of length $2p^e$. {\it Annals Discrete Mathematics} 9: 155-162.
+% \bibitem{RA1}
+\item Anitha, R. Lekshmi, R. S.  May 2007.  N-sun decomposition of
+complete graphs and complete bipartite graphs. {\it Proceedings of
+world Academy of science, Engineering and technology} 21.
+%\bibitem{RA}
+\item Anitha, R. Lekshmi, R. S. 2008. N-sun decomposition of complete,
+complete bipartite and some harary graphs. {\it International Journal of computational and Mathematical Sciences }2 winter).
+ %\bibitem{CBG}
+\item Barrientos, C. 2002. Graceful labelings of chain and corona graphs. {\it Bulletin, ICA} 34: 17-26.
+\item Berge, C. 1970.  Graphes et hypergraphes. {\it Dunod Paris}.
+\item Bermond, J. C. 1975. Thesis Paris XI.
+ %\bibitem{JC}
+\item Bermond, J. C., Favaron, D.,Maheo, M. 1989. Hamilton decomposition of Cayley graphs of degree 4. {\it Journal of Combinatorial Theory Series B} 46: 142-153.
+%\bibitem{EBD}
+  %\bibitem{CBG1}
+% \bibitem{JC1}
+\item Bermond, J. C., Huang, C. Sotteau, D. 1978. Balanced cycle and
+circuit designs, Even cases. {\it Ars Combinatoria} 5: 293-318.
+%\bibitem{JC4}
+ \item Bermond, J. C. and Faber, V. 1976. Decomposition of the complete directed graph into k-circuits. {\it Journal of Combinatorial Theory Series B} 21: 146-155.
+        %\bibitem{JC3}
+\item Bermond, J. C. and  Sotteau, D. 1975. Graph decompositions and
+$G$-design. {\it Proceedings of the 5th British Combinatorial
+conference, Aberdeen}.  Congressus Numerantium 15 utilas
+Mathematica Publishing Co, Winnepeg, Canada, (1976), 53-72.
+\item Bell, E. 1991. Decomposition of a complete graph into cycles of
+length less than 50.  M.Sc Thesis, Auburn University.
+  %\bibitem{EJB1}
+\item Billigton, E. J. 1999. Decomposing complete tripartite graphs into
+cycles of length 3 and 4. {\it Discrete Mathematics} 197/198:  123-135.
+ %\bibitem{EJB}
+\item Billington, E. J., Hoffman, D. G., Maenhaut, B. M. 1999. Group
+divisible pentagon systems. {\it Utilitas Mathematics} 55: 211-219.
+% \bibitem{JBS}
+\item Bondy, J. A. and Murty, U. S. R. 1982. {\it Graph Theory with
+applications}. Elsevier Science Publishing Co., Inc., U. S. A.
+%\bibitem{JAB}
+\item Bondy, J. A. and Murty, U. S. R. 2008. {\it Graph Theory, Graduate
+text in Mathematics Series 244}. Spinger Verlag, New York,
+Berlin Heldeberg.
+ %\bibitem{ABL}
+ \item Brandstadt, A., Le, V. B., Spinrad, J. P. 1987.  Graph classes, A survey. {\it Philladephia, PA.SIAM} 112.
+  % \bibitem{RAB}
+ \item Brualdi, R. A. and  Schroeder, M. W. 2010. Symmetric hamilton cycle decompositions of complete graphs minus 1-factor. {\it Journal of Combinatorial Designs} 19: 1-15.% \bibitem{DBC}
+\item Bryant, D. 2007. Cycle decompositions of complete graphs, survey in
+Combinatorics.  {\it London Mathematical Society, Lecture Note Series } 346,
+Cambridge University Press, Cambridge.
+%\bibitem{DBS}
+\item Bryant, D., El-Zanati, S. I., Maenhaut, B. V. 2006. Decomposition of
+complete graphs into $5$-cubes. {\it Journal of Combinatorial Designs} 14.2:
+159-166.
+ %\bibitem{DBH}
+ \item Bryant, D. and Horsely, D. 2009.  Decomposition of complete graphs into long cycles. {\it Bulletin London Mathematical Society. Advance
+ Acess}.
+%\bibitem{DBC1}
+\item Bryant, D., Horsely, D., Maenhaut, B., Smith, B. R. 2010. Cycle
+decompostion of complete multigraphs. {\it Journal of Combinatorial Designs}
+19: 42-69.
+  %\bibitem{MBD}
+\item Burati, M. and Delfra, A. 2004. Cyclic Hamiltonian cycle systems of
+complete graph. {\it Discrete Mathematics } 279: 107-119.
+%\bibitem{PCD}
+\item Cameron, P. J. 2009. Decomposition of complete multipartite graphs.
+{\it Discrete Mathematics} 309: 4185-4186.
+%\bibitem{NCD}
+ \item Cavenagh, N. J. 1998. Decomposition of complete tripartite graphs into $k$-cycles. {\it Ausralasian Journal of Combinatorics} 18: 193-200.
+ %\bibitem{NCE}
+\item Cavenagh, N. J and Billington, E. J. 2000. Decomposition of complete
+multipartite graphs into cycles of even length. {\it Graphs and
+Combinatorics} 16:  49-65.
+ %\bibitem{ATA}
+\item Cayley, A. 2004. {\it Topics in Algebraic Graph Theory}. Cambridge University Press.
+%\bibitem{YKL}
+\item Choi, Y., Kim, S., Lim, S., Park, B. 2008. A construction of
+one-factorization. {\it Journal of Korean Mathematical Society} 45.5: 1243-1253.
+%\bibitem{HLD}
+\item DeVries, H. L. 1984. Historical notes on steiner systems. {\it
+Discrete Mathematics} 52: 293-297.
+\item Diestel, R. 2005.  {\it Graph theory}. Springer-Verlag Heidelberg, New York.
+%\bibitem{GDO}
+\item Dirac, G. H. 1972. On Hamiltonian circuits and Hamilton paths. {\it
+Mathematics Amm. }197: 57-70.
+%\bibitem{JRW}
+\item Doyen, J. and Wilson, R. M. 1973. Embeddings of steiner triple
+systems. {\it Discrete Mathematics} 5: 229-239.
+ %\bibitem{EFD}
+\item Farrell, E. J. 2000. Decomposition of complete graphs and complete bipartite graphs into complete bipartite factors. {\it Journal of Mathematical Science. (Calcutta)}
+ 11: 29-33.
+ %\bibitem{FAR}
+\item Franek, F. and Rosa, A. 2000. Two factorizations of small complete graphs. {\it Journal of Statistical Planning and Inference} 86: 435-442.
+%\bibitem{DFB}
+\item Froncek, D. 2007.  Bi-cyclic decompositions of complete graphs into
+spanning trees. {\it Discrete Mathematics} 307: 285-293.
+\item Froncek, D. 2010. Decomposition of complete graphs into small graphs. {\it Opuscula Mathematics}
+  30.3: 277-280.%\bibitem{DPK}
+\item Froncek, D., Kovar and P., Kubesa, M. 2010. Decomposition of complete
+graphs into  blown-up cycles $C_m[2]$. {\it Discrete Mathematics }
+310: 1003-1015.
+ %\bibitem{DDC}
+ %\bibitem{CGA}
+\item Godsil, G. and Royle, G. 2001. {\it Algebraic Graph Theory, Graduate
+Texts in Mathematics 207}. Spinger Verlag, New York, Berlin
+Herldeberg.
+ %\bibitem{RHA}
+\item Haggkvist, R. 1985. A lemma on cycle decompositions. {\it Annals of
+Discrete Mathematics} 27: 227-232.
+%\bibitem{JNH1}
+\item Hilton, J. N. 1984.  Hamiltonian decompositions of complete graphs.
+{\it Journal of Combinatorial Theory Series B} 36. 2: 125-134.
+%\bibitem{PHW}
+\item Himelwright, P., Wallis, W. D., Williamson, J. E. 1982. On
+one-factorizations of compositions of graphs. {\it Journal of Graph
+Theory} 6: 75-80.
+%\bibitem{DHOR}
+\item Hoffman, D. G., Linder, C. C., Rodger, C. A. 1989. On the
+construction of odd cycle systems. {\it Journal of Graph theory} 13:
+417-426.
+% \bibitem{DHRO1} D. G. Hoffman, C. C. Linder, C. R. Rodger, On the construction of odd cycle systems, J. Graph Theory, Vol 13, issue 4, (2006), 417-426.
+% \bibitem{LLG}
+\item Hsu, L. and Lin, C. 2009. {\it Graph Theory and Interconnection
+Networks}. CRC Press, Taylor and Francis Group.
+%\bibitem{ISGC1}
+%ISGCI: Information System on Graph Class Inclusion v2.0, List of
+%small graphs (2009), http//wwwteo. informatik.
+%unirostock.de/isgci/small graphs.html.\\
+%\bibitem{AKON}
+\item Kotzig, A. 1965. On decomposition of the complete graph into
+$4k$-gons. {\it Mat.Fyz Cas.} 15: 227-233.
+% \bibitem{AKD1}
+\item Kotzig, A. 1981. Decomposition of complete graphs into isomorphic
+cubes. {\it Journal of Combinatorial Theory Series B} 3: 292-296.
+%\bibitem{RL8}
+\item Laskar, R. 1978. Decomposition of some composite graphs into
+Hamilton cycles. {\it Proceedings of the 5th Hungarian Coll.
+Keszthely}. North Holland. 705-716.
+%\bibitem{RBO3}
+\item Laskar, R. and Auerbach, B. 1976. On decomposition of $r$-partite
+graphs into edge-disjoint hamilton circuits. {\it Discrete
+Mathematics} 14: 265-268.
+%\bibitem{CDR3}
+\item Leach, C. D. and Rodger, C. A. 2004. Hamilton decompoitions of
+complete graphs with a $3$-factor leave. {\it Discrete Mathematics}
+279.1-3: 337-344.
+% \bibitem{ZLD1}
+\item Liang, Z. E. 2005. Decomposition of complete graphs into $2K_k$.
+{\it Journal of Norm, Univ. Nat. Sci. Ed.} 29.1: 46-57.
+%\bibitem{CLD2}
+\item Linder, C. C. and Rodger, C. A. 1992.  Decomposition into cycles II:
+{\it cycle systems in Contemporary designs theory; a collection
+of surveys}. J. H. Dinitz and D. R. Stinson (Editors), Wiley,
+New York. 325-369.
+%\bibitem{JHD2}
+\item Liu, J. 1994. Hamiltonian decompositions of cayley graphs on abelian
+groups. {\it Discrete Mathematics}131: 163-171.
+\item ------------ 1996. Hamiltonian decomposition of cayley graphs on abelian groups of odd order. {\it Journal of Combinatorial Theory Series B} 66: 75-86.
+\item ------------ 2000. A generalization of the Oberwolfach problem and
+$C_t$-factorization of complete equipartite graphs. {\it Journal of Combinatorial Designs} 8: 42-29.
+%\bibitem{JLH1}
+\item ------------ 2003a. Hamilton decompositions of cayley graphs on abelian
+groups of even order. {\it Journal of Combinatorial Theory Series B} 88: 305-321.
+\item ------------ 2003b. The equipartite Oberwolfach problem with uniform
+tables. {\it Journal of Combinatorial Theory Series A } 101: 20-34.
+%\bibitem{DLR1}
+\item Lucas, D. E. 1892. {\it Recreations Mathematique}. Vol II, Gauthiers
+villars, Paris .
+\item Maheo, M. 1980. Strongly graceful graphs. {\it Discrete Mathematics} 29: 39-46.
+\item Mahmoodian, E. S. and Mirzakhani, M. 1995. Decomposition of complete tripartite graphs into
+ $5$-cycles in C. J. Colbourn E. S. Mahmoodian (Eds). {\it
+ Combinatorics and Advances}.
+ %\bibitem{RPC1}
+\item Manikandan, R. S. and Paulraja, P. 2006. $C_p$-decomposition of some
+regular
+graphs. {\it Discrete Mathematics} 306: 429-451.% \bibitem{EMM1}
+%\bibitem{RPC2}
+\item Manikandan, R. S. and Paulraja, P. 2007. $C_5$-decomposition of the
+tensor product of complete graphs, {\it Australasian Journal of Combinatorics} 37: 285-293.
+% \bibitem{RPC3} R. S. Manikandan, P.Paulraja, $C_5$-decomposition of the tensor product of complete graphs, Australas. J. Combin. 37 (2007) 285-293.
+ %\bibitem{MMS1}
+ % \bibitem{DWW}
+\item Morris, D. W., Morris, J., Webb, K. 2009. Hamiltonian cycles in
+$(2,3,c)$-circulant graphs. {\it Discrete Mathematics} 309: 5484-5490.
+%\bibitem{MUTP}
+\item Muthusamy, A. and Paulraja, P. 1995. Factorizations of product
+graphs into cycle of uniform length. {\it Graphs Combinatorics} 11:
+69-90.
+%\bibitem{PPSK}
+\item Paulraja, p. and Kumar, S. S. 2011. Resolvable even cycle
+decompositions of the tensor product of complete graphs. {\it
+Discrete Mathematics} 311: 1841-1850.
+%  \bibitem{WLP1}
+\item Piotrowski, W. L. 1991. The solution of the bipartite analogue of
+the Oberwolfach problem. {\it Discrete Mathematics} 97: 339-356.
+%\bibitem{YWS1}
+\item Qin, Y., Xiao, W., Miklavic, S. 2009. Connected graphs as subgraphs
+of cayley graphs: conditions on Hamiltonicity. {\it Discrete
+Mathematics} 309: 5426-5431.
+ % \bibitem{JAC3}
+\item Ramirez-Alfonsin, J. L. 1995. Cycle decomposition of $K_n$ into
+complete and complete multipartite  graphs. {\it Australasian
+Journal of Combinatorics }11: 233-238.
+%\bibitem{CAS2}
+ \item Rodger, C. A. 1992. Self-complementary graph decompositions. {\it Journal of Australasian
+Mathematical Society Series A} 53: 17-24.
+%\bibitem{MS3}
+\item Sajna, M. 2002. Cycle decomposition III: Complete graphs and fixed
+length cycles. {\it Journal of Combinatorial Designs } 10: 27-78.
+%\bibitem{MS4}
+\item Sajna, M. 2003. Decomposition of the complete graphs plus a
+$1$-factor into cycles of equal length. {\it Journal of Combinatorial
+Designs} 11: 170-207.
+%\bibitem{ESB1}
+\item Schmeichel, E. 1982. Bipartite graphs with cycles of all even
+lengths. {\it Journal of Graph Theory }6: 429-439.
+  %\bibitem{XSQ1}
+\item Shan, X. and Kang, Q. 2006. Decompositions of complete graphs into
+$(2k-1)$-circles with one chord. {\it Journal of Mathematical Research Exposition}
+26.1:  56-62.
+%\bibitem{BSD3}
+\item Smith, B. R. 2008. Decomposing complete equipartite graphs into
+cycles of length $2p$. {\it Journal of Combinatorial Designs} 16: 244-252.
+%\bibitem{BSC1}
+\item Smith, B. R. 2009. Complete equipartite $3p$-cycle systems. {\it
+Australasian
+Journal of Combinatorics} 45: 125-138.
+% \bibitem{DSD1}
+\item Sotteau, D. 1981. Decomposition of $K_{m,n}(K_{m,n}^*)$ into cycles
+(circuits) of length $2k$. {\it Journal of Combinatorial Theory Series B} 30:
+75-81.
+%\bibitem{RGG1}
+\item Stanton, R. G. and Goulden, I. P. 1981. Graph factorization, general
+tripple systems and cyclic triple systems. {\it Aequationes
+Math.} 22. 1: 1-28.
+%\bibitem{RGG2}
+\item Stanton, R. G. and Goulden, I. P. 1997.  {\it One factorization, Mathematics and its application} 390, Kluwer Academic Publisher group, Dordrech.
+% \bibitem{MTD1}
+\item Tarsi, M. 1983. Decomposition of complete multigraph into
+simple paths: Nonbalanced Handcuffed Designs. {\it Journal of Combinatorial Theory Series A} 34: 60-70.
+% \bibitem{WDOS}
+\item Wallis, W. D. 1997. {\it One factorization}. Kluwer Academic
+publishers Dordrecht, Boston, London .
+%\bibitem{WDD2}
+ %W. D. Wallis, Magic graphs, Boston MA, Birkhauser 2000.\\
+  %\bibitem{RWC1}
+\item Wilson, R. M. 1974. Construction and uses of pairwise balanced
+designs. {\it Mathematical Centre Tracts } 55: 18-41.
+
+
+\end{description}
+
+
+\end{newpage}
+ %\end{thebibliography}
+\end{document}
